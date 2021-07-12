@@ -1,4 +1,4 @@
-baseURL = "http://nakednous.github.io/go-vc"
+baseURL = "http://visualcomputing.github.io/hugo-vc"
 languageCode = "en-us"
 title = "Visual Computing"
 theme = 'book'
@@ -22,7 +22,7 @@ enableGitInfo = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/nakednous/go-vc'
+  BookRepo = 'https://github.com/nakednous/hugo-vc'
 
   # Configure the date format used on the pages
   # - In git information

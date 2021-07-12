@@ -4,9 +4,9 @@ let symbol1;
 let debug;
 
 function preload() {
-  image = loadImage('/go-vc/sketches/mandrill.png');
-  symbol1 = loadImage('/go-vc/sketches/omkara.png');
-  mosaic = loadShader('/go-vc/sketches/shader.vert', '/go-vc/sketches/photomosaic.frag');
+  image = loadImage('/hugo-vc/sketches/mandrill.png');
+  symbol1 = loadImage('/hugo-vc/sketches/omkara.png');
+  mosaic = loadShader('/hugo-vc/sketches/shader.vert', '/hugo-vc/sketches/photomosaic.frag');
 }
 
 function setup() {
