@@ -13,4 +13,4 @@ $git submodule update --init --recursive
 $hugo server -D --disableFastRender
 ```
 
-Deploy with `git push` after redefined `baseURL` in config.toml which should point to your actual public remote.
+Deploy with `$git push` after redefined `baseURL` in `config.toml` which should point to your actual public remote.
