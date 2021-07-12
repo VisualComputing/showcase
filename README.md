@@ -4,7 +4,7 @@ Welcome to the [UN / DISI](http://www.ingenieria.unal.edu.co/dependencias/depart
 
 ## Hacking
 
-The template [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/).
+Install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
 
 ```sh
 $git clone https://github.com/VisualComputing/hugo-vc
