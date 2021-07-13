@@ -1,4 +1,4 @@
-var myp5 = new p5((p) => {
+new p5((p) => {
   let a, b, c, d, e;
 
   p.setup = function () {
