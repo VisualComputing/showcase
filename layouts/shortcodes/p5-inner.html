@@ -2,7 +2,7 @@
 
 <div id="{{ $id }}"></div>
 <script>
-  new p5((p) => {
+  new p5((p5) => {
     {{ .Inner | safeJS }}
   }, "{{ $id }}" );
 </script>
