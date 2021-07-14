@@ -1,0 +1,8 @@
+{{ $id := .Get `id` }}
+
+<div id="{{ $id }}"></div>
+<script>
+  new p5((p) => {
+    {{ .Inner | safeJS }}
+  }, "{{ $id }}" );
+</script>
