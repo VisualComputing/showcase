@@ -11,8 +11,6 @@ All parameters are optional but `sketch`. Up to `lib5` libs may be specified.
 
 # Examples
 
-{{< p5-libs ver="1.4.0" >}}
-
 ## Instance mode within div element
 
 ```html
@@ -33,11 +31,11 @@ Produces:
 
 {{< p5-div id="scintillating" sketch="/hugo-vc/sketches/scintillating.js" >}}
 
-## Inner
+## Stroboscopic motion inner example
 
 Produces:
 
-{{< p5-inner id="codeid" >}}
+{{< p5-inner id="strobo" >}}
   let flag;
 
   p5.setup = function () {
@@ -61,5 +59,61 @@ Produces:
       p5.point(150, 450);
     }
     flag = !flag;
+  }
+{{< /p5-inner >}}
+
+## Lilac chaser
+
+{{< p5-inner id="lilac" >}}
+  p5.setup = function() {
+    p5.createCanvas(400, 400);
+    p5.frameRate(7);
   };
+
+  function drawBlurCircles(x, y, r) {
+    p5.push();
+    //console.log(1);
+    p5.noStroke();
+    var opc = 0.4;
+    var step = 3.0/r;
+
+    for (var i = r; i > 0; i-=1.5) {
+      if (opc < 5) {
+        opc += step;
+        p5.fill(255, 20, 180, opc);
+        //console.log(step,r);
+      }
+      //console.log(4);
+      p5.ellipse(x, y, i, i);
+    }
+    p5.pop();
+  };
+
+  var jump = 0;
+  var count = 0;
+  p5.draw = function() {
+    p5.background(200);
+    var numCircles = 12;
+    var stepAngle = 360.0/numCircles;
+    p5.push();
+    p5.translate(p5.width/2.0, p5.height/2.0);
+    for (var i = 0; i < 360; i = i + stepAngle) {
+      //console.log(stepAngle, i, jump);
+      if (i != jump) {
+        p5.push();
+        p5.rotate(p5.radians(i));
+        drawBlurCircles(120, 0, 60);
+        p5.pop();
+      }
+    }
+    if( !p5.mouseIsPressed ) {
+      jump = (jump + stepAngle)%360;
+    }
+    p5.push();
+    p5.strokeWeight(1.5);
+    p5.line(-7, 0, 7, 0);
+    p5.line(0, -7, 0, 7);
+    p5.pop();
+    p5.pop();
+  }
 {{< /p5-inner >}}
