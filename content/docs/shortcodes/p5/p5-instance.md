@@ -35,7 +35,7 @@ Produces:
 
 Produces:
 
-{{< p5-div-inline id="strobo" >}}
+{{< p5-instance-div id="strobo" >}}
   let flag;
 
   p5.setup = function () {
@@ -60,11 +60,11 @@ Produces:
     }
     flag = !flag;
   }
-{{< /p5-div-inline >}}
+{{< /p5-instance-div >}}
 
 ## Lilac chaser
 
-{{< p5-div-inline id="lilac" >}}
+{{< p5-instance-div id="lilac" >}}
   p5.setup = function() {
     p5.createCanvas(400, 400);
     p5.frameRate(7);
@@ -116,4 +116,4 @@ Produces:
     p5.pop();
     p5.pop();
   }
-{{< /p5-div-inline >}}
+{{< /p5-instance-div >}}
