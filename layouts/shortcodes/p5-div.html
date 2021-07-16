@@ -1,4 +1,3 @@
-{{ $id := .Get `id` }}
 {{ $defver := `1.4.0` }}
 {{ $sketch := .Get `sketch` }}
 {{ $lib1 := .Get `lib1` }}
@@ -16,4 +15,4 @@
 {{ if isset .Params "lib5" }} <script src={{ $lib5 }}></script> {{ end }}
 <script src={{ $sketch }}></script>
 
-<div id="{{ $id }}"></div>
+<div id="{{ strings.TrimSuffix ".js" (path.Base $sketch) }}"></div>

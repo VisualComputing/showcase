@@ -3,7 +3,7 @@ There are two p5 `iframe` shortcodes: .
 # p5-iframe
 
 ```html
-{{</* p5-iframe id="sketchid" ver="1.4.0" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" width="800" height="600" */>}}
+{{</* p5-iframe ver="1.4.0" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" width="800" height="600" */>}}
 ```
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
@@ -16,7 +16,8 @@ All parameters are optional but `sketch`. Default values are shown in the above 
   //...
 {{< p5-global-iframe */>}}
 ```
-All parameters are optional. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
+
+All parameters are optional but `id`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
 
 ## Examples
 
@@ -33,7 +34,7 @@ Produces:
 ## Sound
 
 ```html
-{{</* p5-global-iframe width="225" height="225" >}}
+{{</* p5-global-iframe id="sound" width="225" height="225" >}}
   // JS code
   //...
 {{< p5-global-iframe */>}}
@@ -41,7 +42,7 @@ Produces:
 
 Produces:
 
-{{< p5-global-iframe width="225" height="225" >}}
+{{< p5-global-iframe id="sound" width="225" height="225" >}}
 // Adapted from Learning Processing by Daniel Shiffman
 // http://www.learningprocessing.com
 // Doorbell sample by Corsica_S via freesound.org,
