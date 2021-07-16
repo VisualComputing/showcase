@@ -1,4 +1,4 @@
-p5 `iframe` shortcodes embed [p5.js](https://p5js.org/) code within an [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe). There are two p5 `iframe` shortcodes: [p5-iframe](#p5-iframe) and [p5-global-iframe](#p5-global-iframe).
+p5 `iframe` shortcodes embed [p5.js](https://p5js.org/) code within an [iframe element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe). There are two p5 `iframe` shortcodes: [p5-iframe](#p5-iframe) and [p5-global-iframe](#p5-global-iframe).
 
 # p5-iframe
 
@@ -8,33 +8,33 @@ p5 `iframe` shortcodes embed [p5.js](https://p5js.org/) code within an [iframe](
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## Example 1: simple sketch
+## Simple sketch example
 
+{{< details title="p5-iframe markdown" open=false >}}
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425 */>}}
 ```
-
-outputs:
+{{< /details >}}
 
 {{< p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425" >}}
 
-## Example 2: Photomosaic with shaders
+## Photomosaic with shaders example
 
+{{< details title="p5-iframe markdown" open=false >}}
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" */>}}
 ```
-
-outputs:
+{{< /details >}}
 
 {{< p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" >}}
 
-## Example 3: External libs with shaders
+## External libs with shaders example
 
+{{< details title="p5-iframe markdown" open=false >}}
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
 ```
-
-outputs:
+{{< /details >}}
 
 {{< p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" >}}
 
@@ -43,7 +43,7 @@ outputs:
 ```html
 {{</* p5-global-iframe id="sketchid" ver="1.4.0" lib1="https://cdntolib1/lib1.js" width="800" height="600" >}}
   // inline sketch code
-{{< p5-global-iframe */>}}
+{{< /p5-global-iframe */>}}
 ```
 
 {{< hint warning >}}
@@ -52,8 +52,9 @@ Note that the inline `sketch` should be coded in [p5 global mode](https://github
 
 All parameters are optional but `id`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## Example: breathing square
+## Breathing square example
 
+{{< details title="p5-global-iframe markdown" open=false >}}
 ```js
 {{</* p5-global-iframe id="breath" width="625" height="625" >}}
   let angle = 0;
@@ -88,10 +89,9 @@ All parameters are optional but `id`. Default values are shown in the above snip
     rect(-187.5, -187.5, 375, 375);
     pop();
   }
-{{< p5-global-iframe */>}}
+{{< /p5-global-iframe */>}}
 ```
-
-Produces:
+{{< /details >}}
 
 {{< p5-global-iframe id="breath" width="625" height="625" >}}
   let angle = 0;

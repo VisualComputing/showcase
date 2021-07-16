@@ -1,4 +1,4 @@
-p5 `div` shortcodes embed [p5.js](https://p5js.org/) code within an [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div). There are two p5 `div` shortcodes: [p5-div](#p5-div) and [p5-instance-div](#p5-instance-div).
+p5 `div` shortcodes embed [p5.js](https://p5js.org/) code within a [div element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div). There are two p5 `div` shortcodes: [p5-div](#p5-div) and [p5-instance-div](#p5-instance-div).
 
 # p5-div
 
@@ -8,13 +8,13 @@ p5 `div` shortcodes embed [p5.js](https://p5js.org/) code within an [div](https:
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-For example:
+## Scintillating grid example
 
+{{< details title="p5-div markdown" open=false >}}
 ```html
 {{</* p5-div sketch="/hugo-vc/sketches/scintillating.js" */>}}
 ```
-
-outputs:
+{{< /details >}}
 
 {{< p5-div sketch="/hugo-vc/sketches/scintillating.js" >}}
 
@@ -23,20 +23,23 @@ outputs:
 ```html
 {{</* p5-instance-div id="sketchid" ver="1.4.0" lib1="https://cdntolib1/lib1.js" >}}
   // inline sketch code
-  }
-{{< p5-instance-div */>}}
+{{< /p5-instance-div */>}}
+```
 
 {{< hint warning >}}
 Note that the inline `sketch` should be coded in [p5 instance mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode) syntax.
 {{< /hint >}}
-```
 
 All parameters are optional but `id`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-For example:
+## Lilac chaser example
 
+{{< details title="p5-instance-div markdown" open=false >}}
 ```js
 {{</* p5-instance-div id="lilac-chaser" >}}
+  let jump = 0;
+  let count = 0;
+
   p5.setup = function() {
     p5.createCanvas(400, 400);
     p5.frameRate(7);
@@ -44,7 +47,6 @@ For example:
 
   function drawBlurCircles(x, y, r) {
     p5.push();
-    //console.log(1);
     p5.noStroke();
     var opc = 0.4;
     var step = 3.0/r;
@@ -53,16 +55,12 @@ For example:
       if (opc < 5) {
         opc += step;
         p5.fill(255, 20, 180, opc);
-        //console.log(step,r);
       }
-      //console.log(4);
       p5.ellipse(x, y, i, i);
     }
     p5.pop();
   };
 
-  var jump = 0;
-  var count = 0;
   p5.draw = function() {
     p5.background(200);
     var numCircles = 12;
@@ -70,7 +68,6 @@ For example:
     p5.push();
     p5.translate(p5.width/2.0, p5.height/2.0);
     for (var i = 0; i < 360; i = i + stepAngle) {
-      //console.log(stepAngle, i, jump);
       if (i != jump) {
         p5.push();
         p5.rotate(p5.radians(i));
@@ -88,17 +85,18 @@ For example:
     p5.pop();
     p5.pop();
   }
-  
-{{< p5-instance-div */>}}
+{{< /p5-instance-div */>}}
 ```
 
 {{< hint warning >}}
 Note that `p5` should be the name to be used for the sketch object variable.
 {{< /hint >}}
-
-outputs:
+{{< /details >}}
 
 {{< p5-instance-div id="lilac-chaser" >}}
+  let jump = 0;
+  let count = 0;
+
   p5.setup = function() {
     p5.createCanvas(400, 400);
     p5.frameRate(7);
@@ -106,7 +104,6 @@ outputs:
 
   function drawBlurCircles(x, y, r) {
     p5.push();
-    //console.log(1);
     p5.noStroke();
     var opc = 0.4;
     var step = 3.0/r;
@@ -115,16 +112,12 @@ outputs:
       if (opc < 5) {
         opc += step;
         p5.fill(255, 20, 180, opc);
-        //console.log(step,r);
       }
-      //console.log(4);
       p5.ellipse(x, y, i, i);
     }
     p5.pop();
   };
 
-  var jump = 0;
-  var count = 0;
   p5.draw = function() {
     p5.background(200);
     var numCircles = 12;
@@ -132,7 +125,6 @@ outputs:
     p5.push();
     p5.translate(p5.width/2.0, p5.height/2.0);
     for (var i = 0; i < 360; i = i + stepAngle) {
-      //console.log(stepAngle, i, jump);
       if (i != jump) {
         p5.push();
         p5.rotate(p5.radians(i));
