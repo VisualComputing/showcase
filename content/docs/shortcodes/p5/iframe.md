@@ -1,4 +1,4 @@
-There are two p5 `iframe` shortcodes: .
+p5 `iframe` shortcodes embed [p5.js](https://p5js.org/) code within an [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe). There are two p5 `iframe` shortcodes: [p5-iframe](#p5-iframe) and [p5-global-iframe](#p5-global-iframe).
 
 # p5-iframe
 
@@ -7,6 +7,36 @@ There are two p5 `iframe` shortcodes: .
 ```
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
+
+## Example 1: simple sketch
+
+```html
+{{</* p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425 */>}}
+```
+
+outputs:
+
+{{< p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425" >}}
+
+## Example 2: Photomosaic with shaders
+
+```html
+{{</* p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" */>}}
+```
+
+outputs:
+
+{{< p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" >}}
+
+## Example 3: External libs with shaders
+
+```html
+{{</* p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
+```
+
+outputs:
+
+{{< p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" >}}
 
 # p5-global-iframe
 
@@ -19,108 +49,82 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 
 All parameters are optional but `id`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
 
-## Examples
-
-### Instance mode simple sketch
-
-```html
-{{</* p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425 */>}}
-```
-
-Produces:
-
-{{< p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425" >}}
-
-## Sound
+## Example: breathing square
 
 ```html
 {{</* p5-global-iframe id="sound" width="225" height="225" >}}
-  // JS code
-  //...
+  var angle = 0;
+  var speed = 0.06;
+
+  function setup() {
+    createCanvas(600, 600);
+  }
+
+  function draw() {
+    background(255, 255, 255);
+    rotateSquare();
+    // pinta los cuadros color naranja
+    if (!mouseIsPressed) {
+      strokeWeight(0);
+      stroke(0);
+      fill(255, 140, 0);
+      rect(0, 0, 281, 281);
+      rect(318, 0, 281, 281);
+      rect(0, 318, 281, 281);
+      rect(318, 318, 281, 281);
+    }
+  }
+
+  // pinta el cuadro azul que rota en el fondo
+  function rotateSquare() {
+    push();
+    angle += speed;
+    strokeWeight(0);
+    stroke(0);
+    fill(0, 0, 255);
+    translate(width / 2, height / 2);
+    rotate(angle);
+    rect(-187.5, -187.5, 375, 375);
+    pop();
+  }
 {{< p5-global-iframe */>}}
 ```
 
 Produces:
 
-{{< p5-global-iframe id="sound" width="225" height="225" >}}
-// Adapted from Learning Processing by Daniel Shiffman
-// http://www.learningprocessing.com
-// Doorbell sample by Corsica_S via freesound.org,
-// Creative Commons BY 3.0
+{{< p5-global-iframe id="sound" width="625" height="625" >}}
+  var angle = 0;
+  var speed = 0.06;
 
-// A Class to describe a "doorbell" (really a button)
-class Doorbell {
-  constructor(x_, y_, r_) {
-    // Location and size
-    this.x = x_;
-    this.y = y_;
-    this.r = r_;
-  }
-  // Is a point inside the doorbell? (used for mouse rollover, etc.)
-  contains(mx, my) {
-    return dist(mx, my, this.x, this.y) < this.r;
+  function setup() {
+    createCanvas(600, 600);
   }
 
-  // Show the doorbell (hardcoded colors, could be improved)
-  display(mx, my) {
-    if (this.contains(mx, my)) {
-      fill(100);
-    } else {
-      fill(175);
+  function draw() {
+    background(255, 255, 255);
+    rotateSquare();
+    // pinta los cuadros color naranja
+    if (!mouseIsPressed) {
+      strokeWeight(0);
+      stroke(0);
+      fill(255, 140, 0);
+      rect(0, 0, 281, 281);
+      rect(318, 0, 281, 281);
+      rect(0, 318, 281, 281);
+      rect(318, 318, 281, 281);
     }
+  }
+
+  // pinta el cuadro azul que rota en el fondo
+  function rotateSquare() {
+    push();
+    angle += speed;
+    strokeWeight(0);
     stroke(0);
-    strokeWeight(4);
-    ellipseMode(RADIUS);
-    ellipse(this.x, this.y, this.r, this.r);
+    fill(0, 0, 255);
+    translate(width / 2, height / 2);
+    rotate(angle);
+    rect(-187.5, -187.5, 375, 375);
+    pop();
   }
-}
-
-// A sound file object
-let dingdong;
-
-// A doorbell object (that will trigger the sound)
-let doorbell;
-
-function setup() {
-  createCanvas(200, 200);
-
-  // Load the sound file.
-  // We have included both an MP3 and an OGG version.
-  soundFormats('mp3', 'ogg');
-  dingdong = loadSound('/hugo-vc/sketches/doorbell.mp3');
-
-  // Create a new doorbell
-  doorbell = new Doorbell(width / 2, height / 2, 32);
-}
-
-function draw() {
-  background(255);
-  // Show the doorbell
-  doorbell.display(mouseX, mouseY);
-}
-
-function mousePressed() {
-  // If the user clicks on the doorbell, play the sound!
-  if (doorbell.contains(mouseX, mouseY)) {
-    dingdong.play();
-  }
-}
 {{< /p5-global-iframe >}}
-
-## Photomosaic with shaders
-
-```html
-{{</* p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" */>}}
-```
-
-Produces:
-
-{{< p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" >}}
-
-## External libs with shaders
-
-```html
-{{</* p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
-```
-
-{{< p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" >}}

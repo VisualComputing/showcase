@@ -34,8 +34,30 @@ Produces:
 
 ```html
 {{</* p5-instance-div id="strobo" >}}
-  // JS code
-  //...
+  let flag;
+
+  p5.setup = function () {
+    p5.createCanvas(600, 600);
+  };
+
+  p5.draw = function () {
+    p5.background(192, 192, 192);
+    p5.frameRate(2);
+    stroboscopicMotion();
+  };
+
+  function stroboscopicMotion() {
+    p5.strokeWeight(100);
+    p5.stroke(0, 255, 255);
+    if (flag) {
+      p5.point(150, 150);
+      p5.point(450, 450);
+    } else {
+      p5.point(450, 150);
+      p5.point(150, 450);
+    }
+    flag = !flag;
+  }
 {{< p5-instance-div */>}}
 ```
 
