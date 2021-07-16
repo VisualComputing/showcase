@@ -6,7 +6,7 @@ p5 `iframe` shortcodes embed [p5.js](https://p5js.org/) code within an [iframe](
 {{</* p5-iframe ver="1.4.0" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" width="800" height="600" */>}}
 ```
 
-All parameters are optional but `sketch`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
+All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
 ## Example 1: simple sketch
 
@@ -47,10 +47,10 @@ outputs:
 ```
 
 {{< hint warning >}}
-Note that inline `sketch` should be coded in [p5 global mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode) syntax.
+Note that the inline `sketch` should be coded in [p5 global mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode) syntax.
 {{< /hint >}}
 
-All parameters are optional but `id`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
+All parameters are optional but `id`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
 ## Example: breathing square
 
@@ -66,7 +66,6 @@ All parameters are optional but `id`. Default values are shown in the above snip
   function draw() {
     background(255, 255, 255);
     rotateSquare();
-    // pinta los cuadros color naranja
     if (!mouseIsPressed) {
       strokeWeight(0);
       stroke(0);
@@ -78,7 +77,6 @@ All parameters are optional but `id`. Default values are shown in the above snip
     }
   }
 
-  // pinta el cuadro azul que rota en el fondo
   function rotateSquare() {
     push();
     angle += speed;
@@ -106,7 +104,6 @@ Produces:
   function draw() {
     background(255, 255, 255);
     rotateSquare();
-    // pinta los cuadros color naranja
     if (!mouseIsPressed) {
       strokeWeight(0);
       stroke(0);
@@ -118,7 +115,6 @@ Produces:
     }
   }
 
-  // pinta el cuadro azul que rota en el fondo
   function rotateSquare() {
     push();
     angle += speed;
