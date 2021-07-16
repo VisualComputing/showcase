@@ -42,19 +42,22 @@ outputs:
 
 ```html
 {{</* p5-global-iframe id="sketchid" ver="1.4.0" lib1="https://cdntolib1/lib1.js" width="800" height="600" >}}
-  // JS code
-  //...
+  // inline sketch code
 {{< p5-global-iframe */>}}
 ```
+
+{{< hint warning >}}
+Note that inline `sketch` should be coded in [p5 global mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode) syntax.
+{{< /hint >}}
 
 All parameters are optional but `id`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
 
 ## Example: breathing square
 
-```html
-{{</* p5-global-iframe id="sound" width="225" height="225" >}}
-  var angle = 0;
-  var speed = 0.06;
+```js
+{{</* p5-global-iframe id="breath" width="625" height="625" >}}
+  let angle = 0;
+  let speed = 0.06;
 
   function setup() {
     createCanvas(600, 600);
@@ -92,9 +95,9 @@ All parameters are optional but `id`. Default values are shown in the above snip
 
 Produces:
 
-{{< p5-global-iframe id="sound" width="625" height="625" >}}
-  var angle = 0;
-  var speed = 0.06;
+{{< p5-global-iframe id="breath" width="625" height="625" >}}
+  let angle = 0;
+  let speed = 0.06;
 
   function setup() {
     createCanvas(600, 600);
