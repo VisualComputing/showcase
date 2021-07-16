@@ -2,7 +2,6 @@
 
 p5 helps add [p5 sketches](https://p5js.org/) into your book.
 
-
 ```html
 {{</* p5-div id="sketchid" ver="1.4.0" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" width="800" height="600" */>}}
 ```

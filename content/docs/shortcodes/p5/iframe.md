@@ -1,17 +1,26 @@
-# p5
+There are two p5 `iframe` shortcodes: .
 
-p5 helps add [p5 sketches](https://p5js.org/) into your book.
-
+# p5-iframe
 
 ```html
 {{</* p5-iframe id="sketchid" ver="1.4.0" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" width="800" height="600" */>}}
 ```
 
-All parameters are optional but `sketch`. Up to `lib5` libs may be specified.
+All parameters are optional but `sketch`. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
 
-# Examples
+# p5-global-iframe
 
-## Instance mode simple sketch
+```html
+{{</* p5-global-iframe id="sketchid" ver="1.4.0" lib1="https://cdntolib1/lib1.js" width="800" height="600" >}}
+  // JS code
+  //...
+{{< p5-global-iframe */>}}
+```
+All parameters are optional. Default values are shown in the above snippet. Up to `lib5` libs may be specified.
+
+## Examples
+
+### Instance mode simple sketch
 
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425 */>}}
