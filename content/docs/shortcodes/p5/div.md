@@ -98,7 +98,7 @@ Note that `p5` should be the name to be used for the sketch object variable.
   let count = 0;
 
   p5.setup = function() {
-    p5.createCanvas(400, 400);
+    p5.createCanvas(378, 378);
     p5.frameRate(7);
   };
 
