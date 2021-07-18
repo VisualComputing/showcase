@@ -1,11 +1,16 @@
-let mosaic;
 let image;
-let symbol1;
-let debug;
+let video;
+let om;
+let mosaic;
+let resolution;
+let video_on;
+let om_on;
 
 function preload() {
   image = loadImage('/hugo-vc/sketches/mandrill.png');
-  symbol1 = loadImage('/hugo-vc/sketches/omkara.png');
+  video = createVideo(['/hugo-vc/sketches/mandrill.webm']);
+  video.hide(); // by default video shows up in separate dom
+  om = loadImage('/hugo-vc/sketches/omkara.png');
   mosaic = loadShader('/hugo-vc/sketches/shader.vert', '/hugo-vc/sketches/photomosaic.frag');
 }
 
@@ -14,11 +19,26 @@ function setup() {
   textureMode(NORMAL);
   noStroke();
   shader(mosaic);
-  mosaic.setUniform('image', image);
-  mosaic.setUniform('symbol1', symbol1);
-  mosaic.setUniform('resolution', 30);
-  debug = true;
-  mosaic.setUniform('debug', debug);
+  mosaic.setUniform('om', om);
+  om_on = createCheckbox('ॐ', false);
+  om_on.changed(() => mosaic.setUniform('om_on', om_on.checked()));
+  om_on.position(10, 10);
+  video_on = createCheckbox('video', false);
+  video_on.changed(() => {
+    if (video_on.checked()) {
+      mosaic.setUniform('img', video);
+      video.loop();  
+    } else {
+      mosaic.setUniform('img', image);
+    } 
+  });
+  video_on.position(10, 30);
+  mosaic.setUniform('img', image);
+  resolution = createSlider(10, 100, 30, 1);
+  resolution.position(10, 50);
+  resolution.style('width', '80px');
+  resolution.input(() => mosaic.setUniform('resolution', resolution.value()));
+  mosaic.setUniform('resolution', resolution.value());
 }
 
 function draw() {
@@ -41,11 +61,4 @@ function cover(texture = false) {
     vertex(-width / 2, height / 2, 0);
   }
   endShape(CLOSE);
-}
-
-function keyPressed() {
-  if (key === 'd') {
-    debug = !debug;
-    mosaic.setUniform('debug', debug);
-  }
 }

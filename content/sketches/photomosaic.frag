@@ -1,12 +1,12 @@
 precision mediump float;
 
-// image is sent by the sketch
-uniform sampler2D image;
-// symbol1 is sent by the sketch
-uniform sampler2D symbol1;
+// img (image or video) is sent by the sketch
+uniform sampler2D img;
+// om is sent by the sketch
+uniform sampler2D om;
 
-// toggles image display
-uniform bool debug;
+// toggles om display
+uniform bool om_on;
 // target horizontal & vertical resolution
 uniform float resolution;
 
@@ -16,16 +16,24 @@ varying vec4 vVertexColor;
 varying vec2 vTexCoord;
 
 void main() {
-  // remap symbolCoord to [0.0, resolution] ∈ R
-  vec2 symbolCoord = vTexCoord * resolution;
-  // remap imageCoord to [0.0, resolution] ∈ Z
-  vec2 imageCoord = floor(symbolCoord);
-  // remap symbolCoord to [0.0, 1.0] ∈ R
-  symbolCoord = symbolCoord - imageCoord;
-  // remap imageCoord to [0.0, 1.0] ∈ R
-  imageCoord = imageCoord * vec2(1.0) / vec2(resolution);
-  // get vec4 color hash index
-  vec4 index = texture2D(image, imageCoord);
-  // TODO Goal: get symbol1 from hash index
-  gl_FragColor = (debug ? index : texture2D(symbol1, symbolCoord)) * vVertexColor;
+  // remap omCoord to [0.0, resolution] ∈ R
+  vec2 omCoord = vTexCoord * resolution;
+  // remap texCoord to [0.0, resolution] ∈ Z
+  vec2 texCoord = floor(omCoord);
+  // remap omCoord to [0.0, 1.0] ∈ R
+  omCoord = omCoord - texCoord;
+  // remap texCoord to [0.0, 1.0] ∈ R
+  texCoord = texCoord * vec2(1.0) / vec2(resolution);
+  // get vec4 image texel (may be used as color hash index by some apps)
+  vec4 imgTexel = texture2D(img, texCoord);
+  if(om_on) {
+    vec4 fallback = vec4(0.0, 0.0, 0.0, 0.0);
+    vec4 black = vec4(0.0, 0.0, 0.0, 1.0);
+    vec4 omTexel = texture2D(om, omCoord);
+    vec4 threshold = vec4(0.1);
+    gl_FragColor = all(lessThan(abs(omTexel - black), threshold)) ? imgTexel : fallback;
+  }
+  else {
+    gl_FragColor = imgTexel;
+  }
 }
