@@ -8,9 +8,10 @@ p5 `iframe` [shortcodes](https://gohugo.io/content-management/shortcodes/) embed
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## [Color relativity](https://p5js.org/examples/color-relativity.html)
+## Color relativity
 
 {{< details title="p5-iframe markdown" open=false >}}
+check [this short](https://p5js.org/examples/color-relativity.html) explanation
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425 */>}}
 ```
@@ -21,6 +22,7 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 ## Everything is ॐ
 
 {{< details title="p5-iframe markdown" open=false >}}
+[ॐ](https://en.wikipedia.org/wiki/Om)
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" */>}}
 ```
@@ -28,10 +30,11 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 
 {{< p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" >}}
 
-## [Depth map](https://en.wikipedia.org/wiki/Depth_map)
+## Depth map
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
+look for some of the [depthmap](https://en.wikipedia.org/wiki/Depth_map) usecases.
 {{</* p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
 ```
 {{< /details >}}
@@ -52,10 +55,10 @@ Note that the inline `sketch` should be coded in [p5 global mode](https://github
 
 All parameters are optional but `id`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## [Breathing square](https://michaelbach.de/ot/mot-breathingSquare/)
+## Breathing square
 
 {{< details title="p5-global-iframe markdown" open=false >}}
-`global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js).
+Checkout [this reference](https://michaelbach.de/ot/mot-breathingSquare/) for an explanation and further parameterization. Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js).
 ```js
 {{</* p5-global-iframe id="breath" width="625" height="625" >}}
   let angle = 0;

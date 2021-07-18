@@ -8,9 +8,9 @@ p5 `div` [shortcodes](https://gohugo.io/content-management/shortcodes/) embed [p
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-##  [Scintillating grid](https://mathworld.wolfram.com/ScintillatingGridIllusion.html)
+## Scintillating grid
 
-check also [this reference](https://www.illusionsindex.org/i/scintillating-grid) among many more there are.
+Check [this](https://mathworld.wolfram.com/ScintillatingGridIllusion.html) and also [this](https://www.illusionsindex.org/i/scintillating-grid) among many more references there are.
 
 {{< details title="p5-div markdown" open=false >}}
 ```html
@@ -34,10 +34,10 @@ Note that the inline `sketch` should be coded in [p5 instance mode](https://gith
 
 All parameters are optional but `id`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## [Lilac chaser](https://en.wikipedia.org/wiki/Lilac_chaser)
+## Lilac chaser
 
 {{< details title="p5-instance-div markdown" open=false >}}
-adapted from [here](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/lilacChaser.js).
+Look at [this](https://en.wikipedia.org/wiki/Lilac_chaser) reference for an illusion introduction. Code adapted from [here](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/lilacChaser.js).
 ```js
 {{</* p5-instance-div id="lilac-chaser" >}}
   let jump = 0;
