@@ -10,7 +10,7 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 
 ## Scintillating grid
 
-Check [this](https://mathworld.wolfram.com/ScintillatingGridIllusion.html) and also [this](https://www.illusionsindex.org/i/scintillating-grid) among many more references there are.
+Look at [this](https://mathworld.wolfram.com/ScintillatingGridIllusion.html) and also [this](https://www.illusionsindex.org/i/scintillating-grid) among many more references there are.
 
 {{< details title="p5-div markdown" open=false >}}
 ```html
@@ -36,10 +36,12 @@ All parameters are optional but `id`. Default values are shown in the above snip
 
 ## Lilac chaser
 
+Look at [this](https://en.wikipedia.org/wiki/Lilac_chaser) introductory reference.
+
 {{< details title="p5-instance-div markdown" open=false >}}
-Look at [this](https://en.wikipedia.org/wiki/Lilac_chaser) reference for an illusion introduction. Code adapted from [here](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/lilacChaser.js).
 ```js
 {{</* p5-instance-div id="lilac-chaser" >}}
+  // Adapted from [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/lilacChaser.js)
   let jump = 0;
   let count = 0;
 
@@ -90,13 +92,12 @@ Look at [this](https://en.wikipedia.org/wiki/Lilac_chaser) reference for an illu
   }
 {{< /p5-instance-div */>}}
 ```
-
 {{< hint warning >}}
 Note that `p5` should be the name to be used for the sketch object variable.
 {{< /hint >}}
 {{< /details >}}
 
-{{< p5-instance-div id="lilac-chaser" >}}
+{{< p5-instance-div id="pacman" >}}
   let jump = 0;
   let count = 0;
 

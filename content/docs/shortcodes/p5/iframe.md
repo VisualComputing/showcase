@@ -10,8 +10,9 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 
 ## Color relativity
 
+Look at this [brief explanation](https://p5js.org/examples/color-relativity.html) about what color relativity is.
+
 {{< details title="p5-iframe markdown" open=false >}}
-check [this short](https://p5js.org/examples/color-relativity.html) explanation
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425 */>}}
 ```
@@ -21,8 +22,9 @@ check [this short](https://p5js.org/examples/color-relativity.html) explanation
 
 ## Everything is ॐ
 
-{{< details title="p5-iframe markdown" open=false >}}
 [ॐ](https://en.wikipedia.org/wiki/Om)
+
+{{< details title="p5-iframe markdown" open=false >}}
 ```html
 {{</* p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" */>}}
 ```
@@ -32,9 +34,10 @@ check [this short](https://p5js.org/examples/color-relativity.html) explanation
 
 ## Depth map
 
+Look for some [depthmap](https://en.wikipedia.org/wiki/Depth_map) usecases.
+
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
-look for some of the [depthmap](https://en.wikipedia.org/wiki/Depth_map) usecases.
 {{</* p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
 ```
 {{< /details >}}
@@ -57,10 +60,12 @@ All parameters are optional but `id`. Default values are shown in the above snip
 
 ## Breathing square
 
+Look at [this reference](https://michaelbach.de/ot/mot-breathingSquare/) for an explanation and further parameterization of the illusion.
+
 {{< details title="p5-global-iframe markdown" open=false >}}
-Checkout [this reference](https://michaelbach.de/ot/mot-breathingSquare/) for an explanation and further parameterization. Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js).
 ```js
 {{</* p5-global-iframe id="breath" width="625" height="625" >}}
+  // Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)
   let angle = 0;
   let speed = 0.06;
 
