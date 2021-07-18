@@ -8,7 +8,7 @@ p5 `iframe` shortcodes embed [p5.js](https://p5js.org/) code within an [iframe e
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## Simple sketch example
+## [Color relativity](https://p5js.org/examples/color-relativity.html)
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
@@ -18,7 +18,7 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 
 {{< p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425" >}}
 
-## Photomosaic with shaders example
+## Everything is ॐ
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
@@ -28,7 +28,7 @@ All parameters are optional but `sketch`. Default values are shown in the above 
 
 {{< p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" >}}
 
-## External libs with shaders example
+## [Depth map](https://en.wikipedia.org/wiki/Depth_map)
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
@@ -52,9 +52,10 @@ Note that the inline `sketch` should be coded in [p5 global mode](https://github
 
 All parameters are optional but `id`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## Breathing square example
+## [Breathing square](https://michaelbach.de/ot/mot-breathingSquare/)
 
 {{< details title="p5-global-iframe markdown" open=false >}}
+`global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js).
 ```js
 {{</* p5-global-iframe id="breath" width="625" height="625" >}}
   let angle = 0;

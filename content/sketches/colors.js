@@ -1,3 +1,6 @@
+// instance mode of: 
+// https://p5js.org/examples/color-relativity.html
+
 new p5((p) => {
   let a, b, c, d, e;
 

@@ -1,12 +1,4 @@
-/* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/26605*@* */
-/* !do not delete the line above, required for linking your tweak if you upload again */
-// Scintillating Grid
-// Author: Rupert Russell
-// October 2, 2010
-// Schtauf, M., Lingelbach, B., Wrist, E.R. (1997)
-// The scintillating grid illusion. Vision Research,
-// 37, 1033-1038.
-// JS port (p5.js 'instance mode') by Jean Pierre Charalambos
+// took from here: https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/scintillating_grid.js
 
 new p5((p) => {
   p.setup = function () {

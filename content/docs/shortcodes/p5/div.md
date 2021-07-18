@@ -8,7 +8,9 @@ p5 `div` shortcodes embed [p5.js](https://p5js.org/) code within a [div element]
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## Scintillating grid example
+##  [Scintillating grid](https://mathworld.wolfram.com/ScintillatingGridIllusion.html)
+
+check also [this reference](https://www.illusionsindex.org/i/scintillating-grid) among many more there are.
 
 {{< details title="p5-div markdown" open=false >}}
 ```html
@@ -32,9 +34,10 @@ Note that the inline `sketch` should be coded in [p5 instance mode](https://gith
 
 All parameters are optional but `id`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## Lilac chaser example
+## [Lilac chaser](https://en.wikipedia.org/wiki/Lilac_chaser)
 
 {{< details title="p5-instance-div markdown" open=false >}}
+adapted from [here](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/lilacChaser.js).
 ```js
 {{</* p5-instance-div id="lilac-chaser" >}}
   let jump = 0;
