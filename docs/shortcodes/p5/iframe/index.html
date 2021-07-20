@@ -1,0 +1,159 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="p5 iframe shortcodes embed p5.js code within an iframe element. There are two p5 iframe shortcodes: p5-iframe and p5-global-iframe.
+p5-iframe #  {{< p5-iframe ver=&#34;1.4.0&#34; sketch=&#34;/path/to/sketch.js&#34; lib1=&#34;https://cdntolib1/lib1.js&#34; width=&#34;800&#34; height=&#34;600&#34; >}} All parameters are optional but sketch. Default values are shown in the above snippet but for libs*. Up to lib5 libs may be specified.
+Color relativity #  Look at this brief explanation about what color relativity is.
+p5-iframe markdown {{< p5-iframe sketch=&#34;/hugo-vc/sketches/colors."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="p5 iframe shortcodes embed p5.js code within an iframe element. There are two p5 iframe shortcodes: p5-iframe and p5-global-iframe.
+p5-iframe #  {{< p5-iframe ver=&#34;1.4.0&#34; sketch=&#34;/path/to/sketch.js&#34; lib1=&#34;https://cdntolib1/lib1.js&#34; width=&#34;800&#34; height=&#34;600&#34; >}} All parameters are optional but sketch. Default values are shown in the above snippet but for libs*. Up to lib5 libs may be specified.
+Color relativity #  Look at this brief explanation about what color relativity is.
+p5-iframe markdown {{< p5-iframe sketch=&#34;/hugo-vc/sketches/colors."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/hugo-vc/docs/shortcodes/p5/iframe/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2021-07-18T12:21:09-05:00"><title>Iframe | Visual Computing</title><link rel=manifest href=/hugo-vc/manifest.json><link rel=icon href=/hugo-vc/favicon.png type=image/x-icon><link rel=stylesheet href=/hugo-vc/book.min.44d646274b130ab88a21f0e2d365f1bbb5167a4df0287f8376c42ce0cd7d1919.css integrity="sha256-RNZGJ0sTCriKIfDi02Xxu7UWek3wKH+DdsQs4M19GRk=" crossorigin=anonymous><script defer src=/hugo-vc/flexsearch.min.js></script><script defer src=/hugo-vc/en.search.min.86c04ee16d3918b9a3a5e123cd974aa0c7723c6a7b094c0ecb7bf95727cce64a.js integrity="sha256-hsBO4W05GLmjpeEjzZdKoMdyPGp7CUwOy3v5VyfM5ko=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/hugo-vc/><span>Visual Computing</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/buttons/>Buttons</a></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/columns/>Columns</a></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/details/>Details</a></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/expand/>Expand</a></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/hints/>Hints</a></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/katex/>Katex</a></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/mermaid/>Mermaid</a></li><li><input type=checkbox id=section-ec67a64aba70b9df3d2a9acd6c92e3bc class=toggle checked>
+<label for=section-ec67a64aba70b9df3d2a9acd6c92e3bc class="flex justify-between"><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/p5/>P5</a></label><ul><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/p5/div/>Div</a></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/p5/iframe/ class=active>Iframe</a></li></ul></li><li><a href=https://visualcomputing.github.io/hugo-vc/docs/shortcodes/tabs/>Tabs</a></li></ul></li></ul><ul><li><a href=/hugo-vc/posts/>Blog</a></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/hugo-vc/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Iframe</strong>
+<label for=toc-control><img src=/hugo-vc/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#p5-iframe>p5-iframe</a><ul><li><a href=#color-relativity>Color relativity</a></li><li><a href=#everything-is-ॐ>Everything is ॐ</a></li><li><a href=#depth-map>Depth map</a></li></ul></li><li><a href=#p5-global-iframe>p5-global-iframe</a><ul><li><a href=#breathing-square>Breathing square</a></li></ul></li></ul></nav></aside></header><article class=markdown><p>p5 <code>iframe</code> <a href=https://gohugo.io/content-management/shortcodes/>shortcodes</a> embed <a href=https://p5js.org/>p5.js</a> code within an <a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe>iframe element</a>. There are two p5 <code>iframe</code> shortcodes: <a href=#p5-iframe>p5-iframe</a> and <a href=#p5-global-iframe>p5-global-iframe</a>.</p><h1 id=p5-iframe>p5-iframe
+<a class=anchor href=#p5-iframe>#</a></h1><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>p5-iframe</span> <span style=color:#a6e22e>ver</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1.4.0&#34;</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/path/to/sketch.js&#34;</span> <span style=color:#a6e22e>lib1</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdntolib1/lib1.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;800&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;600&#34;</span> &gt;}}
+</code></pre></div><p>All parameters are optional but <code>sketch</code>. Default values are shown in the above snippet but for <code>libs*</code>. Up to <code>lib5</code> libs may be specified.</p><h2 id=color-relativity>Color relativity
+<a class=anchor href=#color-relativity>#</a></h2><p>Look at this <a href=https://p5js.org/examples/color-relativity.html>brief explanation</a> about what color relativity is.</p><details><summary>p5-iframe markdown</summary><div class=markdown-inner><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>p5-iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/hugo-vc/sketches/colors.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;725&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;425</span> &gt;}}
+</code></pre></div></div></details><iframe id=colors style=width:725px;height:425px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/hugo-vc/sketches/colors.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><h2 id=everything-is-ॐ>Everything is ॐ
+<a class=anchor href=#everything-is-%e0%a5%90>#</a></h2><p><a href=https://en.wikipedia.org/wiki/Om>ॐ</a></p><details><summary>p5-iframe markdown</summary><div class=markdown-inner><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>p5-iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/hugo-vc/sketches/photomosaic.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> &gt;}}
+</code></pre></div></div></details><iframe id=photomosaic style=width:625px;height:625px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/hugo-vc/sketches/photomosaic.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><h2 id=depth-map>Depth map
+<a class=anchor href=#depth-map>#</a></h2><p>Look for some <a href=https://en.wikipedia.org/wiki/Depth_map>depthmap</a> usecases.</p><details><summary>p5-iframe markdown</summary><div class=markdown-inner><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>p5-iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/hugo-vc/sketches/depthmap.js&#34;</span> <span style=color:#a6e22e>lib1</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;725&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> &gt;}}
+</code></pre></div></div></details><iframe id=depthmap style=width:725px;height:625px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js></script>
+             <script src=https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js></script> 
+            
+            
+            
+            
+            <script src=/hugo-vc/sketches/depthmap.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><h1 id=p5-global-iframe>p5-global-iframe
+<a class=anchor href=#p5-global-iframe>#</a></h1><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>p5-global-iframe</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;sketchid&#34;</span> <span style=color:#a6e22e>ver</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;1.4.0&#34;</span> <span style=color:#a6e22e>lib1</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdntolib1/lib1.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;800&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;600&#34;</span> &gt;}}
+  // inline sketch code
+{{&lt; /<span style=color:#f92672>p5-global-iframe</span> &gt;}}
+</code></pre></div><blockquote class="book-hint warning">Note that the inline <code>sketch</code> should be coded in <a href=https://github.com/processing/p5.js/wiki/Global-and-instance-mode>p5 global mode</a> syntax.</blockquote><p>All parameters are optional but <code>id</code>. Default values are shown in the above snippet but for <code>libs*</code>. Up to <code>lib5</code> libs may be specified.</p><h2 id=breathing-square>Breathing square
+<a class=anchor href=#breathing-square>#</a></h2><p>Look at <a href=https://michaelbach.de/ot/mot-breathingSquare/>this reference</a> for an explanation and further parameterization of the illusion.</p><details><summary>p5-global-iframe markdown</summary><div class=markdown-inner><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{{<span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p5</span><span style=color:#f92672>-</span><span style=color:#a6e22e>global</span><span style=color:#f92672>-</span><span style=color:#a6e22e>iframe</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;breath&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#f92672>&gt;</span>}}
+  <span style=color:#75715e>// Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>angle</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>speed</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.06</span>;
+
+  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+    <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>600</span>, <span style=color:#ae81ff>600</span>);
+  }
+
+  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+    <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>255</span>);
+    <span style=color:#a6e22e>rotateSquare</span>();
+    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>mouseIsPressed</span>) {
+      <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0</span>);
+      <span style=color:#a6e22e>stroke</span>(<span style=color:#ae81ff>0</span>);
+      <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>140</span>, <span style=color:#ae81ff>0</span>);
+      <span style=color:#a6e22e>rect</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>281</span>, <span style=color:#ae81ff>281</span>);
+      <span style=color:#a6e22e>rect</span>(<span style=color:#ae81ff>318</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>281</span>, <span style=color:#ae81ff>281</span>);
+      <span style=color:#a6e22e>rect</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>318</span>, <span style=color:#ae81ff>281</span>, <span style=color:#ae81ff>281</span>);
+      <span style=color:#a6e22e>rect</span>(<span style=color:#ae81ff>318</span>, <span style=color:#ae81ff>318</span>, <span style=color:#ae81ff>281</span>, <span style=color:#ae81ff>281</span>);
+    }
+  }
+
+  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>rotateSquare</span>() {
+    <span style=color:#a6e22e>push</span>();
+    <span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>speed</span>;
+    <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0</span>);
+    <span style=color:#a6e22e>stroke</span>(<span style=color:#ae81ff>0</span>);
+    <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>);
+    <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>width</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>, <span style=color:#a6e22e>height</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>);
+    <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>angle</span>);
+    <span style=color:#a6e22e>rect</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>187.5</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>187.5</span>, <span style=color:#ae81ff>375</span>, <span style=color:#ae81ff>375</span>);
+    <span style=color:#a6e22e>pop</span>();
+  }
+{{<span style=color:#f92672>&lt;</span> <span style=color:#960050;background-color:#1e0010>/p5-global-iframe &gt;}}</span>
+</code></pre></div></div></details><iframe id=breath style=width:625px;height:625px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script>
+              
+  let angle = 0;
+  let speed = 0.06;
+
+  function setup() {
+    createCanvas(600, 600);
+  }
+
+  function draw() {
+    background(255, 255, 255);
+    rotateSquare();
+    if (!mouseIsPressed) {
+      strokeWeight(0);
+      stroke(0);
+      fill(255, 140, 0);
+      rect(0, 0, 281, 281);
+      rect(318, 0, 281, 281);
+      rect(0, 318, 281, 281);
+      rect(318, 318, 281, 281);
+    }
+  }
+
+  function rotateSquare() {
+    push();
+    angle += speed;
+    strokeWeight(0);
+    stroke(0);
+    fill(0, 0, 255);
+    translate(width / 2, height / 2);
+    rotate(angle);
+    rect(-187.5, -187.5, 375, 375);
+    pop();
+  }
+
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/hugo-vc/commit/a15970b7db8a32e9f1e219635b72fdd74c11d921 title="Last modified by nakednous | July 18, 2021" target=_blank rel=noopener><img src=/hugo-vc/svg/calendar.svg class=book-icon alt=Calendar>
+<span>July 18, 2021</span></a></div></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#p5-iframe>p5-iframe</a><ul><li><a href=#color-relativity>Color relativity</a></li><li><a href=#everything-is-ॐ>Everything is ॐ</a></li><li><a href=#depth-map>Depth map</a></li></ul></li><li><a href=#p5-global-iframe>p5-global-iframe</a><ul><li><a href=#breathing-square>Breathing square</a></li></ul></li></ul></nav></div></aside></main></body></html>
