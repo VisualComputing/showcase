@@ -147,3 +147,60 @@ Note that `p5` should be the name to be used for the sketch object variable.
     p5.pop();
   }
 {{< /p5-instance-div >}}
+
+## Video on canvas
+
+Adapted from [here](https://p5js.org/examples/dom-video-canvas.html). Don't forget to checkout also the [video on dom](https://p5js.org/examples/dom-video.html) example.
+
+{{< details title="p5-instance-div markdown" open=false >}}
+```js
+{{</* p5-instance-div id="video" >}}
+  let fingers;
+
+  p5.setup = function() {
+    p5.createCanvas(710, 400);
+    // specify multiple formats for different browsers
+    fingers = p5.createVideo(['/vc/sketches/fingers.mov', '/vc/sketches/fingers.webm']);
+    fingers.hide(); // by default video shows up in separate dom
+                    // element. hide it and draw it to the canvas instead    
+  };
+
+  p5.draw = function() {
+    p5.background(150);
+    p5.image(fingers, 10, 10); // draw the video frame to canvas
+    p5.filter(p5.GRAY);
+    p5.image(fingers, 150, 150); // draw a second copy to canvas
+  };
+
+  p5.mousePressed = function() {
+    fingers.loop(); // set the video to loop and start playing  
+  }
+{{< /p5-instance-div */>}}
+```
+{{< hint warning >}}
+Note that `p5` should be the name to be used for the sketch object variable.
+{{< /hint >}}
+{{< /details >}}
+
+{{< p5-instance-div id="video" >}}
+  let fingers;
+
+  p5.setup = function() {
+    p5.createCanvas(710, 400);
+    // specify multiple formats for different browsers
+    fingers = p5.createVideo(['/vc/sketches/fingers.mov', '/vc/sketches/fingers.webm']);
+    fingers.hide(); // by default video shows up in separate dom
+                    // element. hide it and draw it to the canvas instead    
+  };
+
+  p5.draw = function() {
+    p5.background(150);
+    p5.image(fingers, 10, 10); // draw the video frame to canvas
+    p5.filter(p5.GRAY);
+    p5.image(fingers, 150, 150); // draw a second copy to canvas
+  };
+
+  p5.mousePressed = function() {
+    fingers.loop(); // set the video to loop and start playing  
+  }
+{{< /p5-instance-div >}}
