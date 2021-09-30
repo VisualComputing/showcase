@@ -6,7 +6,8 @@
 p5-iframe #  {{< p5-iframe ver=&#34;1.4.0&#34; sketch=&#34;/path/to/sketch.js&#34; lib1=&#34;https://cdntolib1/lib1.js&#34; width=&#34;800&#34; height=&#34;600&#34; >}} All parameters are optional but sketch. Default values are shown in the above snippet but for libs*. Up to lib5 libs may be specified.
 Color relativity #  Look at this brief explanation about what color relativity is.
 p5-iframe markdown {{< p5-iframe sketch=&#34;/vc/sketches/colors.">
-<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta name=theme-color content="#FFFFFF">
+<meta name=color-scheme content="light dark"><meta property="og:title" content>
 <meta property="og:description" content="p5 iframe shortcodes embed p5.js code within an iframe element. There are two p5 iframe shortcodes: p5-iframe and p5-global-iframe.
 p5-iframe #  {{< p5-iframe ver=&#34;1.4.0&#34; sketch=&#34;/path/to/sketch.js&#34; lib1=&#34;https://cdntolib1/lib1.js&#34; width=&#34;800&#34; height=&#34;600&#34; >}} All parameters are optional but sketch. Default values are shown in the above snippet but for libs*. Up to lib5 libs may be specified.
 Color relativity #  Look at this brief explanation about what color relativity is.
@@ -17,9 +18,9 @@ p5-iframe markdown {{< p5-iframe sketch=&#34;/vc/sketches/colors.">
 <title>Iframe | Visual Computing</title>
 <link rel=manifest href=/vc/manifest.json>
 <link rel=icon href=/vc/favicon.png type=image/x-icon>
-<link rel=stylesheet href=/vc/book.min.44d646274b130ab88a21f0e2d365f1bbb5167a4df0287f8376c42ce0cd7d1919.css integrity="sha256-RNZGJ0sTCriKIfDi02Xxu7UWek3wKH+DdsQs4M19GRk=" crossorigin=anonymous>
+<link rel=stylesheet href=/vc/book.min.89a77f7e702a8626749b948bbfb01109823daf6c1246ca407d1378833494c402.css integrity="sha256-iad/fnAqhiZ0m5SLv7ARCYI9r2wSRspAfRN4gzSUxAI=" crossorigin=anonymous>
 <script defer src=/vc/flexsearch.min.js></script>
-<script defer src=/vc/en.search.min.ec4be9c6e2186242371d65e3f3afaf48111e240553cc9ac8e02cbff6232cd33e.js integrity="sha256-7EvpxuIYYkI3HWXj86+vSBEeJAVTzJrI4Cy/9iMs0z4=" crossorigin=anonymous></script>
+<script defer src=/vc/en.search.min.0072ca72f0692668db486d390aecc0568405fa9db9f85e4dee49f217847dd671.js integrity="sha256-AHLKcvBpJmjbSG05CuzAVoQF+p25+F5N7knyF4R91nE=" crossorigin=anonymous></script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -29,7 +30,7 @@ p5-iframe markdown {{< p5-iframe sketch=&#34;/vc/sketches/colors.">
 <div class=book-menu-content>
 <nav>
 <h2 class=book-brand>
-<a href=/vc/><span>Visual Computing</span>
+<a class="flex align-center" href=/vc/><span>Visual Computing</span>
 </a>
 </h2>
 <div class=book-search>
@@ -134,8 +135,7 @@ Color relativity
 <a class=anchor href=#color-relativity>#</a>
 </h2>
 <p>Look at this <a href=https://p5js.org/examples/color-relativity.html>brief explanation</a> about what color relativity is.</p>
-<details>
-<summary>p5-iframe markdown</summary>
+<details><summary>p5-iframe markdown</summary>
 <div class=markdown-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>p5-iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/vc/sketches/colors.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;725&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;425</span> &gt;}}
 </code></pre></div>
@@ -163,8 +163,7 @@ Depth map
 <a class=anchor href=#depth-map>#</a>
 </h2>
 <p>Look for some <a href=https://en.wikipedia.org/wiki/Depth_map>depthmap</a> usecases.</p>
-<details>
-<summary>p5-iframe markdown</summary>
+<details><summary>p5-iframe markdown</summary>
 <div class=markdown-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>p5-iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/vc/sketches/depthmap.js&#34;</span> <span style=color:#a6e22e>lib1</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;725&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> &gt;}}
 </code></pre></div>
@@ -203,8 +202,7 @@ Breathing square
 <a class=anchor href=#breathing-square>#</a>
 </h2>
 <p>Look at <a href=https://michaelbach.de/ot/mot-breathingSquare/>this reference</a> for an explanation and further parameterization of the illusion.</p>
-<details>
-<summary>p5-global-iframe markdown</summary>
+<details><summary>p5-global-iframe markdown</summary>
 <div class=markdown-inner>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{{<span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p5</span><span style=color:#f92672>-</span><span style=color:#a6e22e>global</span><span style=color:#f92672>-</span><span style=color:#a6e22e>iframe</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;breath&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#f92672>&gt;</span>}}
   <span style=color:#75715e>// Coded as `global mode` of [this](https://github.com/VisualComputing/Cognitive/blob/gh-pages/sketches/rotateSquare.js)
