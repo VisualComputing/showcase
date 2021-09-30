@@ -1,14 +1,14 @@
 {
   "name": "Visual Computing",
   "short_name": "Visual Computing",
-  "start_url": "/hugo-vc/",
-  "scope": "/hugo-vc/",
+  "start_url": "/vc/",
+  "scope": "/vc/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/hugo-vc/favicon.svg",
+      "src": "/vc/favicon.svg",
       "sizes": "512x512"
     }
   ]
