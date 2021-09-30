@@ -14,13 +14,13 @@ Scintillating grid #  Look at this and also this among many more references ther
 p5-div markdown {{< p5-div sketch=&#34;/vc/sketches/scintillating.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://visualcomputing.github.io/vc/docs/shortcodes/p5/div/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-29T19:44:08-05:00">
+<meta property="article:modified_time" content="2021-09-30T08:16:31-05:00">
 <title>Div | Visual Computing</title>
 <link rel=manifest href=/vc/manifest.json>
 <link rel=icon href=/vc/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/vc/book.min.89a77f7e702a8626749b948bbfb01109823daf6c1246ca407d1378833494c402.css integrity="sha256-iad/fnAqhiZ0m5SLv7ARCYI9r2wSRspAfRN4gzSUxAI=" crossorigin=anonymous>
 <script defer src=/vc/flexsearch.min.js></script>
-<script defer src=/vc/en.search.min.0072ca72f0692668db486d390aecc0568405fa9db9f85e4dee49f217847dd671.js integrity="sha256-AHLKcvBpJmjbSG05CuzAVoQF+p25+F5N7knyF4R91nE=" crossorigin=anonymous></script>
+<script defer src=/vc/en.search.min.660266ce5cadba1dd47e273b59ade25ad099fdb7ec5d6b388caa338bbacd7281.js integrity="sha256-ZgJmzlytuh3Ufic7Wa3iWtCZ/bfsXWs4jKozi7rNcoE=" crossorigin=anonymous></script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -116,6 +116,7 @@ Blog
 <li><a href=#p5-instance-div>p5-instance-div</a>
 <ul>
 <li><a href=#lilac-chaser>Lilac chaser</a></li>
+<li><a href=#video-on-canvas>Video on canvas</a></li>
 </ul>
 </li>
 </ul>
@@ -222,10 +223,48 @@ Note that <code>p5</code> should be the name to be used for the sketch object va
 <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js></script>
 <div id=pacman></div>
 <script>new p5(a=>{let b=0,d=0;a.setup=function(){a.createCanvas(380,380),a.frameRate(7)};function c(f,g,d){var c,e,b;a.push(),a.noStroke(),c=.4,e=3/d;for(b=d;b>0;b-=1.5)c<5&&(c+=e,a.fill(255,20,180,c)),a.ellipse(f,g,b,b);a.pop()}a.draw=function(){var f,e,d;a.background(200),f=12,e=360/f,a.push(),a.translate(a.width/2,a.height/2);for(d=0;d<360;d=d+e)d!=b&&(a.push(),a.rotate(a.radians(d)),c(120,0,60),a.pop());a.mouseIsPressed||(b=(b+e)%360),a.push(),a.strokeWeight(1.5),a.line(-7,0,7,0),a.line(0,-7,0,7),a.pop(),a.pop()}},"pacman")</script>
+<h2 id=video-on-canvas>
+Video on canvas
+<a class=anchor href=#video-on-canvas>#</a>
+</h2>
+<p>Adapted from <a href=https://p5js.org/examples/dom-video-canvas.html>here</a>. Don&rsquo;t forget to checkout also the <a href=https://p5js.org/examples/dom-video.html>video on dom</a> example.</p>
+<details><summary>p5-instance-div markdown</summary>
+<div class=markdown-inner>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{{<span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p5</span><span style=color:#f92672>-</span><span style=color:#a6e22e>instance</span><span style=color:#f92672>-</span><span style=color:#a6e22e>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;video&#34;</span> <span style=color:#f92672>&gt;</span>}}
+  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>fingers</span>;
+
+  <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>setup</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+    <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>710</span>, <span style=color:#ae81ff>400</span>);
+    <span style=color:#75715e>// specify multiple formats for different browsers
+</span><span style=color:#75715e></span>    <span style=color:#a6e22e>fingers</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>createVideo</span>([<span style=color:#e6db74>&#39;/vc/sketches/fingers.mov&#39;</span>, <span style=color:#e6db74>&#39;/vc/sketches/fingers.webm&#39;</span>]);
+    <span style=color:#a6e22e>fingers</span>.<span style=color:#a6e22e>hide</span>(); <span style=color:#75715e>// by default video shows up in separate dom
+</span><span style=color:#75715e></span>                    <span style=color:#75715e>// element. hide it and draw it to the canvas instead    
+</span><span style=color:#75715e></span>  };
+
+  <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>draw</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+    <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>150</span>);
+    <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>image</span>(<span style=color:#a6e22e>fingers</span>, <span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>10</span>); <span style=color:#75715e>// draw the video frame to canvas
+</span><span style=color:#75715e></span>    <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>GRAY</span>);
+    <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>image</span>(<span style=color:#a6e22e>fingers</span>, <span style=color:#ae81ff>150</span>, <span style=color:#ae81ff>150</span>); <span style=color:#75715e>// draw a second copy to canvas
+</span><span style=color:#75715e></span>  };
+
+  <span style=color:#a6e22e>p5</span>.<span style=color:#a6e22e>mousePressed</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>() {
+    <span style=color:#a6e22e>fingers</span>.<span style=color:#a6e22e>loop</span>(); <span style=color:#75715e>// set the video to loop and start playing  
+</span><span style=color:#75715e></span>  }
+{{<span style=color:#f92672>&lt;</span> <span style=color:#960050;background-color:#1e0010>/p5-instance-div &gt;}}</span>
+</code></pre></div><blockquote class="book-hint warning">
+Note that <code>p5</code> should be the name to be used for the sketch object variable.
+</blockquote>
+</div>
+</details>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js></script>
+<div id=video></div>
+<script>new p5(a=>{let b;a.setup=function(){a.createCanvas(710,400),b=a.createVideo(['/vc/sketches/fingers.mov','/vc/sketches/fingers.webm']),b.hide()},a.draw=function(){a.background(150),a.image(b,10,10),a.filter(a.GRAY),a.image(b,150,150)},a.mousePressed=function(){b.loop()}},"video")</script>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/visualcomputing/vc/commit/4c89b9cae9545fcc2ed02a6986ee3e6b5faa488e title="Last modified by nakednous | September 30, 2021" target=_blank rel=noopener>
+<div><a class="flex align-center" href=https://github.com/visualcomputing/vc/commit/0686700ebd9bba5c10a7d38120255330ad8c284f title="Last modified by nakednous | September 30, 2021" target=_blank rel=noopener>
 <img src=/vc/svg/calendar.svg class=book-icon alt=Calendar>
 <span>September 30, 2021</span>
 </a>
@@ -249,6 +288,7 @@ Note that <code>p5</code> should be the name to be used for the sketch object va
 <li><a href=#p5-instance-div>p5-instance-div</a>
 <ul>
 <li><a href=#lilac-chaser>Lilac chaser</a></li>
+<li><a href=#video-on-canvas>Video on canvas</a></li>
 </ul>
 </li>
 </ul>
