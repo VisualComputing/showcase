@@ -32,6 +32,18 @@ Look for some [depthmap](https://en.wikipedia.org/wiki/Depth_map) usecases.
 
 {{< p5-iframe sketch="/vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" >}}
 
+## Sound
+
+Example took from the p5 ml5 library.
+
+{{< details title="p5-iframe markdown" open=false >}}
+```html
+{{</* p5-iframe sketch="/vc/sketches/sound.js" width="225" height="225" */>}}
+```
+{{< /details >}}
+
+{{< p5-iframe sketch="/vc/sketches/sound.js" width="225" height="225" >}}
+
 # p5-global-iframe
 
 ```html
