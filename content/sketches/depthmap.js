@@ -5,7 +5,7 @@ var near, far;
 var easycam;
 
 function preload() {
-  depthShader = loadShader('/hugo-vc/sketches/shader.vert', '/hugo-vc/sketches/depthmap.frag');
+  depthShader = loadShader('/vc/sketches/shader.vert', '/vc/sketches/depthmap.frag');
 }
 
 function setup () {  

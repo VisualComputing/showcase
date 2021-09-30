@@ -14,23 +14,11 @@ Look at this [brief explanation](https://p5js.org/examples/color-relativity.html
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
-{{</* p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425 */>}}
+{{</* p5-iframe sketch="/vc/sketches/colors.js" width="725" height="425 */>}}
 ```
 {{< /details >}}
 
-{{< p5-iframe sketch="/hugo-vc/sketches/colors.js" width="725" height="425" >}}
-
-## Everything is ॐ
-
-[ॐ](https://en.wikipedia.org/wiki/Om)
-
-{{< details title="p5-iframe markdown" open=false >}}
-```html
-{{</* p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" */>}}
-```
-{{< /details >}}
-
-{{< p5-iframe sketch="/hugo-vc/sketches/photomosaic.js" width="625" height="625" >}}
+{{< p5-iframe sketch="/vc/sketches/colors.js" width="725" height="425" >}}
 
 ## Depth map
 
@@ -38,11 +26,11 @@ Look for some [depthmap](https://en.wikipedia.org/wiki/Depth_map) usecases.
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
-{{</* p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
+{{</* p5-iframe sketch="/vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
 ```
 {{< /details >}}
 
-{{< p5-iframe sketch="/hugo-vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" >}}
+{{< p5-iframe sketch="/vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" >}}
 
 # p5-global-iframe
 

@@ -1,4 +1,4 @@
-baseURL = "https://visualcomputing.github.io/hugo-vc"
+baseURL = "https://visualcomputing.github.io/vc"
 languageCode = "en-us"
 title = "Visual Computing"
 theme = 'book'
@@ -22,7 +22,7 @@ enableGitInfo = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/visualcomputing/hugo-vc'
+  BookRepo = 'https://github.com/visualcomputing/vc'
 
   # Configure the date format used on the pages
   # - In git information
