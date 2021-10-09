@@ -3,39 +3,55 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+# Visual Computing Template
 
-{{< columns >}}
-## Astris ipse furtiva
+Welcome to the [UN / DISI](http://www.ingenieria.unal.edu.co/dependencias/departamentos/departamento-de-ingenieria-de-sistemas-e-industrial) _visual computing_ course template site.
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+## Goal
 
-<--->
+To study the process of creation and manipulation of a digital image of a modern visual application, using current hardware.
 
-## Suis quot vota
+## Methodology
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{< /columns >}}
+[Active-learning](https://en.wikipedia.org/wiki/Active_learning) using [free-software](https://en.wikipedia.org/wiki/Free_software) to develop:
 
+* [Slides](https://github.com/orgs/VisualComputing/teams/presentations/repositories).
+* [nub](https://github.com/VisualComputing/nub) and [p5.tree](https://github.com/VisualComputing/p5.tree).
+* [p5.quadrille.js](https://github.com/objetos/p5.quadrille.js).
 
-## Tempora nisi nunc
+## Grading
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
+Workshops [blog posts](https://en.wikipedia.org/wiki/Edublog)-like reports produced with [codedoc](https://codedoc.cc/) and [p5.js](https://p5js.org/) and having a basic research structure:
+  * Problem statement
+  * Background
+  * Code (solution) & results
+  * Conclusions & future work
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
+## Outline
 
-## Locis suis novi cum suoque decidit eadem
+| To read | Subject                                                            | 
+|------------|--------------------------------------------------------------------|
+|            | [Introduction](https://github.com/VisualComputing/Introduction)    |
+|            | [Processing](https://processing.org/) & [p5.js](https://p5js.org/) |
+| [gh-pages](https://pages.github.com/) | [VC Template](https://visualcomputing.github.io/vc/) |
+| [Do we see reality as it is?](http://y2u.be/oYp5XuGYqqY) | [Cognitive](https://github.com/VisualComputing/Cognitive) | 
+| [The barycentric conspiracy](https://fgiesen.wordpress.com/2013/02/06/the-barycentric-conspirac/) | [Rendering & Algorithm visualization](https://github.com/VisualComputing/Rendering) | 
+| [Shaders tutorial](https://processing.org/tutorials/pshader/) | [Fragment Shaders](https://github.com/VisualComputing/FragmentShaders) |
+| [3D Math primer for Graphics and Game Development -- chs. 8 & 9](https://tfetimes.com/wp-content/uploads/2015/04/F.Dunn-I.Parberry-3D-Math-Primer-for-Graphics-and-Game-Development.pdf), [Projection matrix](http://www.songho.ca/opengl/gl_projectionmatrix.html) | [Affine Transformations](https://github.com/VisualComputing/Transformations) |
+| [nub](https://github.com/VisualComputing/nub) | [SceneGraphs](https://github.com/VisualComputing/SceneGraphs) |
+| [A Survey of Interaction Techniques](https://hal.inria.fr/hal-00789413/document) | [Interaction](https://github.com/VisualComputing/Interaction) |
+| [Shaders tutorial](https://processing.org/tutorials/pshader/) | [Vertex Shaders](https://github.com/VisualComputing/VertexShaders) |
+| [Visualizing Data](http://media.espora.org/mgoblin_media/media_entries/1633/Visualizing_Data.pdf), [Network Science -- ch. 2](http://networksciencebook.com/chapter/2) | Data Visualization | 
 
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+## Hacking
+
+Install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
+
+```sh
+$git clone https://github.com/VisualComputing/vc
+$cd vc
+$git submodule update --init --recursive
+$hugo server -D --disableFastRender
+```
+
+Deploy with `$git push` after redefined `baseURL` in `config.toml` which should point to your actual public remote.
