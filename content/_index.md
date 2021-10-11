@@ -38,6 +38,7 @@ Workshops [blog posts](https://en.wikipedia.org/wiki/Edublog)-like reports produ
 | [The barycentric conspiracy](https://fgiesen.wordpress.com/2013/02/06/the-barycentric-conspirac/) | [Rendering & Algorithm visualization](https://github.com/VisualComputing/Rendering) | 
 | [Shaders tutorial](https://processing.org/tutorials/pshader/) | [Fragment Shaders](https://github.com/VisualComputing/FragmentShaders) |
 | [3D Math primer for Graphics and Game Development -- chs. 8 & 9](https://tfetimes.com/wp-content/uploads/2015/04/F.Dunn-I.Parberry-3D-Math-Primer-for-Graphics-and-Game-Development.pdf), [Projection matrix](http://www.songho.ca/opengl/gl_projectionmatrix.html) | [Affine Transformations](https://github.com/VisualComputing/Transformations) |
+| | [spline](https://visualcomputing.github.io/Curves) |
 | [nub](https://github.com/VisualComputing/nub) | [SceneGraphs](https://github.com/VisualComputing/SceneGraphs) |
 | [A Survey of Interaction Techniques](https://hal.inria.fr/hal-00789413/document) | [Interaction](https://github.com/VisualComputing/Interaction) |
 | [Shaders tutorial](https://processing.org/tutorials/pshader/) | [Vertex Shaders](https://github.com/VisualComputing/VertexShaders) |
