@@ -34,7 +34,7 @@ Look for some [depthmap](https://en.wikipedia.org/wiki/Depth_map) usecases.
 
 ## Sound
 
-Example took from the p5 ml5 library.
+Example took from the [p5 examples](https://p5js.org/examples/sound-sound-effect.html).
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
