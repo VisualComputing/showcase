@@ -21,7 +21,7 @@ To study the process of creation and manipulation of a digital image of a modern
 
 ## Grading
 
-Workshops [blog posts](https://en.wikipedia.org/wiki/Edublog)-like reports produced with [codedoc](https://codedoc.cc/) and [p5.js](https://p5js.org/) and having a basic research structure:
+Workshops [blog posts](https://en.wikipedia.org/wiki/Edublog)-like reports produced with [gohugo](https://gohugo.io/) and [p5.js](https://p5js.org/) and having a basic research structure:
   * Problem statement
   * Background
   * Code (solution) & results
