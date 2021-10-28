@@ -1,4 +1,4 @@
-baseURL = "https://github.com/007-team-cv/vc"
+baseURL = "https://007-team-cv.github.io/vc/"
 languageCode = "en-us"
 title = "Visual Computing"
 theme = 'book'
