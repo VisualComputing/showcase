@@ -60,3 +60,11 @@ Deploy with `$git push` after redefined `baseURL` in `config.toml` which should 
 {{< hint info >}}
 The **vc** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones.
 {{< /hint >}}
+
+{{< hint info >}}
+If you forked the repo don't forget to activate the [actions](https://github.com/VisualComputing/vc/actions).
+{{< /hint >}}
+
+{{< hint info >}}
+If you changed the repo named don't forget to update all the js related (both sketches and assets) urls.
+{{< /hint >}}
