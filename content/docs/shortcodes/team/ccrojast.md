@@ -1,6 +1,6 @@
 # Christian Camilo Rojas Tapias 
 
-Soy estudiante de ingenieria de sistemas en la Universidad Nacional, Me gusta el area de computacion visual, y la criptografia. en mis tiempos libres me gusta escuchar musica jugar futbol, o ultimate. 
+Soy estudiante de ingenieria de sistemas en la Universidad Nacional, Me gusta el area de computacion visual, y la criptografia. En mis tiempos libres me gusta escuchar musica jugar futbol, o ultimate. 
 
 # Ilusión de los Pasos
 
