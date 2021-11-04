@@ -66,5 +66,5 @@ If you forked the repo don't forget to activate the [actions](https://github.com
 {{< /hint >}}
 
 {{< hint info >}}
-If you changed the repo named don't forget to update all the js related (both sketches and assets) urls.
+If you changed the repo name don't forget to update all the js related (both sketches and assets) urls.
 {{< /hint >}}

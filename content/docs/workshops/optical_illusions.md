@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Comprender algunos aspectos fundamentales de la [inferencia inconsciente](https://github.com/VisualComputing/Cognitive) de la percepción visual y su aplicación a la computación gráfica.
+Comprender algunos aspectos fundamentales de la [inferencia inconsciente](https://github.com/VisualComputing/Cognitive) de la percepción visual y sus posibles aplicaciones.
 
 ## Tareas
 
