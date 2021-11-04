@@ -10,7 +10,7 @@ Realizar una indagación teórico-práctica de las ilusiones visuales, al menos 
 
 ## Entrega
 
-* Plazo para hacer _push_ del repositorio a github: 10/11/21 y 16/11/21 a las 24h, grupos 2 y 1 respectivamente.
+Plazo para hacer _push_ del repositorio a github: 10/11/21 y 16/11/21 a las 24h, grupos 2 y 1 respectivamente.
 
 ## Protocolo presentaciones
 
