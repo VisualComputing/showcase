@@ -15,14 +15,14 @@ new p5((p) => {
     p.noFill();
     p.strokeWeight(2.5);
     
-    var r1 = 0.62*x/2;
-    var r2 = 0.80*x/2;
+    var r1 = 0.60*x/2;
+    var r2 = 0.82*x/2;
     
     //p.circle(xc,yc,2*r1);
     //p.circle(xc,yc,2*r2);
     
-    var nc1 = 28;
-    var nc2 = 40;
+    var nc1 = 24;
+    var nc2 = 28;
     
     var sqw = 17;
     
@@ -34,21 +34,36 @@ new p5((p) => {
     var rq = sqw/Math.sin(be);
     
     for (var ti=th; ti<=2*Math.PI; ti+=th){
+
+      var sqcx = xc+r1*Math.cos(ti); var sqcy = yc+r1*Math.sin(ti);
+
       var psx = [xc+(r1+sqw)*Math.cos(ti),  xc+r1*Math.cos(ti), xc+rp*Math.cos(ti+al), xc+rq*Math.cos(ti+be)];
       
       var psy = [yc+(r1+sqw)*Math.sin(ti),  yc+r1*Math.sin(ti), yc+rp*Math.sin(ti+al), yc+rq*Math.sin(ti+be)];
-      
-      p.stroke(110);
-      
-      p.line(psx[0], psy[0], psx[1], psy[1]);
-      
-      p.line(psx[1], psy[1], psx[2], psy[2]);
+
+      var psxp = [];
+      var psyp = [];
+
+      const ga = Math.random()*(Math.PI/6) - Math.PI/12;
+
+      for (var i=0; i<4; i++) {
+        psxp[i] = (psx[i] - sqcx)*Math.cos(ga)-(psy[i] - sqcy)*Math.sin(ga)+sqcx;
+        psyp[i] = (psx[i] - sqcx)*Math.sin(ga)+(psy[i] - sqcy)*Math.cos(ga)+sqcy;
+      }
       
       p.stroke(220);
       
-      p.line(psx[2], psy[2], psx[3], psy[3]);
+      p.line(psxp[0], psyp[0], psxp[1], psyp[1]);
+
+      p.stroke(110);
       
-      p.line(psx[3], psy[3], psx[0], psy[0]);
+      p.line(psxp[1], psyp[1], psxp[2], psyp[2]);
+      
+      p.line(psxp[2], psyp[2], psxp[3], psyp[3]);
+
+      p.stroke(220);
+      
+      p.line(psxp[3], psyp[3], psxp[0], psyp[0]);
       
     }
     
@@ -60,24 +75,37 @@ new p5((p) => {
     rq = sqw/Math.sin(be);
     
     for (var ti=th; ti<=2*Math.PI; ti+=th){
+
+      var sqcx = xc+r2*Math.cos(ti); var sqcy = yc+r2*Math.sin(ti);
+
       var psx = [xc+(r2+sqw)*Math.cos(ti),  xc+r2*Math.cos(ti), xc+rp*Math.cos(ti+al), xc+rq*Math.cos(ti+be)];
       
       var psy = [yc+(r2+sqw)*Math.sin(ti),  yc+r2*Math.sin(ti), yc+rp*Math.sin(ti+al), yc+rq*Math.sin(ti+be)];
-      
-      p.stroke(220);
-      
-      p.line(psx[0], psy[0], psx[1], psy[1]);
 
+      var psxp = [];
+      var psyp = [];
+
+      const ga = Math.random()*(Math.PI/6) - Math.PI/12;
+
+      for (var i=0; i<4; i++) {
+        psxp[i] = (psx[i] - sqcx)*Math.cos(ga)-(psy[i] - sqcy)*Math.sin(ga)+sqcx;
+        psyp[i] = (psx[i] - sqcx)*Math.sin(ga)+(psy[i] - sqcy)*Math.cos(ga)+sqcy;
+      }
+      
       p.stroke(110);
       
-      p.line(psx[1], psy[1], psx[2], psy[2]);
+      p.line(psxp[0], psyp[0], psxp[1], psyp[1]);
       
-      p.line(psx[2], psy[2], psx[3], psy[3]);
+      p.line(psxp[1], psyp[1], psxp[2], psyp[2]);
 
       p.stroke(220);
       
-      p.line(psx[3], psy[3], psx[0], psy[0]);
+      p.line(psxp[2], psyp[2], psxp[3], psyp[3]);
+      
+      p.line(psxp[3], psyp[3], psxp[0], psyp[0]);
       
     }
+
+    noLoop();
   };
-}, "pinna")
+}, "pinna-messed-up")

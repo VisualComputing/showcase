@@ -10,6 +10,10 @@ The illusion shows a rotating motion effect. Each square is deliniated by two wh
 
 When we invert the polarity (of the vertex) the illusion reverses.
 
+{{< p5-div sketch="/vc/sketches/pinna-inverted.js" >}}
+
 One can also missalign the squares without affecting the illusion as long as the general position is kept.
+
+{{< p5-div sketch="/vc/sketches/pinna-messed-up.js" >}}
 
 ## Pinna's intertwining illusion

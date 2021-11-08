@@ -38,15 +38,18 @@ new p5((p) => {
       
       var psy = [yc+(r1+sqw)*Math.sin(ti),  yc+r1*Math.sin(ti), yc+rp*Math.sin(ti+al), yc+rq*Math.sin(ti+be)];
       
-      p.stroke(110);
-      
-      p.line(psx[0], psy[0], psx[1], psy[1]);
-      
-      p.line(psx[1], psy[1], psx[2], psy[2]);
       
       p.stroke(220);
       
+      p.line(psx[0], psy[0], psx[1], psy[1]);
+
+      p.stroke(110);
+      
+      p.line(psx[1], psy[1], psx[2], psy[2]);
+      
       p.line(psx[2], psy[2], psx[3], psy[3]);
+
+      p.stroke(220);
       
       p.line(psx[3], psy[3], psx[0], psy[0]);
       
@@ -64,20 +67,18 @@ new p5((p) => {
       
       var psy = [yc+(r2+sqw)*Math.sin(ti),  yc+r2*Math.sin(ti), yc+rp*Math.sin(ti+al), yc+rq*Math.sin(ti+be)];
       
-      p.stroke(220);
+      p.stroke(110);
       
       p.line(psx[0], psy[0], psx[1], psy[1]);
-
-      p.stroke(110);
       
       p.line(psx[1], psy[1], psx[2], psy[2]);
       
-      p.line(psx[2], psy[2], psx[3], psy[3]);
-
       p.stroke(220);
+      
+      p.line(psx[2], psy[2], psx[3], psy[3]);
       
       p.line(psx[3], psy[3], psx[0], psy[0]);
       
     }
   };
-}, "pinna")
+}, "pinna-inverted")
