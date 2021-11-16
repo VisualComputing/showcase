@@ -20,13 +20,30 @@ He had also a strong interest in optical illusions. In 1860, inspired by a cloth
 
 ![Johann_Zöllner](https://github.com/vc-project/vc/blob/alejo/content/sketches/foto_zollner.jpg)
 
+
 ## Explanation
-A very supported hypothesis on the working of this illusion states that our perceptual systems have a tendency to expand acute angles. Here the short lines that intersect the long lines cause the visual system to enhance the orientation contrast between the long and the short lines This also produces the illusion that parallel lines are closer at some parts that on others.
+A very supported hypothesis on the working of this illusion states that our perceptual systems have a tendency to expand acute angles. Here the short lines that intersect the long lines cause the visual system to enhance the orientation contrast between the long and the short lines. This also produces the illusion that parallel lines are closer at some parts that on others. The expanded acute angle effect can be easily spotted in the following image:
+
 
 ![ZöllnerVariant](https://github.com/vc-project/vc/blob/alejo/content/sketches/Zollnervariant.jpg)
+
+
+
+## Philosofical aspects
+Several philosofical problems can be associated to the field of optical illusions. Zöllner illusion is a classical illusion frequently cited in diverse philosofical debates on the nature of experience.
+
+A first issue is about whether we are directly acquainted with the world or whether we are only acquainted with mental representations of it. A second issue states that it would seem to be that one can know that the lines are parallel but at the same time one experiences them as unparallel. This fact can help prove wrong the idea that perceptual states are based on believing.
+
+
+## Possible uses and applications
+* Research how the human visual system works.
+* Attention draw in an intended direction for user interfaces or advertising.
+* Artistic effects in Videogame design for genres such as maze games.
+
 
 
 **References:**
 
 * https://www.illusionsindex.org/ir/zoellner-illusion
 * https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-30400-7_9164
+* https://www.atlantis-press.com/proceedings/icmmcce-17/25882507
