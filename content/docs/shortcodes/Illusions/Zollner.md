@@ -17,6 +17,9 @@ Johann Karl Friedrich Zöllner (8 November 1834, Berlin – 25 April 1882, Leipz
 He had also a strong interest in optical illusions. In 1860, inspired by a cloth pattern that he observed in his father’s factory, he created the illusion and published it in the journal Annalen der Physik.
 
 ![Johann_Zöllner](https://github.com/vc-project/vc/blob/alejo/content/sketches/foto_zollner.jpg)
+![Johann_Zöllner](https://github.com/vc-project/vc/blob/main/content/sketches/foto_zollner.jpg)
+![Johann_Zöllner](/vc/blob/main/content/sketches/foto_zollner.jpg)
+
 
 
 ## Explanation
