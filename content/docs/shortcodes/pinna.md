@@ -32,8 +32,6 @@ As applications one can see how in certain 3D environments, for example, in vide
 
 ## Simón Aparicio Bocanegra
 
-![Simón Aparicio Bocanegra](images/simon.jpg "Simón Aparicio Bocanegra")
-
-<img href="/resources/images/simon.jpg" alt="Simón Aparicio Bocanegra" style="height: 100px; width:100px; border-radius:50%;"/>
+<img src="https://github.com/vc-project/vc/resources/images/simon.jpg" alt="Simón Aparicio Bocanegra" style="height: 100px; width:100px; border-radius:50%;"/>
 
 Estudiante de ingeniería de sistemas en octava matricula, interesado en el desarrollo de software, enfocado en backend. Estudiante de alemán, lector y nadador.
