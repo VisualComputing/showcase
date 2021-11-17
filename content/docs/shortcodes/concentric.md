@@ -9,4 +9,4 @@ A possible appplication of this effect can be, in addition to sam the visual sys
 ## Bibliography
 1. https://www.redalyc.org/pdf/462/46247652006.pdf
 
-{{< p5-div sketch="/vc/sketches/rectangleIlusion.js" >}}
+{{< p5-iframe sketch="/vc/sketches/rectangleIlusion.js" width="650" height="650" >}}
