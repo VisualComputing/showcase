@@ -8,8 +8,6 @@ The illusion consists of a series of parallel, diagonal lines which are crossed 
 
 {{< p5-iframe sketch="/vc/sketches/zollner.js"  width="425" height="425" >}}
 
-{{< p5-iframe sketch="https://github.com/vc-project/vc/blob/alejo/content/sketches/zollner.js"  width="425" height="425" >}}
-
 zollner.js
 
 
