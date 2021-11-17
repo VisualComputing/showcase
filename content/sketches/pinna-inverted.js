@@ -24,7 +24,7 @@ new p5((p) => {
     var nc1 = 28;
     var nc2 = 40;
     
-    var sqw = 17;
+    var sqw = 18;
     
     var al = Math.atan(sqw/r1);
     var be = Math.atan(sqw/(r1+sqw));

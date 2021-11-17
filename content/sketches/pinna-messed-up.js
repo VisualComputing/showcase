@@ -24,7 +24,7 @@ new p5((p) => {
     var nc1 = 24;
     var nc2 = 28;
     
-    var sqw = 17;
+    var sqw = 18;
     
     var al = Math.atan(sqw/r1);
     var be = Math.atan(sqw/(r1+sqw));
@@ -35,7 +35,9 @@ new p5((p) => {
     
     for (var ti=th; ti<=2*Math.PI; ti+=th){
 
-      var sqcx = xc+r1*Math.cos(ti); var sqcy = yc+r1*Math.sin(ti);
+      if (Math.random()<0.1) continue;
+
+      var sqcx = xc+r1*Math.cos(ti)+Math.random()*xc/10-xc/5; var sqcy = yc+r1*Math.sin(ti)+Math.random()*xc/5-xc/10;
 
       var psx = [xc+(r1+sqw)*Math.cos(ti),  xc+r1*Math.cos(ti), xc+rp*Math.cos(ti+al), xc+rq*Math.cos(ti+be)];
       
@@ -75,6 +77,8 @@ new p5((p) => {
     rq = sqw/Math.sin(be);
     
     for (var ti=th; ti<=2*Math.PI; ti+=th){
+
+      if (Math.random()<0.1) continue;
 
       var sqcx = xc+r2*Math.cos(ti); var sqcy = yc+r2*Math.sin(ti);
 

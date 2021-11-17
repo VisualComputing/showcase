@@ -1,6 +1,12 @@
 # Pinna illusions
 
-Pinna illusions encomposses various optical ilusions discovered by Dr. Baingio Pinna. We are gonna focus here on just two of them, composed by identical squares positioned in circular orbits around the center of the image. The position and shading of the squares creates in the first one the illusion of movement and in the second one the perception of spiraling orbits.
+Pinna illusions encomposses various optical ilusions discovered by Dr. Baingio Pinna. We are gonna focus here on just two of them, composed by identical squares positioned in circular orbits around the center of the image. The position and shading of the squares creates the perception of spiraling orbits in the first one and in the second one the illusion of movement.
+
+## Pinna's intertwining illusion
+
+One can see an array of squares in a seemingly spiraling position. Nonetheless, the ilussion is made of concentric circles of slightly rotated squares.
+
+{{< p5-div sketch="/vc/sketches/pinna-intertwining.js" >}}
 
 ## Pinna ilussion
 
@@ -16,4 +22,18 @@ One can also missalign the squares without affecting the illusion as long as the
 
 {{< p5-div sketch="/vc/sketches/pinna-messed-up.js" >}}
 
-## Pinna's intertwining illusion
+As applications one can see how in certain 3D environments, for example, in video games, these illusions can cause certain confusion. Placing them in the perifery of the players field of view could make them feel like something moved. The apparent movement of these illusions can in practice cause some desired confusion on the user.
+
+## Bibliography
+
+1. https://www.sciencedirect.com/science/article/pii/S0042698900000729
+2. http://www.scholarpedia.org/article/Pinna_illusion
+3. https://www.opticalillusion.net/optical-illusions/pinnas-intertwining-illusion/
+
+## Simón Aparicio Bocanegra
+
+![Simón Aparicio Bocanegra](images/simon.jpg "Simón Aparicio Bocanegra")
+
+<img href="/resources/images/simon.jpg" alt="Simón Aparicio Bocanegra" style="height: 100px; width:100px; border-radius:50%;"/>
+
+Estudiante de ingeniería de sistemas en octava matricula, interesado en el desarrollo de software, enfocado en backend. Estudiante de alemán, lector y nadador.
