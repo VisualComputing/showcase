@@ -16,9 +16,8 @@ Johann Karl Friedrich Zöllner (8 November 1834, Berlin – 25 April 1882, Leipz
 
 He had also a strong interest in optical illusions. In 1860, inspired by a cloth pattern that he observed in his father’s factory, he created the illusion and published it in the journal Annalen der Physik.
 
-![Johann_Zöllner](https://github.com/vc-project/vc/blob/alejo/content/sketches/foto_zollner.jpg)
-![Johann_Zöllner](https://github.com/vc-project/vc/blob/main/content/sketches/foto_zollner.jpg)
-![Johann_Zöllner](/vc/blob/main/content/sketches/foto_zollner.jpg)
+
+![Johann_Zöllner](/vc/sketches/foto_zollner.jpg)
 
 
 
@@ -26,8 +25,7 @@ He had also a strong interest in optical illusions. In 1860, inspired by a cloth
 A very supported hypothesis on the working of this illusion states that our perceptual systems have a tendency to expand acute angles. Here the short lines that intersect the long lines cause the visual system to enhance the orientation contrast between the long and the short lines. This also produces the illusion that parallel lines are closer at some parts that on others. The expanded acute angle effect can be easily spotted in the following image:
 
 
-![ZöllnerVariant](https://github.com/vc-project/vc/blob/alejo/content/sketches/Zollnervariant.jpg)
-
+![Johann_Zöllner](/vc/sketches/Zollnervariant.jpg)
 
 
 ## Philosofical aspects
