@@ -32,9 +32,6 @@ As applications one can see how in certain 3D environments, for example, in vide
 
 ## Simón Aparicio Bocanegra
 
-
-![Simón Aparicio Bocanegra](https://github.com/vc-project/vc/blob/main/resources/_gen/images/simon.jpg)
-
-<img src="https://github.com/vc-project/vc/blob/main/resources/_gen/images/simon.jpg" alt="Simón Aparicio Bocanegra" style="height: 100px; width:100px; border-radius:50%;"/>
+<img src="/vc/sketches/simon.jpg" alt="Simón Aparicio Bocanegra" style="height: 100px; width:100px; border-radius:50%;"/>
 
 Software engineering student in its eighth semester, interested in software development, focused specially in backend. I have expirience in languages such as: Python, Javascript, Java, and C. German language student, amateur swimmer and reader.
