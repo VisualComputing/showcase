@@ -19,6 +19,7 @@ He had also a strong interest in optical illusions. In 1860, inspired by a cloth
 ![Johann_Zöllner](https://github.com/vc-project/vc/blob/alejo/content/sketches/foto_zollner.jpg)
 ![Johann_Zöllner](https://github.com/vc-project/vc/blob/main/content/sketches/foto_zollner.jpg)
 ![Johann_Zöllner](/vc/blob/main/content/sketches/foto_zollner.jpg)
+![Johann_Zöllner](/vc/sketches/foto_zollner.jpg)
 
 
 
