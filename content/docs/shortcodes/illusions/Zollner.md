@@ -46,3 +46,8 @@ A first issue is about whether we are directly acquainted with the world or whet
 * https://www.illusionsindex.org/ir/zoellner-illusion
 * https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-30400-7_9164
 * https://www.atlantis-press.com/proceedings/icmmcce-17/25882507
+
+
+
+## Javier Alejandro Ortiz Silva
+Systems and computer engineering student with interest in the fields of artificial intelligence, data science and education.  Member of the UN debate society and lover of history and literature. Experience with languages Ruby, Python, C++ and Java.
