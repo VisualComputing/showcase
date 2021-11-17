@@ -7,7 +7,7 @@ new p5((p) => {
       p.background(0);
       for (let i = 50; i < p.height; i += 50) {
           for (let j = 50; j < p.width; j += 50) { 
-              p.stroke(150)
+              p.stroke(255)
               p.strokeWeight(10)
               p.line(0, i, p.width, i)
               p.line(j, 0, j, p.height)
