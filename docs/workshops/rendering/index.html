@@ -2,23 +2,21 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Ilusiones ópticas #  Propósito #  Comprender algunos aspectos fundamentales de la inferencia inconsciente de la percepción visual y sus posibles aplicaciones.
-Tareas #  Realizar una indagación teórico-práctica de las ilusiones visuales, al menos una por cada integrante del grupo y plantear una posible aplicación práctica.
-Entrega #  Plazo para hacer push del repositorio a github: 10/11/21 y 16/11/21 a las 24h, grupos 2 y 1 respectivamente.">
+<meta name=description content="Rendering #  Propósito #  Realizar indagación teórica-práctica de rendering.
+Tareas #   Realizar una indagación teórica de algún algoritmo de visibilidad o algún método de iluminación global. Implementar la visualización de un algoritmo de rasterización, e.g., líneas, círculos, antialiasing. Acá se pueden apreciar visualizaciones para la rasterización de un triángulo que pueden servir de modelo.  Entrega #  Plazo para hacer comit del repositorio a github: 5/12/21 y 6/12/21 a las 24h, grupos 1 y 2 respectivamente.">
 <meta name=theme-color content="#FFFFFF">
 <meta name=color-scheme content="light dark"><meta property="og:title" content>
-<meta property="og:description" content="Ilusiones ópticas #  Propósito #  Comprender algunos aspectos fundamentales de la inferencia inconsciente de la percepción visual y sus posibles aplicaciones.
-Tareas #  Realizar una indagación teórico-práctica de las ilusiones visuales, al menos una por cada integrante del grupo y plantear una posible aplicación práctica.
-Entrega #  Plazo para hacer push del repositorio a github: 10/11/21 y 16/11/21 a las 24h, grupos 2 y 1 respectivamente.">
+<meta property="og:description" content="Rendering #  Propósito #  Realizar indagación teórica-práctica de rendering.
+Tareas #   Realizar una indagación teórica de algún algoritmo de visibilidad o algún método de iluminación global. Implementar la visualización de un algoritmo de rasterización, e.g., líneas, círculos, antialiasing. Acá se pueden apreciar visualizaciones para la rasterización de un triángulo que pueden servir de modelo.  Entrega #  Plazo para hacer comit del repositorio a github: 5/12/21 y 6/12/21 a las 24h, grupos 1 y 2 respectivamente.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://visualcomputing.github.io/vc/docs/workshops/rendering/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-11-27T09:56:11-05:00">
+<meta property="article:modified_time" content="2021-11-27T09:59:16-05:00">
 <title>Rendering | Visual Computing</title>
 <link rel=manifest href=/vc/manifest.json>
 <link rel=icon href=/vc/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/vc/book.min.89a77f7e702a8626749b948bbfb01109823daf6c1246ca407d1378833494c402.css integrity="sha256-iad/fnAqhiZ0m5SLv7ARCYI9r2wSRspAfRN4gzSUxAI=" crossorigin=anonymous>
 <script defer src=/vc/flexsearch.min.js></script>
-<script defer src=/vc/en.search.min.d43012bf6f155680f1112bf29bede59faa7e9ab75a1766fa691727c01b7f3303.js integrity="sha256-1DASv28VVoDxESvym+3ln6p+mrdaF2b6aRcnwBt/MwM=" crossorigin=anonymous></script>
+<script defer src=/vc/en.search.min.d40bcfcbe7bd62db0d79153a3dd79fb41f3f7738c08a72ce767a28ea41d083e9.js integrity="sha256-1AvPy+e9YtsNeRU6PdeftB8/dzjAinLOdnoo6kHQg+k=" crossorigin=anonymous></script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -120,7 +118,7 @@ Blog
 <aside class="hidden clearfix">
 <nav id=TableOfContents>
 <ul>
-<li><a href=#ilusiones-ópticas>Ilusiones ópticas</a>
+<li><a href=#rendering>Rendering</a>
 <ul>
 <li><a href=#propósito>Propósito</a></li>
 <li><a href=#tareas>Tareas</a></li>
@@ -128,73 +126,41 @@ Blog
 <li><a href=#protocolo-presentaciones>Protocolo presentaciones</a></li>
 </ul>
 </li>
-<li><a href=#rendering>Rendering</a>
-<ul>
-<li><a href=#propósito-1>Propósito</a></li>
-<li><a href=#tareas-1>Tareas</a></li>
-<li><a href=#entrega-1>Entrega</a></li>
-<li><a href=#protocolo-presentaciones-1>Protocolo presentaciones</a></li>
-</ul>
-</li>
 </ul>
 </nav>
 </aside>
 </header>
-<article class=markdown><h1 id=ilusiones-ópticas>
-Ilusiones ópticas
-<a class=anchor href=#ilusiones-%c3%b3pticas>#</a>
+<article class=markdown><h1 id=rendering>
+Rendering
+<a class=anchor href=#rendering>#</a>
 </h1>
 <h2 id=propósito>
 Propósito
 <a class=anchor href=#prop%c3%b3sito>#</a>
 </h2>
-<p>Comprender algunos aspectos fundamentales de la <a href=https://github.com/VisualComputing/Cognitive>inferencia inconsciente</a> de la percepción visual y sus posibles aplicaciones.</p>
+<p>Realizar indagación teórica-práctica de <a href=https://visualcomputing.github.io/Rendering>rendering</a>.</p>
 <h2 id=tareas>
 Tareas
 <a class=anchor href=#tareas>#</a>
-</h2>
-<p>Realizar una indagación teórico-práctica de las ilusiones visuales, al menos una por cada integrante del grupo y plantear una posible aplicación práctica.</p>
-<h2 id=entrega>
-Entrega
-<a class=anchor href=#entrega>#</a>
-</h2>
-<p>Plazo para hacer <em>push</em> del repositorio a github: 10/11/21 y 16/11/21 a las 24h, grupos 2 y 1 respectivamente.</p>
-<h2 id=protocolo-presentaciones>
-Protocolo presentaciones
-<a class=anchor href=#protocolo-presentaciones>#</a>
-</h2>
-<p>Exposiciones a ser realizadas la clase siguiente al <code>push</code> de 8m: 6m presentación: discusión del reporte subido a su página + 2m preguntas.</p>
-<h1 id=rendering>
-Rendering
-<a class=anchor href=#rendering>#</a>
-</h1>
-<h2 id=propósito-1>
-Propósito
-<a class=anchor href=#prop%c3%b3sito-1>#</a>
-</h2>
-<p>Realizar indagación teórica-práctica de <a href=https://visualcomputing.github.io/Rendering>rendering</a>.</p>
-<h2 id=tareas-1>
-Tareas
-<a class=anchor href=#tareas-1>#</a>
 </h2>
 <ol>
 <li>Realizar una indagación teórica de algún <a href=https://en.wikipedia.org/wiki/Hidden-surface_determination>algoritmo de visibilidad</a> o algún método de <a href=https://en.wikipedia.org/wiki/Global_illumination#List_of_methods>iluminación global</a>.</li>
 <li>Implementar la visualización de un algoritmo de rasterización, e.g., <a href=https://en.wikipedia.org/wiki/Line_drawing_algorithm>líneas</a>, <a href=https://en.wikipedia.org/wiki/Midpoint_circle_algorithm>círculos</a>, <a href=https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/rasterization-practical-implementation>antialiasing</a>. <a href=https://visualcomputing.github.io/docs/rendering/rasterization/#shading>Acá</a> se pueden apreciar visualizaciones para la rasterización de un triángulo que pueden servir de modelo.</li>
 </ol>
-<h2 id=entrega-1>
+<h2 id=entrega>
 Entrega
-<a class=anchor href=#entrega-1>#</a>
+<a class=anchor href=#entrega>#</a>
 </h2>
 <p>Plazo para hacer <em>comit</em> del repositorio a github: 5/12/21 y 6/12/21 a las 24h, grupos 1 y 2 respectivamente.</p>
-<h2 id=protocolo-presentaciones-1>
+<h2 id=protocolo-presentaciones>
 Protocolo presentaciones
-<a class=anchor href=#protocolo-presentaciones-1>#</a>
+<a class=anchor href=#protocolo-presentaciones>#</a>
 </h2>
 <p>Exposiciones a ser realizadas la clase siguiente al <code>push</code> de 8m: 6m presentación: discusión del reporte subido a su página + 2m preguntas.</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/visualcomputing/vc/commit/4a1486cbb86f7a82a458548290205bf2a2e81272 title="Last modified by nakednous | November 27, 2021" target=_blank rel=noopener>
+<div><a class="flex align-center" href=https://github.com/visualcomputing/vc/commit/f38749d326976bc24ffaeb5ae1592e996de14818 title="Last modified by nakednous | November 27, 2021" target=_blank rel=noopener>
 <img src=/vc/svg/calendar.svg class=book-icon alt=Calendar>
 <span>November 27, 2021</span>
 </a>
@@ -210,20 +176,12 @@ Protocolo presentaciones
 <div class=book-toc-content>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#ilusiones-ópticas>Ilusiones ópticas</a>
+<li><a href=#rendering>Rendering</a>
 <ul>
 <li><a href=#propósito>Propósito</a></li>
 <li><a href=#tareas>Tareas</a></li>
 <li><a href=#entrega>Entrega</a></li>
 <li><a href=#protocolo-presentaciones>Protocolo presentaciones</a></li>
-</ul>
-</li>
-<li><a href=#rendering>Rendering</a>
-<ul>
-<li><a href=#propósito-1>Propósito</a></li>
-<li><a href=#tareas-1>Tareas</a></li>
-<li><a href=#entrega-1>Entrega</a></li>
-<li><a href=#protocolo-presentaciones-1>Protocolo presentaciones</a></li>
 </ul>
 </li>
 </ul>
