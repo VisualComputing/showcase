@@ -11,7 +11,7 @@ Realizar indagación teórica-práctica de [rendering](https://visualcomputing.g
 
 ## Entrega
 
-Plazo para hacer _comit_ del repositorio a github: 5/12/21 y 6/12/21 a las 24h, grupos 1 y 2 respectivamente.
+Plazo para hacer _commit_ del repositorio a github: 13/12/21 y 6/12/21 a las 24h, grupos 1 y 2 respectivamente.
 
 ## Protocolo presentaciones
 
