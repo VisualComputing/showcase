@@ -1,4 +1,4 @@
-baseURL = "https://visualcomputing.github.io/vc"
+baseURL = "https://github.com/snriverar84/vc-1"
 languageCode = "en-us"
 title = "Visual Computing"
 theme = 'book'
@@ -34,4 +34,7 @@ enableGitInfo = true
   # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks = false
+
+
+
 
