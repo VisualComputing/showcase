@@ -1,25 +1,25 @@
 name: github pages
 
-on:
-  push:
+on: 
+  push: 
     branches:
       - main  # Set a branch name to trigger deployment
-  pull_request:
+  pull_request: 
 
-jobs:
-  deploy:
+jobs: 
+  deploy: 
     runs-on: ubuntu-latest
-    concurrency:
+    concurrency: 
       group: ${{ github.workflow }}-${{ github.ref }}
-    steps:
+    steps: 
       - uses: actions/checkout@v2
-        with:
+        with: 
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
-        with:
+        with: 
           hugo-version: 'latest' # also valid: hugo-version: '0.85.0'
           extended: true
 
@@ -29,6 +29,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
-        with:
+        with: 
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public

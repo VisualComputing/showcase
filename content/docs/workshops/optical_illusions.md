@@ -16,3 +16,5 @@ Plazo para hacer _push_ del repositorio a github: 10/11/21 y 16/11/21 a las 24h,
 
 Exposiciones a ser realizadas la clase siguiente al `push` de 8m: 6m presentación: discusión del reporte subido a su página + 2m preguntas.
 
+
+
