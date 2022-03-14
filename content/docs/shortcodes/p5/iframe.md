@@ -20,17 +20,17 @@ Look at this [brief explanation](https://p5js.org/examples/color-relativity.html
 
 {{< p5-iframe sketch="/vc/sketches/colors.js" width="725" height="425" >}}
 
-## Depth map
+## Third party libraries
 
-Look for some [depthmap](https://en.wikipedia.org/wiki/Depth_map) usecases.
+Example adapted from [p5.EasyCam](https://github.com/freshfork/p5.EasyCam/blob/master/examples/QuickStart/QuickStart.js).
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
-{{</* p5-iframe sketch="/vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" */>}}
+{{</* p5-iframe sketch="/vc/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" */>}}
 ```
 {{< /details >}}
 
-{{< p5-iframe sketch="/vc/sketches/depthmap.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="725" height="625" >}}
+{{< p5-iframe sketch="/vc/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" >}}
 
 ## Sound
 
