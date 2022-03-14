@@ -4,3 +4,4 @@
 *.md~
 # Logs
 *.log
+.hugo_build.lock
