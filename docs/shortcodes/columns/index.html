@@ -1,216 +1,35 @@
-<!doctype html><html lang=en dir=ltr>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Columns #  Columns help organize shorter pieces of content horizontally for readability.
-{{< columns >}} <!-- begin columns block --> # Left Content Lorem markdownum insigne... <---> <!-- magic separator, between columns --> # Mid Content Lorem markdownum insigne... <---> <!-- magic separator, between columns --> # Right Content Lorem markdownum insigne... {{< /columns >}} Example #  Left Content #  Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!">
-<meta name=theme-color content="#FFFFFF">
-<meta name=color-scheme content="light dark"><meta property="og:title" content>
-<meta property="og:description" content="Columns #  Columns help organize shorter pieces of content horizontally for readability.
-{{< columns >}} <!-- begin columns block --> # Left Content Lorem markdownum insigne... <---> <!-- magic separator, between columns --> # Mid Content Lorem markdownum insigne... <---> <!-- magic separator, between columns --> # Right Content Lorem markdownum insigne... {{< /columns >}} Example #  Left Content #  Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://visualcomputing.github.io/vc/docs/shortcodes/columns/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-07-12T07:11:39-05:00">
-<title>Columns | Visual Computing</title>
-<link rel=manifest href=/vc/manifest.json>
-<link rel=icon href=/vc/favicon.png type=image/x-icon>
-<link rel=stylesheet href=/vc/book.min.89a77f7e702a8626749b948bbfb01109823daf6c1246ca407d1378833494c402.css integrity="sha256-iad/fnAqhiZ0m5SLv7ARCYI9r2wSRspAfRN4gzSUxAI=" crossorigin=anonymous>
-<script defer src=/vc/flexsearch.min.js></script>
-<script defer src=/vc/en.search.min.42215b90f5f0368bcd855360fa86e1b6d6669b6bdbe171210b409abfae2df0b7.js integrity="sha256-QiFbkPXwNovNhVNg+obhttZmm2vb4XEhC0Cav64t8Lc=" crossorigin=anonymous></script>
-</head>
-<body dir=ltr>
-<input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control>
-<main class="container flex">
-<aside class=book-menu>
-<div class=book-menu-content>
-<nav>
-<h2 class=book-brand>
-<a class="flex align-center" href=/vc/><span>Visual Computing</span>
-</a>
-</h2>
-<div class=book-search>
-<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
-<div class="book-search-spinner hidden"></div>
-<ul id=book-search-results></ul>
-</div>
-<ul>
-<li class=book-section-flat>
-<span>Shortcodes</span>
-<ul>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/buttons/>Buttons</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/columns/ class=active>Columns</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/details/>Details</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/expand/>Expand</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/hints/>Hints</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/katex/>Katex</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/mermaid/>Mermaid</a>
-</li>
-<li>
-<input type=checkbox id=section-ec67a64aba70b9df3d2a9acd6c92e3bc class=toggle>
-<label for=section-ec67a64aba70b9df3d2a9acd6c92e3bc class="flex justify-between">
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/p5/>P5</a>
-</label>
-<ul>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/p5/div/>Div</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/p5/iframe/>Iframe</a>
-</li>
-</ul>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/shortcodes/tabs/>Tabs</a>
-</li>
-</ul>
-</li>
-<li>
-<input type=checkbox id=section-191d4fa5967ce9fef74cb18feb81d534 class=toggle>
-<label for=section-191d4fa5967ce9fef74cb18feb81d534 class="flex justify-between">
-<a role=button>Workshops</a>
-</label>
-<ul>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/workshops/optical_illusions/>Optical Illusions</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/workshops/rendering/>Rendering</a>
-</li>
-<li>
-<a href=https://visualcomputing.github.io/vc/docs/workshops/shaders/>Shaders</a>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<a href=/vc/posts/>
-Blog
-</a>
-</li>
-</ul>
-</nav>
-<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-</div>
-</aside>
-<div class=book-page>
-<header class=book-header>
-<div class="flex align-center justify-between">
-<label for=menu-control>
-<img src=/vc/svg/menu.svg class=book-icon alt=Menu>
-</label>
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Columns #  Columns help organize shorter pieces of content horizontally for readability.
+{{< columns >}} <!-- begin columns block --> # Left Content Lorem markdownum insigne...  <---> <!-- magic separator, between columns -->  # Mid Content Lorem markdownum insigne...  <---> <!-- magic separator, between columns -->  # Right Content Lorem markdownum insigne... {{< /columns >}} Example #  Left Content #  Lorem markdownum insigne. Olympo signis Delphis!"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Columns #  Columns help organize shorter pieces of content horizontally for readability.
+{{< columns >}} <!-- begin columns block --> # Left Content Lorem markdownum insigne...  <---> <!-- magic separator, between columns -->  # Mid Content Lorem markdownum insigne...  <---> <!-- magic separator, between columns -->  # Right Content Lorem markdownum insigne... {{< /columns >}} Example #  Left Content #  Lorem markdownum insigne. Olympo signis Delphis!"><meta property="og:type" content="article"><meta property="og:url" content="https://visualcomputing.github.io/vc/docs/shortcodes/columns/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2021-07-12T07:11:39-05:00"><title>Columns | Visual Computing</title><link rel=manifest href=/vc/manifest.json><link rel=icon href=/vc/favicon.png type=image/x-icon><link rel=stylesheet href=/vc/book.min.89a77f7e702a8626749b948bbfb01109823daf6c1246ca407d1378833494c402.css integrity="sha256-iad/fnAqhiZ0m5SLv7ARCYI9r2wSRspAfRN4gzSUxAI=" crossorigin=anonymous><script defer src=/vc/flexsearch.min.js></script>
+<script defer src=/vc/en.search.min.3a0104c2a2c6b733ef3116717812d5efa53a937db692b927f22c75fc1beab9ab.js integrity="sha256-OgEEwqLGtzPvMRZxeBLV76U6k322krkn8ix1/Bvquas=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/vc/><span>Visual Computing</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><span>Shortcodes</span><ul><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/buttons/>Buttons</a></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/columns/ class=active>Columns</a></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/details/>Details</a></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/expand/>Expand</a></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/hints/>Hints</a></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/katex/>Katex</a></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/mermaid/>Mermaid</a></li><li><input type=checkbox id=section-ec67a64aba70b9df3d2a9acd6c92e3bc class=toggle>
+<label for=section-ec67a64aba70b9df3d2a9acd6c92e3bc class="flex justify-between"><a href=https://visualcomputing.github.io/vc/docs/shortcodes/p5/>P5</a></label><ul><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/p5/div/>Div</a></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/p5/iframe/>Iframe</a></li></ul></li><li><a href=https://visualcomputing.github.io/vc/docs/shortcodes/tabs/>Tabs</a></li></ul></li></ul><ul><li><a href=/vc/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/vc/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Columns</strong>
-<label for=toc-control>
-<img src=/vc/svg/toc.svg class=book-icon alt="Table of Contents">
-</label>
-</div>
-<aside class="hidden clearfix">
-<nav id=TableOfContents>
-<ul>
-<li><a href=#columns>Columns</a>
-<ul>
-<li><a href=#example>Example</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-</aside>
-</header>
-<article class=markdown><h1 id=columns>
-Columns
-<a class=anchor href=#columns>#</a>
-</h1>
-<p>Columns help organize shorter pieces of content horizontally for readability.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{&lt; <span style=color:#f92672>columns</span> &gt;}} <span style=color:#75715e>&lt;!-- begin columns block --&gt;</span>
-# Left Content
-Lorem markdownum insigne...
-
-&lt;<span style=color:#f92672>---</span>&gt; <span style=color:#75715e>&lt;!-- magic separator, between columns --&gt;</span>
-
-# Mid Content
-Lorem markdownum insigne...
-
-&lt;<span style=color:#f92672>---</span>&gt; <span style=color:#75715e>&lt;!-- magic separator, between columns --&gt;</span>
-
-# Right Content
-Lorem markdownum insigne...
-{{&lt; /<span style=color:#f92672>columns</span> &gt;}}
-</code></pre></div><h2 id=example>
-Example
-<a class=anchor href=#example>#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
-<div class="flex-even markdown-inner">
-<h2 id=left-content>
-Left Content
-<a class=anchor href=#left-content>#</a>
-</h2>
-<p>Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+<label for=toc-control><img src=/vc/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#columns>Columns</a><ul><li><a href=#example>Example</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=columns>Columns
+<a class=anchor href=#columns>#</a></h1><p>Columns help organize shorter pieces of content horizontally for readability.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>{{&lt; <span style=color:#f92672>columns</span> &gt;}} <span style=color:#75715e>&lt;!-- begin columns block --&gt;</span>
+</span></span><span style=display:flex><span># Left Content
+</span></span><span style=display:flex><span>Lorem markdownum insigne...
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>---</span>&gt; <span style=color:#75715e>&lt;!-- magic separator, between columns --&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Mid Content
+</span></span><span style=display:flex><span>Lorem markdownum insigne...
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>---</span>&gt; <span style=color:#75715e>&lt;!-- magic separator, between columns --&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span># Right Content
+</span></span><span style=display:flex><span>Lorem markdownum insigne...
+</span></span><span style=display:flex><span>{{&lt; /<span style=color:#f92672>columns</span> &gt;}}
+</span></span></code></pre></div><h2 id=example>Example
+<a class=anchor href=#example>#</a></h2><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner"><h2 id=left-content>Left Content
+<a class=anchor href=#left-content>#</a></h2><p>Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 protulit, sed sed aere valvis inhaesuro Pallas animam: qui <em>quid</em>, ignes.
-Miseratus fonte Ditis conubia.
-</div>
-<div class="flex-even markdown-inner">
-<h2 id=mid-content>
-Mid Content
-<a class=anchor href=#mid-content>#</a>
-</h2>
-<p>Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter!
-</div>
-<div class="flex-even markdown-inner">
-<h2 id=right-content>
-Right Content
-<a class=anchor href=#right-content>#</a>
-</h2>
-<p>Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+Miseratus fonte Ditis conubia.</div><div class="flex-even markdown-inner"><h2 id=mid-content>Mid Content
+<a class=anchor href=#mid-content>#</a></h2><p>Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter!</div><div class="flex-even markdown-inner"><h2 id=right-content>Right Content
+<a class=anchor href=#right-content>#</a></h2><p>Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 protulit, sed sed aere valvis inhaesuro Pallas animam: qui <em>quid</em>, ignes.
-Miseratus fonte Ditis conubia.
-</div>
-</div>
-</article>
-<footer class=book-footer>
-<div class="flex flex-wrap justify-between">
-<div><a class="flex align-center" href=https://github.com/visualcomputing/vc/commit/268ec346f0b648c6ded618232d67d8b43a1d58d6 title="Last modified by nakednous | July 12, 2021" target=_blank rel=noopener>
-<img src=/vc/svg/calendar.svg class=book-icon alt=Calendar>
-<span>July 12, 2021</span>
-</a>
-</div>
-</div>
-<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
-</footer>
-<div class=book-comments>
-</div>
-<label for=menu-control class="hidden book-menu-overlay"></label>
-</div>
-<aside class=book-toc>
-<div class=book-toc-content>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#columns>Columns</a>
-<ul>
-<li><a href=#example>Example</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-</main>
-</body>
-</html>
+Miseratus fonte Ditis conubia.</div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/vc/commit/268ec346f0b648c6ded618232d67d8b43a1d58d6 title="Last modified by nakednous | July 12, 2021" target=_blank rel=noopener><img src=/vc/svg/calendar.svg class=book-icon alt=Calendar>
+<span>July 12, 2021</span></a></div></div><script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#columns>Columns</a><ul><li><a href=#example>Example</a></li></ul></li></ul></nav></div></aside></main></body></html>
