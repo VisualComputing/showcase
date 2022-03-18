@@ -1,6 +1,6 @@
-baseURL = "https://visualcomputing.github.io/vc"
+baseURL = "https://visualcomputing.github.io/showcase"
 languageCode = "en-us"
-title = "Visual Computing"
+title = "Showcase Template"
 theme = 'book'
 
 # Book configuration
@@ -22,7 +22,7 @@ enableGitInfo = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/visualcomputing/vc'
+  BookRepo = 'https://github.com/visualcomputing/showcase'
 
   # Configure the date format used on the pages
   # - In git information

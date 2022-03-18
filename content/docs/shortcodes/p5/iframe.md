@@ -14,11 +14,11 @@ Look at this [brief explanation](https://p5js.org/examples/color-relativity.html
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
-{{</* p5-iframe sketch="/vc/sketches/colors.js" width="725" height="425 */>}}
+{{</* p5-iframe sketch="/showcase/sketches/colors.js" width="725" height="425 */>}}
 ```
 {{< /details >}}
 
-{{< p5-iframe sketch="/vc/sketches/colors.js" width="725" height="425" >}}
+{{< p5-iframe sketch="/showcase/sketches/colors.js" width="725" height="425" >}}
 
 ## Third party libraries
 
@@ -26,11 +26,11 @@ Example adapted from [p5.EasyCam](https://github.com/freshfork/p5.EasyCam/blob/m
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
-{{</* p5-iframe sketch="/vc/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" */>}}
+{{</* p5-iframe sketch="/showcase/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" */>}}
 ```
 {{< /details >}}
 
-{{< p5-iframe sketch="/vc/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" >}}
+{{< p5-iframe sketch="/showcase/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" >}}
 
 ## Sound
 
@@ -38,11 +38,11 @@ Example took from the [p5 examples](https://p5js.org/examples/sound-sound-effect
 
 {{< details title="p5-iframe markdown" open=false >}}
 ```html
-{{</* p5-iframe sketch="/vc/sketches/sound.js" width="225" height="225" */>}}
+{{</* p5-iframe sketch="/showcase/sketches/sound.js" width="225" height="225" */>}}
 ```
 {{< /details >}}
 
-{{< p5-iframe sketch="/vc/sketches/sound.js" width="225" height="225" >}}
+{{< p5-iframe sketch="/showcase/sketches/sound.js" width="225" height="225" >}}
 
 # p5-global-iframe
 
@@ -136,3 +136,39 @@ Look at [this reference](https://michaelbach.de/ot/mot-breathingSquare/) for an 
     pop();
   }
 {{< /p5-global-iframe >}}
+
+# p5-widget
+
+The `p5-widget` [shortcode](https://gohugo.io/content-management/shortcodes/) embed [p5.js](https://p5js.org/) code within an [p5-widget](https://toolness.github.io/p5.js-widget/).
+
+```html
+{{</* p5-widget autoplay=true height="400" width="400" ver="1.4.1" >}}
+  // inline sketch code
+{{< /p5-widget */>}}
+```
+
+All parameters are optional. Default `ver` is `1.4.1`. For example:
+
+## Widget example
+
+```js
+{{</* p5-widget autoplay=true height="400" width="400" ver="1.4.1" >}}
+function setup() {
+  createCanvas(300, 300);
+}
+
+function draw() {
+  background(255, 0, 255);
+}
+{{< /p5-widget */>}}
+```
+
+{{< p5-widget autoplay=true height="400" width="400" ver="1.4.1" >}}
+function setup() {
+  createCanvas(300, 300);
+}
+
+function draw() {
+  background(255, 0, 255);
+}
+{{< /p5-widget >}}
