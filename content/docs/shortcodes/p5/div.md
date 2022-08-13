@@ -3,7 +3,7 @@ p5 `div` [shortcodes](https://gohugo.io/content-management/shortcodes/) embed [p
 # p5-div
 
 ```html
-{{</* p5-div ver="1.4.1" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" */>}}
+{{</* p5-div ver="1.4.2" sketch="/path/to/sketch.js" lib1="https://cdntolib1/lib1.js" */>}}
 ```
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
@@ -23,7 +23,7 @@ Look at [this](https://mathworld.wolfram.com/ScintillatingGridIllusion.html) and
 # p5-instance-div
 
 ```html
-{{</* p5-instance-div id="sketchid" ver="1.4.1" lib1="https://cdntolib1/lib1.js" >}}
+{{</* p5-instance-div id="sketchid" ver="1.4.2" lib1="https://cdntolib1/lib1.js" >}}
   // inline sketch code
 {{< /p5-instance-div */>}}
 ```
