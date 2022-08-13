@@ -12,7 +12,7 @@ create a `mermaid.json` file in your `assets` folder!
 ## Example
 
 {{< columns >}}
-```tpl
+{{< highlight tpl1 >}}
 {{</* mermaid [class="text-center"]*/>}}
 stateDiagram-v2
     State1: The state with a note
@@ -23,7 +23,7 @@ stateDiagram-v2
     State1 --> State2
     note left of State2 : This is the note to the left.
 {{</* /mermaid */>}}
-```
+{{< /highlight >}}
 
 <--->
 

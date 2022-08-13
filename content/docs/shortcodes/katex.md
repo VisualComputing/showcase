@@ -3,20 +3,17 @@
 KaTeX shortcode let you render math typesetting in markdown document. See [KaTeX](https://katex.org/)
 
 ## Example
-{{< columns >}}
 
-```latex
+{{< columns >}}
+{{< highlight latex >}}
 {{</* katex [display] [class="text-center"]  */>}}
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
 {{</* /katex */>}}
-```
-
+{{< /highlight >}}
 <--->
-
 {{< katex display >}}
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
 {{< /katex >}}
-
 {{< /columns >}}
 
 ## Display Mode Example
