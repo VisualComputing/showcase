@@ -17,7 +17,7 @@ Deploy with `$git push` after redefined `baseURL` in `config.toml` which should 
 
 ### Remarks
 
-1. If you renamed the repo don't forget to update all url references of the markdown and js file sources, to reflect that change. Look in all the [content folder](https://github.com/VisualComputing/showcase/tree/main/content) files for `showcase` occurrences and replace them all by `<newreponame>`.
+1. If you renamed the repo don't forget to update all url references of the markdown and js file sources, to reflect that change. Look in all the [content folder](https://github.com/VisualComputing/showcase/tree/main/content) files for `showcase` occurrences and replace them by `<newreponame>`.
 2. If you forked the repo don't forget to activate the [actions](https://github.com/VisualComputing/showcase/actions).
 3. Don´t forget to select the `gh-pages` branch as the one to serve your site from at the [pages section of your repo configuration page](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), if it is no so by default.
 4. The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones.
