@@ -23,7 +23,7 @@ Deploy with `$git push` after redefined `baseURL` in `config.toml` which should 
 **Remarks**
 
 {{< hint info >}}
-If you renamed the repo don't forget to update all url references of the markdown and js file sources, to reflect that change. Look in all the [content folder](https://github.com/VisualComputing/showcase/tree/main/content) files for `showcase` occurrences and replace al them by `<newreponame>`.
+If you renamed the repo don't forget to update all url references of the markdown and js file sources, to reflect that change. Look in all the [content folder](https://github.com/VisualComputing/showcase/tree/main/content) files for `showcase` occurrences and replace them all by `<newreponame>`.
 {{< /hint >}}
 
 {{< hint info >}}
