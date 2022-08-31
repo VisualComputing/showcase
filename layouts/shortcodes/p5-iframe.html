@@ -8,13 +8,17 @@
 {{ $stylesheet := .Get `stylesheet` }}
 
 <iframe
+  marginwidth="{{default 0 (.Get `marginWidth`)}}"
+  marginheight="{{default 0 (.Get `marginHegth`)}}"
+  frameborder="{{default 0 (.Get `frameBorder`)}}"
+  scrolling="{{default no (.Get `scrolling`)}}"
   id="{{ strings.TrimSuffix ".js" (path.Base $sketch) }}"
   style="width:{{ default "800" (.Get `width`) }}px; height:{{ default "600" (.Get `height`) }}px"
   srcdoc="
         <!DOCTYPE html>
         <html>
           <head>
-            <link rel='stylesheet' href={{ $stylesheet }}>
+            {{ if isset .Params "stylesheet" }} <link rel='stylesheet' href={{ $stylesheet }}> {{ end }}
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/{{ default $defver (.Get `ver`) }}/p5.min.js></script>
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/{{ default $defver (.Get `ver`) }}/addons/p5.sound.min.js></script>
             {{ if isset .Params "lib1" }} <script src={{ $lib1 }}></script> {{ end }}
