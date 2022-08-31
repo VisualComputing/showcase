@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Showcase Template"
 theme = 'book'
 
+staticDir = ['static']
+
 # Book configuration
 disablePathToLower = true
 enableGitInfo = true
@@ -34,4 +36,7 @@ enableGitInfo = true
   # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks = false
+
+
+
 
