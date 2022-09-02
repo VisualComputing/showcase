@@ -59,18 +59,18 @@
     hsl(338deg 95% 53%) 100%
   );
 
-  filter: saturate(70%);
-  transition: filter 0.5s linear;
-
   box-shadow: 2px 2px 1px 0px #762543;
-
   cursor: pointer;
+
+  transition: all 0.3s ease;
+  filter: brightness(100%);
 }
 
 .container > button:hover {
-  filter: saturate(100%);
+  filter: brightness(120%);
 }
 
 .container > button:active {
   box-shadow: inset 2px 2px 1px 0px #762543;
+  filter: brightness(90%);
 }
