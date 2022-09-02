@@ -8,10 +8,10 @@
 {{ $stylesheet := .Get `stylesheet` }}
 
 <iframe
-  marginwidth="{{default 0 (.Get `marginWidth`)}}"
-  marginheight="{{default 0 (.Get `marginHegth`)}}"
-  frameborder="{{default 0 (.Get `frameBorder`)}}"
-  scrolling="{{default no (.Get `scrolling`)}}"
+  marginheight="{{default "10" (.Get `marginHeight`)}}"
+  marginwidth="{{default "10" (.Get `marginWidth`)}}"
+  frameborder="{{default "1" (.Get `frameBorder`)}}"
+  scrolling="{{default "no" (.Get `scrolling`)}}"
   id="{{ strings.TrimSuffix ".js" (path.Base $sketch) }}"
   style="width:{{ default "800" (.Get `width`) }}px; height:{{ default "600" (.Get `height`) }}px"
   srcdoc="

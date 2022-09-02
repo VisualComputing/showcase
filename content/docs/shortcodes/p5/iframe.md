@@ -44,6 +44,16 @@ Example took from the [p5 examples](https://p5js.org/examples/sound-sound-effect
 
 {{< p5-iframe sketch="/showcase/sketches/sound.js" width="225" height="225" >}}
 
+## Styling
+
+{{< details title="p5-iframe markdown" open=false >}}
+{{< highlight html >}}
+{{</* p5-iframe sketch="/showcase/sketches/style.js" width="225" height="225" stylesheet="/showcase/styles/style.css" marginWidth="0" marginHeight="0" frameBorder="0" scrolling="no" */>}}
+{{< /highlight >}}
+{{< /details >}}
+
+{{< p5-iframe sketch="/showcase/sketches/style.js" width="225" height="225" stylesheet="/showcase/styles/style.css" marginWidth="0" marginHeight="0" frameBorder="0" scrolling="no">}}
+
 # p5-global-iframe
 
 ```html
