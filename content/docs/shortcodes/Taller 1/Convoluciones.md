@@ -35,6 +35,21 @@ Para cambiar los efectos sobre la imagen hay de usar el Slider para seleccionar 
 de los kernels, ya despues de seleccionado se debe presionar el boton **Recargar canvas**.
 {{< /hint >}}
 
+**Kernels disponibles**  
+
+
+| Name        | Matrix     |
+|-----------|--------|
+|Identity| [0, 0, 0, 0, 1, 0, 0, 0, 0]|
+|Sharpen| [0, -1, 0, -1, 5, -1, 0, -1, 0]|
+|Box Blur| [1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9]|
+|Edge Detection| [-1, -1, -1, -1, 8, -1, -1, -1, -1]|
+|Gaussian Blur| [1, 2, 1, 2, 4, 2, 1, 2, 1]|
+|Emboss| [-2, -1, 0, -1, 1, 1, 0, 1, 2]|
+|Bottom Sobel| [-1,2,-1,0,0,0,1,2,1]|
+|Outline| [-1,-1,-1,-1,8,-1,-1,-1,-1]|
+|Top Sobel| [1,2,1,0,0,0,-1,-2,-1|
+
 ## Code
 
 {{< p5-iframe sketch="/visual_computing/sketches/convolutions.js" width="625" height="625" >}}
