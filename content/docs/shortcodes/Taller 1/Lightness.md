@@ -80,7 +80,7 @@ p.image(img2, 0, 0, p.width, p.height);
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/lightness.js" width="450" height="450" >}}
+{{< p5-iframe sketch="/visual_computing/sketches/lightness.js" width="450" height="450" >}}
 
 ## Conclusions
 
