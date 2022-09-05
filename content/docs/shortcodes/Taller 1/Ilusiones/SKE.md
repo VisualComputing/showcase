@@ -51,7 +51,7 @@ return
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/illusion3d.js" width="450" height="450" >}}
+{{< p5-iframe sketch="/visual_computing/sketches/illusion3d.js" width="450" height="450" >}}
 
 ## Conclusions
 

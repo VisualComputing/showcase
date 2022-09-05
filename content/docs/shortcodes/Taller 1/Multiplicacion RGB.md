@@ -51,7 +51,7 @@ return
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/RGBmultiply.js" width="450" height="450" >}}
+{{< p5-iframe sketch="/visual_computing/sketches/RGBmultiply.js" width="450" height="450" >}}
 
 ## Conclusions
 

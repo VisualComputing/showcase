@@ -3,7 +3,7 @@ new p5((p) =>{
   let img;
   let myPixels;
   p.preload = function() {
-    img = p.loadImage("/showcase/sketches/medusa.jpeg");
+    img = p.loadImage("/visual_computing/sketches/medusa.jpeg");
   }
 
 
