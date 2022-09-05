@@ -13,40 +13,36 @@ Pasos dentro del código:
 
 {{< details title="source code" open=false >}}
 {{< highlight html >}}
-let angle = 0;
-let speed = 0.05;
-let circleColor = true;
-
+let backgroundColor;
+let color1, color2
 function setup() {
-createCanvas(400, 400);
+  createCanvas(200, 200);
+  let c1 = createInput("0,0,0",'color')
+  let c2 = createInput("0,0,0",'color')
+  
+  
+  c1.input(()=> setColor1(c1,c2))
+  c2.input(()=> setColor1(c1,c2))
 }
 
-function draw() {
-background(220);
-angle += speed;
-strokeWeight(1)
-circle(200,200,400);
-cirrcle(375)
-}
+function setColor1(c1,c2){
+  let color1 = color(red(c1.value()), green(c1.value()), blue(c1.value()))
+ let black = color(0,0,0)
+   fill(color1)
+  rect(0,0, 130,130)
+  let color2 = color(red(c2.value()), green(c2.value()), blue(c2.value()))
+  fill(color2)
+  rect(70,70, 130,130)
+  
+   //let white = color(255,255,255)
+   
+  const cred = (red(c1.value()) * red(c2.value())) / 255;
+  const cblue = (blue(c1.value()) * blue(c2.value())) / 255;
+  const cgreen = (green(c1.value()) * green(c2.value())) /255;
+  fill(color(cred, cgreen,cblue))
+  rect(70,70, 60,60)
+  //background(cred,cgreen,cblue)
 
-function cirrcle(size){
-fill(255,255,0)
-if(circleColor){
-fill(0,0,255)  
- }
-circleColor = !circleColor
-
-if(size>100){
-translate(p5.Vector.fromAngle(millis() / 1000, 12.5));
-strokeWeight(0)
-circle(200,200, size);
-cirrcle(size-25)
-}else if(size>0){
-translate(p5.Vector.fromAngle(millis() / 1000, -12.5));
-circle(200,200, size);  
- cirrcle(size-25)
-}
-return
 }
 {{< /highlight >}}
 {{< /details >}}

@@ -51,3 +51,5 @@ function preload() {
     }
     pop()
   }
+
+  //Bibliografia: https://editor.p5js.org/ebenjmuse/sketches/HyPfeGkCZ
