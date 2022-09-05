@@ -54,11 +54,12 @@ input[type=number].input-box {
   border-radius: 5px;
   outline: none;
   border: none;
-  width: 140px;
-  text-align: center;
+  width: 145px;
+  text-align: left;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   text-transform: capitalize;
+  padding-left: 5px;
 }
 
 .select-box::-ms-expand {
@@ -75,13 +76,13 @@ input[type=number].input-box {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   height: 30px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
+  padding-left: 5px;
 }
 
 .checkbox-box > label {
-  /* width: 100%; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -105,19 +106,94 @@ input[type=number].input-box {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: invert(70%);
   border: none;
-  /* margin-top: -50px; */
+
   margin-left: -10px;
   padding: 5px;
   border-radius: 5px;
   width: 90px;
 }
 
-/* kernel[i][j].style('background-color', 'rgba(0,0,0,0.3)');
-kernel[i][j].style('border', 'none');
-kernel[i][j].style('border-radius', '10px');
-kernel[i][j].style('color', 'white');
-kernel[i][j].style('text-align', 'right');
-kernel[i][j].style('font-weight', 'bold');
-kernel[i][j].style('-moz-appearance', 'textfield');
-kernel[i][j].style('-webkit-appearance', 'none'); */
+.measures-container{
+  width: 145px;
+  height: 145px;
 
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 5px 5px; 
+
+  overflow: hidden;
+}
+
+.measure-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: invert(70%);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+
+  border-radius: 5px;
+}
+
+.measures-label{
+  flex: 0 0;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0.8rem;
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+.measures-values-container{
+  flex: 1 0;
+  margin: 0;
+  padding: 0;
+
+  display: block;
+}
+
+.measures-display{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.measures-value{
+  margin: 0;
+  padding: 0;
+
+  font-size: 0.8rem;
+  text-align: center;
+
+  mix-blend-mode: screen;
+}
+
+.load-file-container{
+  display: flex;
+
+  align-items: center;
+
+  width: 125px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 0.8rem;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: invert(70%);
+  border-radius: 5px;
+
+  padding: 0 10px;
+
+  text-transform: capitalize;
+}
+
+.load-file-container > input{
+  display: none;
+}
