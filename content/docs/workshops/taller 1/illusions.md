@@ -103,3 +103,33 @@ Las ilusiones ópticas son ampliamente utilizadas como un recurso expresivo en e
 [Journal of Ilusion](https://journalofillusion.net/index.php/joi/article/view/5612/13464)
 
 
+# Ilusión dinámica de Ebbinghaus
+
+## Resumen 
+
+En esta Ilusión podemos observar como se desplazan todos los circulos en un movimiento de ida y vuelta y que los circulos verdes cresen y decrecen segun el mivimiento pero el circulo gris ¿ tambien lo hace ?
+
+Para comprobar esta Ilusión podemos dar clic en el boton donde si dibujaran 2 rectas paraleleas separadas por el tamañao del circulo gris 
+
+## palabras claves 
+
+circulo, Tamaño, movimiento. 
+
+{{< p5-iframe sketch="/showcase/sketches/Ebbinghaus/Ebbinghaus.js" width="400" height="400" marginHeight="0" marginWidth="0" frameBorder="0" scrolling="no">}}
+## Marco Teórico 
+### Explicación de la Ilusion
+
+Cuando presionamos el botón podemos observar como definitivamente el círculo gris no presentan crecimiento en su tamaño solo un desplazamiento lineal. Este aparente cambio de tamaño se presenta debido a que nuestro cerebro percibe las cosas del mundo exterior frecuentemente con cambios haciendo que se adapte de maneras diferentes a los diferentes estímulos que recibe, Para nuestro celebró los cambios son más frecuentemente que lo estático por lo tanto va a tratar de ver cambios más fácilmente que lo estático.
+
+### ilusión de Ebbinghaus
+
+Es una ilusión óptica que altera la percepción de las dimensiones relativas. Es denominada así en honor a su descubridor, el psícólogo alemán Hermann Ebbinghaus(1850-1909) fue popularizada en el mundo de habla inglesa por Titchener en un libro de texto sobre psicología experimental de año 1901, de ahí que su nombre alternativo sea "Círculos de Titchener".
+
+## Conclusiones
+
+Entender esta ilusión nos ayuda a comprender que se pueden crear aparentes cambios en forma solo afectando el entorno cercano de la imagen o su entorno.
+
+
+
+
+
