@@ -1,7 +1,7 @@
-baseURL = "https://visualcomputing.github.io/showcase"
+baseURL = "https://dicarvajalb.github.io/visual_computing"
 languageCode = "en-us"
 title = "Showcase Template"
-theme = 'book'
+theme = "book"
 
 # Book configuration
 disablePathToLower = true
@@ -22,7 +22,7 @@ enableGitInfo = true
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/visualcomputing/showcase'
+  BookRepo = 'https://github.com/Dicarvajalb/visual_computing'
 
   # Configure the date format used on the pages
   # - In git information
@@ -34,4 +34,5 @@ enableGitInfo = true
   # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks = false
+
 
