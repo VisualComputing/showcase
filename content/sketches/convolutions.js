@@ -10,14 +10,14 @@ function setup() {
   noLoop();
   
   //Boton de Recarga
-  button = createButton('Recargar Canvas');
-  button.position(10, 10);
+  button = createButton('Aplicar Kernel');
+  button.position(135, 10);
   button.mousePressed(reload);
   
   //Cambiar el kernel
-  slider = createSlider(1, 5, 1);
-  slider.position(120, 10);
-  slider.style('width', '80px');
+  slider = createSlider(1, 8, 1, 1);
+  slider.position(10, 10);
+  slider.style('width', '120px');
 }
 
 //Calcular el producto punto
@@ -194,23 +194,43 @@ function reload(){
   redraw()
 }
 
+const kernels = {
+    identity: [0, 0, 0, 0, 1, 0, 0, 0, 0],
+    sharpen: [0, -1, 0, -1, 5, -1, 0, -1, 0],
+    boxBlur: [1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9, 1 / 9],
+    edgeDetection: [-1, -1, -1, -1, 8, -1, -1, -1, -1],
+    gaussianBlur: [1, 2, 1, 2, 4, 2, 1, 2, 1],
+    emboss: [-2, -1, 0, -1, 1, 1, 0, 1, 2],
+    bottomSobel: [-1,2,-1,0,0,0,1,2,1],
+    outline: [-1,-1,-1,-1,8,-1,-1,-1,-1],
+    topSobel: [1,2,1,0,0,0,-1,-2,-1]
+};
+
 function draw() {
   background(220);
   //image(img, 10, 10);
   img.loadPixels();
   let d = img.width;
-  
+
   //Cambiar los canvas
-  if(slider.value()==1){
-    kernel = [0,0,0,0,1,0,0,0,0]; //restaurar
-  }else if(slider.value()==2){
-    kernel = [0,-1,0,-1,5,-1,0,-1,0 ]; //definir        
-  }else if(slider.value()==3){
-    kernel = [1/9,1/9,1/9,1/9,1/9,1/9,1/9,1/9,1/9,]; //blur cuadrado
-  }else if(slider.value()==4){
-    kernel = [-2,-1,0,-1,1,1,0,1,2]; //viselar
-  }else{
-    kernel = [-1,-1,-1,-1,8,-1,-1,-1,-1]; //deteccion de bordes fuerte
+  if (slider.value() == 1) {
+    kernel = kernels.identity; //restaurar
+  } else if (slider.value() == 2) {
+    kernel = kernels.sharpen; //definir
+  } else if (slider.value() == 3) {
+    kernel = kernels.boxBlur; //blur cuadrado
+  } else if (slider.value() == 4) {
+    kernel = kernels.emboss //viselar
+  } else if (slider.value() == 5) {
+    kernel = kernels.gaussianBlur //blur gaussiano
+  } else if (slider.value() == 6) {
+    kernel = kernels.bottomSobel
+  } else if (slider.value() == 7) {
+    kernel = kernels.topSobel
+  } else if (slider.value() == 8) {
+    kernel = kernels.outline
+  } else {
+    kernel = kernels.edgeDetection; //deteccion de bordes fuerte
   }
       
   let finalMap = CoreCalc(kernel,img.pixels,d);
