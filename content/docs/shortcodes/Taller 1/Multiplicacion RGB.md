@@ -1,4 +1,4 @@
-# Efecto esteroquinético
+# Multiplicación RGB
 
 ## Problem statement
 
