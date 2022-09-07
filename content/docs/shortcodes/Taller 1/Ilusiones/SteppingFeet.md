@@ -14,7 +14,7 @@ Para cambiar la velocidad de las figuras se usa el primer slider, para cambiar l
 
 {{< p5-iframe sketch="/visual_computing/sketches/stepping_feet.js" width="625" height="625" >}}
 
-{{< details "**CODIGO:** Movimiento Enlazado" close >}}
+{{< details "**CODIGO:** Paso a paso" close >}}
 **C**odigo generado usando el editor web de **P5.js**.
 ```javascript
 var canvasWidth = 600;
