@@ -13,6 +13,7 @@ var colorBar1 = 'yellow';
 var colorBar2 = 'blue';
 var moveBarRight = true;
 var isMove = true;
+var contrast = true;
 
 var sliderSpeed;
 
@@ -23,7 +24,11 @@ function setup() {
 }
 
 function draw() {
-  drawBoard();
+  if(contrast){
+    drawBoard();
+  }else{
+    background(220);
+  }
   updateSpeed();
   drawBar1();
   drawBar2();
@@ -152,6 +157,20 @@ function drawLayout() {
                 colorBar2 = 'black'
                 break;
         }
+    });
+    
+    // Bye Contrast button
+    button = createButton('Bye contrast');   
+    button.position(150, 440);
+    button.mousePressed(() => {
+      contrast = false;
+    });
+
+    // Hi Contrast button
+    button = createButton('Hi contrast');   
+    button.position(150, 470);
+    button.mousePressed(() => {
+      contrast = true;
     });
 
 }
