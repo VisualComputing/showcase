@@ -111,6 +111,9 @@ function preload() {
 }
 
 function setup() {
+
+    pixelDensity(1);
+    
     let ratio = images[0].height / images[0].width;
     let w = 725;
     images[0].resize(w, w * ratio);
@@ -300,6 +303,8 @@ function convolution() {
     this.pg.loadPixels();
     images[0].loadPixels();
 
+    let d = pixelDensity();
+
     colorCount = [];
 
     colorCount[0] = new Array(256).fill(0);
@@ -338,7 +343,7 @@ function convolution() {
                         let dy = ky - floor(currentKernel.length / 2);
 
 
-                        let dIndex = 4 * ((y + dy) * this.pg.width + (x + dx)) + step;
+                        let dIndex = 4 * ((y * d + dy) * this.pg.width + (x + dx)) + step;
 
                         sum += images[0].pixels[dIndex] * currentKernel[kx][ky];
                     }
@@ -368,6 +373,9 @@ function convolution() {
 function createHistogram() {
     let barWidth = this.xSize / 255;
     this.pg.loadPixels();
+
+    let d = pixelDensity();
+
     for (let c = 0; c < 3; c++) {
         for (let i = 0; i <= 255; i++) {
             let x = int(map(i, 0, 256, 0, this.xSize));
@@ -375,7 +383,7 @@ function createHistogram() {
             for (let j = 0; j < currentTone; j++) {
                 let y = int(map(j, 0, maxColorCount, 0, this.ySize));
                 for (let w = 0; w < barWidth; w++)
-                    this.pg.pixels[4 * (y * this.xSize + (x + w)) + c] = 255;
+                    this.pg.pixels[4 * ((y * d) * this.xSize + (x + w)) + c] = 255;
             }
         }
     }
