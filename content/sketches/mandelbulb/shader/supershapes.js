@@ -39,7 +39,7 @@ function drawShader() {
     mandelbulbShader.setUniform('WIDTH', width);
     mandelbulbShader.setUniform('HEIGHT', height);
 
-    mandelbulbShader.setUniform('VOLUMETRIC_RENDER', false);
+    mandelbulbShader.setUniform('VOLUMETRIC_RENDER', true);
 
     mandelbulbShader.setUniform('cameraRotation', easycam.getRotation());
     mandelbulbShader.setUniform('cameraCenter', easycam.getCenter());

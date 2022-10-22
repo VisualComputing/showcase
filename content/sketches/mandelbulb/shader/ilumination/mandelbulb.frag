@@ -17,9 +17,42 @@ uniform float N;
 
 uniform bool showNormals;
 uniform bool AO;
-uniform bool secondaryLigth;
+uniform bool lightAttenuation;
 uniform bool diffuseLigth;
 uniform bool shapeColor;
+uniform bool distanceColoring;
+uniform bool specularLight;
+uniform bool ambientLight;
+uniform bool rotate;
+
+uniform vec3 shapeColorC;
+uniform vec3 diffuseLightC;
+uniform vec3 secondaryLightC;
+uniform vec3 specularColor;
+
+uniform vec3 diffuseLightP;
+uniform vec3 secondaryLightP;
+
+uniform float ambientCoef;
+uniform float attenuationLight;
+uniform float falloutV;
+uniform float matShininess;
+
+uniform float exponentialTerm;
+uniform float numeratorTerm;
+
+uniform float time;
+
+uniform bool distancedNormal;
+uniform float minhExp;
+uniform float maxhExp;
+uniform float maxSamplingDistance;
+uniform float sdfFactor;
+
+uniform float gammaCorrection;
+
+uniform float specularIntensity;
+uniform float diffuseIntensity;
 
 // --------------------------------------------//
 //               Noise Functions
@@ -33,6 +66,13 @@ float hash1(float n) {
 // Aux function
 float map(float value, float istart, float istop, float ostart, float ostop) {
     return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+}
+
+mat2 Rotate(float angle) {
+    float s = sin(angle);
+    float c = cos(angle);
+
+    return mat2(c, -s, s, c);
 }
 
 // Mandelbulb SDF
@@ -65,16 +105,21 @@ float mandelbulbSDF(vec3 pos) {
     }
 
     // Detail in function of camera distance
-    float bandFactor = map(cameraDistance, 500., 300., 0.5, 1.);
+    float bandFactor = map(cameraDistance, 500., 300., sdfFactor, sdfFactor + 1.);
 
     // Hubbard-Douady potential see https://iquilezles.org/articles/distancefractals/
-    float dist = bandFactor * log(r) * r / dw;
+    float dist = sdfFactor * log(r) * r / dw;
 
     return dist;
 }
 
 // Get the closest distance from p to world
 float world(vec3 p) {
+    if(rotate) {
+        p.xz *= Rotate(-sin(float(time) * 0.002));
+        p.yz *= Rotate(cos(float(time) * 0.003));
+    }
+
     // Set point to initial camera distance
     p /= 500.;
 
@@ -93,15 +138,18 @@ float world(vec3 p) {
 // Tetrahedron technique by Paulo Falcao 2008 see https://iquilezles.org/articles/normalsSDF/
 vec3 calcNormal(vec3 p, float t) {
     // Detail given by distance of point to the camera
-    float h = map(t, 0., 3., 0.00001, 0.01);
+
+    float h;
+    if(distancedNormal)
+        h = map(t, 0., maxSamplingDistance, pow(10., -minhExp), pow(10., -maxhExp));
+    else
+        h = pow(10., -minhExp);
 
     const vec2 k = vec2(1, -1);
-    return normalize(
-        k.xyy * world(p + k.xyy * h) +
+    return normalize(k.xyy * world(p + k.xyy * h) +
         k.yyx * world(p + k.yyx * h) +
         k.yxy * world(p + k.yxy * h) +
-        k.xxx * world(p + k.xxx * h)
-    );
+        k.xxx * world(p + k.xxx * h));
 }
 
 float ambientOcclusion1(vec3 pos, vec3 N, float fallout) {
@@ -136,7 +184,7 @@ float rayMarch(vec3 ro, vec3 rd) {
         float map = world(rp);
 
         // Check if ray intersects
-        if(map < MIN_MARCH_DISTANCE)
+        if(map < pow(10., -MIN_MARCH_DISTANCE))
             break;
 
         // Advance ray to the next closest point
@@ -163,57 +211,115 @@ void main() {
     vec3 col = vec3(0.);
 
     // Ambient Light definition
-    vec3 ambientPosition = vec3(-5., 5., -2.);
-    vec3 ambientColor = vec3(1.0, 0.9, 0.7);
-
-    // Secondary light
-    vec3 secondarylightPosition = vec3(0., 5., -5.);
-    vec3 secondarylightColor = vec3(0.251, 0.7804, 0.2941);
+    vec3 ambientPosition = diffuseLightP;
+    vec3 ambientColor = diffuseLightC;
 
     // Spawn ray and get distance
     float t = rayMarch(ro, rd);
 
+    vec3 shapeC;
+
     if(t > 0.) {
+
         // Shape Color based on distance
-        if(shapeColor)
-            col += vec3(map(t, 0., 1., 0.8, 0.3), 0, 0.5);
+        if(distanceColoring)
+            shapeC = vec3(map(t, 0., 1., shapeColorC.r, shapeColorC.r - 0.5), shapeColorC.g, shapeColorC.b);
+        else
+            shapeC = shapeColorC;
+
+        // col += shapeC;
+
+        if(shapeColor) {
+            vec3 gamma = vec3(1.0 / gammaCorrection);
+            gl_FragColor = vec4(pow(col, gamma), 1.);
+            return;
+        }
 
         // Get normals of shape
         vec3 posWS = ro + rd * t;
-        vec3 norWS = calcNormal(posWS, t);
+        vec3 norWS = calcNormal(posWS, length(posWS));
 
         // Colormode NORMALS
         if(showNormals) {
             col = norWS;
-            gl_FragColor = vec4(col, 1.);
+            vec3 gamma = vec3(1.0 / gammaCorrection);
+            gl_FragColor = vec4(pow(col, gamma), 1.);
             return;
         }
 
-        // Calculate Ambient ligth with attenuation
-        vec3 ld = secondarylightPosition;
-        float lightDistance = length((ld - posWS));
+        // Calculate ambient
+        vec3 ambient = ambientCoef * ambientColor * shapeC;
 
-        float attenuation = 10.0 / pow(lightDistance, 1.);
-        vec3 lightColor = secondarylightColor * attenuation;
+        if(ambientLight) {
+            col = ambient;
+            vec3 gamma = vec3(1.0 / gammaCorrection);
+            gl_FragColor = vec4(pow(col, gamma), 1.);
+            return;
+        }
 
         // Calculate diffuse ligth
-        vec3 diffuseR = vec3(dot(normalize(ambientPosition), norWS)) * ambientColor;
+        vec3 lt = normalize(ambientPosition - posWS); //surface to light
+
+        float diffuseCoef = max(dot(norWS, lt), 0.);
+        vec3 diffuseR = diffuseCoef * ambientColor;
+
+        // calculate specular (reflection)
+        vec3 specular = vec3(0.);
+
+        if(diffuseCoef > 0.) {
+            vec3 tCo = normalize(co - posWS);
+
+            vec3 halfway = normalize(tCo + lt);
+            float angle = max(0., dot(norWS, halfway));
+            float specularCoef = pow(angle, matShininess);
+
+            specular = specularCoef * specularColor * ambientColor;
+        }
+
+        // Calculate light attenuation
+
+        // vec3 ld = secondarylightPosition;
+        float lightDistance = length(ambientPosition - posWS);
+
+        // float attenuation = attenuationIntesity / pow(lightDistance, attenuationAngle);
+        float attenuation = numeratorTerm / (1. + attenuationLight * pow(lightDistance, exponentialTerm));
 
         // Calculate ambient oclussion
-        float ao = ambientOcclusion1(posWS, norWS, 0.46);
-
-        // Add ambient ligth
-        if(secondaryLigth)
-            col += lightColor;
+        float ao = ambientOcclusion1(posWS, norWS, falloutV);
 
         // Add diffuse ligth
-        if(diffuseLigth)
-            col += diffuseR;
+        if(diffuseLigth) {
+            col = diffuseR * diffuseIntensity;
+            vec3 gamma = vec3(1.0 / gammaCorrection);
+            gl_FragColor = vec4(pow(col, gamma), 1.);
+            return;
+        }
+
+        // Specular
+        if(specularLight) {
+            col = specular * specularIntensity;
+            vec3 gamma = vec3(1.0 / gammaCorrection);
+            gl_FragColor = vec4(pow(col, gamma), 1.);
+            return;
+        }
+
+        // Light attenuation
+        if(lightAttenuation) {
+            vec3 gamma = vec3(1.0 / gammaCorrection);
+            gl_FragColor = vec4(pow(vec3(attenuation), gamma), 1.);
+            return;
+        }
+
+        col += ambient +
+            (attenuation * specular * specularIntensity) +
+            (attenuation * diffuseR * diffuseIntensity);
 
         // Add ambient oclussion
         if(AO)
             col *= ao + 0.01;
     }
 
-    gl_FragColor = vec4(col, 1.);
+    vec3 gamma = vec3(1.0 / gammaCorrection);
+
+    gl_FragColor = vec4(pow(col, gamma), 1.);
 }
