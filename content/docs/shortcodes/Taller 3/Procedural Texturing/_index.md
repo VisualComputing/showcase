@@ -26,6 +26,8 @@ La explicación simplificada del proeso de asignación de coordenadas de textura
 
 En este ejemplo, un píxel, que se muestra a la izquierda de la ilustración, se idealiza en un cuadrado de color. Las direcciones de las cuatro esquinas del píxel se asignan a la primitiva 3D en el espacio del objeto(La forma del píxel a menudo se distorsiona debido a la forma de la primitiva en el espacio 3D y al ángulo de visión), las esquinas del área de la superficie de la primitiva que corresponden a las esquinas del píxel se mapean en el espacio de textura. El proceso de mapeo vuelve a distorsionar la forma del píxel, lo cual es común. El valor de color final del píxel se calcula a partir de los téxeles en la región a la que se asigna el píxel.
 
+## Code
+
 A continuación algunos ejemplos:
 
 Aplicamos el siguiente patron a una esfera:
@@ -143,4 +145,8 @@ void main() {
 ## Conclusiones
 
 Este no solo es un metodo sencillo sino tambien uno muy practico con el cual se pueden replican un sinfin de texturas.
+
+## Referencias
+
+https://learn.microsoft.com/en-us/windows/win32/direct3d9/texture-coordinates
 
