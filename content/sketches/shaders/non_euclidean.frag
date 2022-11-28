@@ -1,8 +1,6 @@
 precision mediump float;
 
-// uniforms are defined and sent by the sketch
 uniform sampler2D texture;
-// see emitResolution: https://github.com/VisualComputing/p5.treegl#macros
 uniform vec2 u_resolution;
 
 void main() {
