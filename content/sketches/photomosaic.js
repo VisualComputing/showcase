@@ -121,13 +121,6 @@ function draw() {
   cover({
     texture: true,
   });
-  // let div = createDiv(floor(frameRate()));
-  // div.style("font-size", "16px");
-  // div.style("background-color", "white");
-  // div.style("font-family", "Arial");
-  // div.style("font-size", "30px");
-  // div.style("font-weight", "bold");
-  // div.position(20, 20);
 }
 
 function windowResized() {
