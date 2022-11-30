@@ -1,16 +1,4 @@
-// Goal in the 3d Brush is double, to implement:
-// 1. a gesture parser to deal with depth, i.e.,
-// replace the depth slider with something really
-// meaningful. You may use a 3d sensor hardware
-// such as: https://en.wikipedia.org/wiki/Leap_Motion
-// or machine learning software to parse hand (or
-// body) gestures from a (video) / image, such as:
-// https://ml5js.org/
-// 2. other brushes to stylize the 3d brush, taking
-// into account its shape and alpha channel, gesture
-// speed, etc.
 
-// Brush controls
 let lightShader;
 let ambient;
 function preload() {
