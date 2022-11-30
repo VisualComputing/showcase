@@ -1,6 +1,6 @@
 # Grupo de estudio
 - Angela Cardenas
-- Diego Carvajal
+- Diego Carvajal: Estudiante de sistemas con intereses en el desarollo de mecánicas interactivas en la web, 
 - Brayan Portela
 - David Muñoz
 
