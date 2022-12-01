@@ -38,7 +38,68 @@ Resultado:
 
 {{< p5-iframe sketch="/visual_computing/sketches/procedural_texturing.js" width="620" height="620" >}}
 
-{{< details "**CODIGO:** Esfera.frag" close >}}
+{{< details "**CODIGO:** procedural_texturing.js" close >}}
+**C**odigo generado usando el editor web de **P5.js**.
+```javascript
+let theShader;
+let shaderTexture;
+
+let theta = 0;
+
+let x;
+let y;
+let outsideRadius = 200;
+let insideRadius = 100;
+
+
+function preload(){
+    
+  theShader = loadShader('/visual_computing/sketches/shaders/shader.vert','/visual_computing/sketches/shaders/shader.frag');
+}
+
+function setup() {
+
+  createCanvas(windowWidth*0.95, windowHeight*0.95, WEBGL);
+  noStroke();
+
+  shaderTexture = createGraphics(710, 400, WEBGL);
+
+  shaderTexture.noStroke();
+
+}
+
+function draw() {
+
+  shaderTexture.shader(theShader);
+
+  theShader.setUniform("u_resolution", [width, height]);
+  theShader.setUniform("u_mouse", [mouseX>0?mouseX:0.0, mouseY>0?mouseY:0.0]);
+
+  
+  shaderTexture.rect(0,0,width,height);
+
+  background("blue");
+  orbitControl();
+  
+  texture(shaderTexture);
+  
+  push();
+  rotateZ(theta * mouseX * 0.0001);
+  rotateX(theta * mouseX * 0.0001);
+  rotateY(theta * mouseX * 0.0001);  
+  theta += 0.01;
+  sphere(125);
+  pop();
+}
+
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+```
+{{< /details >}}
+
+{{< details "**CODIGO:** shader.frag" close >}}
 **C**odigo generado usando el editor web de **P5.js**.
 ```javascript
 #ifdef GL_ES
@@ -107,7 +168,68 @@ Resultado:
 
 {{< p5-iframe sketch="/visual_computing/sketches/procedural_texturing_2.js" width="620" height="620" >}}
 
-{{< details "**CODIGO:** Cubo.frag" close >}}
+{{< details "**CODIGO:** procedural_texturing_2.js" close >}}
+**C**odigo generado usando el editor web de **P5.js**.
+```javascript
+let theShader;
+let shaderTexture;
+
+let theta = 0;
+
+let x;
+let y;
+let outsideRadius = 200;
+let insideRadius = 100;
+
+
+function preload(){
+  theShader = loadShader('/visual_computing/sketches/shaders/shader_2.vert','/visual_computing/sketches/shaders/shader_2.frag');
+}
+
+function setup() {
+  
+  createCanvas(windowWidth*0.95, windowHeight*0.95, WEBGL);
+  noStroke();
+
+  shaderTexture = createGraphics(710, 400, WEBGL);
+
+  shaderTexture.noStroke();
+}
+
+function draw() {
+
+  shaderTexture.shader(theShader);
+
+  theShader.setUniform("u_resolution", [width, height]);
+  theShader.setUniform("u_time", millis() / 1000.0);
+  theShader.setUniform("u_mouse", [mouseX>0?mouseX:0.0, mouseY>0?mouseY:0.0]);
+
+  
+  shaderTexture.rect(0,0,width,height);
+
+  background(40);
+  
+  orbitControl();
+  
+  texture(shaderTexture);
+  
+  push();  
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.005);
+  box(width / 4);
+  pop();
+}
+
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+//Fuente: https://github.com/nakednous/p5jsShaderExamples
+```
+{{< /details >}}
+
+{{< details "**CODIGO:** shader_2.frag" close >}}
 **C**odigo generado usando el editor web de **P5.js**.
 ```javascript
 #ifdef GL_ES
@@ -139,6 +261,7 @@ void main() {
 
     gl_FragColor = vec4(color.rg,1.144,0.944);
 }
+//Fuente: https://www.shadertoy.com/
 ```
 {{< /details >}}
 
@@ -150,3 +273,8 @@ Este no solo es un metodo sencillo sino tambien uno muy practico con el cual se 
 
 https://learn.microsoft.com/en-us/windows/win32/direct3d9/texture-coordinates
 
+https://github.com/nakednous/p5jsShaderExamples
+
+https://thebookofshaders.com/09/
+
+https://www.shadertoy.com/
