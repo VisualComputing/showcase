@@ -36,5 +36,5 @@ Don't forget to select the `gh-pages` branch as the one to serve your site from 
 {{< /hint >}}
 
 {{< hint info >}}
-The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones.
+The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones. Don't forget to edit the theme footer to keep the copyright note.
 {{< /hint >}}

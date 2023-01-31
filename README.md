@@ -22,4 +22,4 @@ even so if you decided to rename the repo anyways, say to `newreponame`, don't f
 
 1. If you forked the repo don't forget to activate the [actions](https://github.com/VisualComputing/showcase/actions).
 2. Don't forget to select the `gh-pages` branch as the one to serve your site from at the [pages section of your repo configuration page](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), if it is no so by default.
-3. The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones.
+3. The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones. Don't forget to edit the theme footer to keep the copyright note.
