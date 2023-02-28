@@ -4,22 +4,18 @@ Welcome to the [gohugo](https://gohugo.io/) template to create rich content [aca
 
 ## Hacking
 
-Install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
+Create a github [user account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) or [organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch), and install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
 
-```sh
-$git clone https://github.com/VisualComputing/showcase
-$cd showcase
-$git submodule update --init --recursive
-$hugo server -D --disableFastRender
-```
+1. Create a new repo [from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) into your user account or organization. **Don't rename the repo but leave it as 'showcase'**.
+2. Grant [read and write permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#configuring-the-default-github_token-permissions) to your newly created repo workflow.
+3. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) your newly created repo and `cd` into your repo root: `$cd showcase`.
+4. Install the site default theme: `$git submodule update --init --recursive`.
+5. Redefined `baseURL` in `config.toml` to point to the your site url, i.e., https://*username*.github.io/showcase/ where *username* is your username (or organization name) on GitHub. Refer [GitHub pages](https://pages.github.com/) for details about url naming conventions.
 
-Deploy with `$git push` after redefined `baseURL` in `config.toml` which should point to your actual public remote.
+Render your site locally: `$hugo server -D --disableFastRender`.
 
-**Don't rename the repo but leave it as 'showcase'**  
-even so if you decided to rename the repo anyways, say to `newreponame`, don't forget to update all url references of the markdown and js file sources, to reflect that change, i.e., look within all [content folder](https://github.com/VisualComputing/showcase/tree/main/content) files for `showcase` occurrences and replace them by `newreponame`, which should be easily doable in any recent open source code editor, e.g., 🔎 in [kate](https://kate-editor.org/) or [vs-codium](https://vscodium.com/).
+Deploy with `$git push`. Don't forget to select the `gh-pages` branch as the one to serve your site from at the [pages section of your repo configuration page](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-### Remarks
+### Remark
 
-1. If you forked the repo don't forget to activate the [actions](https://github.com/VisualComputing/showcase/actions).
-2. Don't forget to select the `gh-pages` branch as the one to serve your site from at the [pages section of your repo configuration page](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), if it is no so by default.
-3. The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones.
+The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones.
