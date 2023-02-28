@@ -4,13 +4,13 @@ Welcome to the [gohugo](https://gohugo.io/) template to create rich content [aca
 
 ## Hacking
 
-Create a github [user account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) or [organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch), and install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
+Create a github [user account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) or [organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch), and install [git](https://git-scm.com/) and the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
 
 1. Create a new repo [from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) into your user account or organization. **Don't rename the repo but leave it as 'showcase'**.
 2. Grant [read and write permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#configuring-the-default-github_token-permissions) to your newly created repo workflow.
 3. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) your newly created repo and `cd` into your repo root: `$cd showcase`.
 4. Install the site default theme: `$git submodule update --init --recursive`.
-5. Redefined `baseURL` in `config.toml` to point to the your site url, i.e., https://*username*.github.io/showcase/ where *username* is your username (or organization name) on GitHub. Refer [GitHub pages](https://pages.github.com/) for details about url naming conventions.
+5. Redefined `baseURL` in `config.toml` to point to your site url, i.e., https://*username*.github.io/showcase/ where *username* is your username (or organization name) on GitHub. Refer [GitHub pages](https://pages.github.com/) for details about url naming conventions. **Don't forget to [commit](https://github.com/git-guides/git-commit) your changes**.
 
 Render your site locally: `$hugo server -D --disableFastRender`.
 
