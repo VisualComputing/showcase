@@ -10,7 +10,7 @@ Create a github [user account](https://docs.github.com/en/get-started/signing-up
 2. Grant [read and write permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#configuring-the-default-github_token-permissions) to your newly created repo workflow.
 3. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) your newly created repo and `cd` into your repo root: `$cd showcase`.
 4. Install the site default theme: `$git submodule update --init --recursive`.
-5. Redefined `baseURL` in `config.toml` to point to your site url, i.e., https://*username*.github.io/showcase/ where *username* is your username (or organization name) on GitHub. Refer [GitHub pages](https://pages.github.com/) for details about url naming conventions. **Don't forget to [commit](https://github.com/git-guides/git-commit) your changes**.
+5. Redefined `baseURL` in `config.toml` to point to your site url, i.e., https://*username*.github.io/showcase/ where *username* is your username (or organization name) on GitHub. Refer to [GitHub pages](https://pages.github.com/) for details about url naming conventions. **Don't forget to [commit](https://github.com/git-guides/git-commit) your changes**.
 
 Render your site locally: `$hugo server -D --disableFastRender`.
 
