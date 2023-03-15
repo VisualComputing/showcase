@@ -1,4 +1,5 @@
 baseURL = "https://andryut.github.io/showcase"
+staticDir = ["resources/_gen/images"]
 languageCode = "en-us"
 title = "Showcase Template"
 theme = 'book'
