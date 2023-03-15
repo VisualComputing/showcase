@@ -13,7 +13,8 @@ function setup() {
   stopButton = createButton('Stop');
   stopButton.mousePressed(stopGrid);
   input = createInput();
-  input.value(5);
+  input.value(2.5);
+  startGrid();
 }
 
 function draw() {
@@ -32,14 +33,14 @@ function drawLines() {
   stroke(0);
   strokeWeight(5);
   let lineSpacing = 10;
-  for (let x = -width*10; x < width*10; x += lineSpacing) {
+  for (let x = -width*1000; x < width*1000; x += lineSpacing) {
     line(x + xOffset, 0, x + xOffset, height);
   }
 }
 
 function startGrid() {
   let val = input.value();
-  xSpeed = parseFloat(val*5);
+  xSpeed = parseFloat(val);
   xOffset = -width;
 }
 
