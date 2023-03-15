@@ -36,3 +36,4 @@ enableGitInfo = true
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks = false
 
+staticDir = ["resources/_gen/images"]

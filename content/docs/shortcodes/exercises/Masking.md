@@ -10,4 +10,4 @@ irregular columns sort. The cafe wall illusion has been utilized by neuropsychol
 
 ## Web app
 
-{{< p5-file-input-iframe sketch="/showcase/sketches/exercises/masking/web_app.js" width="610" height="730">}}
+{{< p5-file-input-iframe sketch="/showcase/sketches/exercises/masking/web_app.js" width="610" height="750">}}
