@@ -1,7 +1,0 @@
----
-bookCollapseSection: false
----
-
-## Integrantes
-
-{{<section>}}
