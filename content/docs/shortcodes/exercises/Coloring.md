@@ -1,3 +1,4 @@
+
 # Coloring for colorblindness
 >**Prompt:** Implement a color mapping application that helps people who are color blind see the colors around them.
 >
@@ -24,3 +25,6 @@ Finally here's the complete P5.js implementation:
 {{< p5-iframe sketch="/showcase/sketches/exercises/coloring/1.js" width="450" height="450" >}}
 
 [1] Stockman, A., Sharpe, L. and Vries, R. (1999) _Color Vision: From Genes to Perception_. Cambridge University Press.
+
+## Color modes
+
