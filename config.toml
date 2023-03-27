@@ -37,3 +37,13 @@ enableGitInfo = true
   BookPortableLinks = false
 
 staticDir = ["resources/_gen/images"]
+
+[menu]
+[[menu.main]]
+  name = 'Shortcodes'
+  pageRef = '/docs/shortcodes'
+  weight = 2
+[[menu.main]]
+  name = 'Team'
+  pageRef = '/docs/team'
+  weight = 1

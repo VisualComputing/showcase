@@ -2,12 +2,9 @@
 headless: true
 ---
 
-- **Shortcodes**
-- [p5]({{< relref "/docs/shortcodes/p5" >}})
-- [Buttons]({{< relref "/docs/shortcodes/buttons" >}})
-- [Columns]({{< relref "/docs/shortcodes/columns" >}})
-- [Hints]({{< relref "/docs/shortcodes/hints" >}})
-- [Katex]({{< relref "/docs/shortcodes/katex" >}})
-- [Mermaid]({{< relref "/docs/shortcodes/mermaid" >}})
-- [Tabs]({{< relref "/docs/shortcodes/tabs" >}})
+- **Menu**
+- [Excercises]({{< relref "/docs/excercises" >}})
+- [Team]({{< relref "/docs/team" >}})
+
+- [Shortcodes]({{< relref "/docs/shortcodes" >}})
 <br />
