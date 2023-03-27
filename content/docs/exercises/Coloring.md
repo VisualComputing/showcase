@@ -28,3 +28,6 @@ Finally here's the complete P5.js implementation:
 
 ## Color modes
 
+{{< p5-iframe sketch="/showcase/sketches/exercises/coloring/HSL.js" width="500" height="700" >}}
+{{< p5-iframe sketch="/showcase/sketches/exercises/coloring/HSV.js" width="500" height="550" >}}
+{{< p5-iframe sketch="/showcase/sketches/exercises/coloring/XYZ.js" width="500" height="400" >}}
