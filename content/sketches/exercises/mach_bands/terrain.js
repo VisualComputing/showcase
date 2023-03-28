@@ -113,7 +113,7 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
     this.addBeachsection(b);e=b.y;f=b.x}b=h.pop()}else{if(a){this.removeBeachsection(a.arc)}else{break}}}this.clipEdges(j);this.closeCells(j);
     var c=new Date();var g=new this.Diagram();g.cells=this.cells;g.edges=this.edges;g.vertices=this.vertices;g.execTime=c.getTime()-d.getTime();
     this.reset();return g};
-  
+
   var perlin;
   var strk;
   var band;
@@ -135,10 +135,9 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
   
   function computeDiagram() {
     var voronoi = new Voronoi();
-    [...Array(parseInt(Math.random()*parseInt((H+W)/100), 10)).keys()].forEach(e => {
+    [...Array(parseInt(Math.random()*parseInt((H+W)/25), 10)).keys()].forEach(e => {
       sites.push({x: Math.random()*W, y: Math.random()*H})
     });
-    console.log(sites);
     return voronoi.compute(sites, bbox);
   }
   
@@ -176,24 +175,28 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
   }
   
   function genTerrain() {
-    cols = W/scl.value();
-    rows = H/scl.value();
-    var yoff = 0;
-    for (var x = 0; x < cols; x++) {
-      terrain[x] = [];
-      color[x] = [];
-      var xoff = 0;
-      for (var y = 0; y < rows; y++) {
-        let vh = nearest(sites, {x: x*scl.value(),y: y*scl.value()}).distance/largestDistance(diagram);
-        if (perlin.checked()) {
-          vh += noise(xoff, yoff);
+    try {
+      cols = W/scl.value();
+      rows = H/scl.value();
+      var yoff = 0;
+      for (var x = 0; x < cols; x++) {
+        terrain[x] = [];
+        color[x] = [];
+        var xoff = 0;
+        for (var y = 0; y < rows; y++) {
+          let vh = nearest(sites, {x: x*scl.value(),y: y*scl.value()}).distance/largestDistance(diagram);
+          if (perlin.checked()) {
+            vh += noise(xoff, yoff);
+          }
+          let h = map(vh, 1, 0, -100, 100); //specify a default value for now
+          terrain[x][y] = h;
+          color[x][y] = map(h, -100, 100, 0, 255);
+          xoff += 0.2;
         }
-        let h = map(vh, 1, 0, -100, 100); //specify a default value for now
-        terrain[x][y] = h;
-        color[x][y] = map(h, -100, 100, 0, 255);
-        xoff += 0.2;
+        yoff += 0.2;
       }
-      yoff += 0.2;
+    } catch (error) {
+      location.reload();
     }
   }
   
@@ -204,6 +207,7 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
   }
   
   function setup() {
+    angleMode(RADIANS);
     W = Math.min(windowWidth, windowHeight)/2 - 10;
     H = W;
     createCanvas(W*2, H*2, WEBGL);
@@ -231,7 +235,7 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
     perlin.input(genTerrain);
   
     band = createCheckbox('band', false);
-    band.position(-10, -160);
+    band.position(10, 160);
     band.style('color', '#1EBCC5');
     
     init();
@@ -249,7 +253,7 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
     translate(0, 50);
   
     rotateX(PI/3);
-    rotateZ(PI*rotation/2000);
+    rotateZ(2*PI*(rotation/2000));
     translate(-W / 2, -H / 2);
   
     if (strk.checked()) {
@@ -274,9 +278,9 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
     } else {
       if (band.checked()) {
         fill(200, 200, 200, 50);
+        var s = scl.value();
         for (let y = 0; y < rows - 1; y++) {
           beginShape(TRIANGLES);
-          var s = scl.value();
           for (let x = 0; x < cols - 2; x++) {
             fill((color[x][y] + color[x][y + 1] + color[x + 1][y]) / 3);
             vertex(x * s      , y * s      , terrain[x][y]);
@@ -286,14 +290,26 @@ function Voronoi(){this.vertices=null;this.edges=null;this.cells=null;this.toRec
             vertex((x + 1) * s, (y + 1) * s, terrain[x + 1][y + 1]);
             vertex((x + 2) * s, y * s      , terrain[x + 2][y]);
             vertex((x + 2) * s, (y + 1) * s, terrain[x + 2][y + 1]);
+            if (x == 0) {
+              fill((color[x][y + 1] + color[x + 1][y + 1] + color[x + 1][y]) / 3);
+              vertex(x * s      , (y + 1) * s      , terrain[x][y + 1]);
+              vertex((x + 1) * s, (y + 1) * s      , terrain[x + 1][y + 1]);
+              vertex((x + 1) * s, y * s            , terrain[x + 1][y]);
+            }
+            if (x > cols - 4) {
+              fill((color[x + 1][y] + color[x + 1][y + 1] + color[x + 2][y]) / 3);
+              vertex((x + 1) * s      , y * s      , terrain[x + 1][y]);
+              vertex((x + 1) * s      , (y + 1) * s, terrain[x + 1][y + 1]);
+              vertex((x + 2) * s, y * s      , terrain[x + 2][y]);
+            }
           }
           endShape();
         }
       } else {
+        var s = scl.value();
         for (var y = 0; y < rows - 1; y++) {
           beginShape(TRIANGLE_STRIP);
           for (var x = 0; x < cols; x++) {
-            var s = scl.value();
             fill(color[x][y]);
             vertex(x * s, y * s, terrain[x][y]);
             fill(color[x][y+1]);

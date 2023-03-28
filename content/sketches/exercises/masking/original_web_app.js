@@ -1,20 +1,3 @@
-# Masking
-
-In the following image there are parallel lines in each row, but exists an illusion of a vertically displacement created by the
-irregular columns sort. The cafe wall illusion has been utilized by neuropsychologists to investigate how the brain processes visual information. Additionally, the illusion has found practical applications in graphic design and art.
-
-{{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/kinegram.js" width="730" height="460" >}}
-{{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern1.js" width="430" height="450" >}}
-{{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern2.js" width="430" height="450" >}}
-
-
-## Web app
-
-On this exercise we provide a script to process images that can be embeded on any web application. But for practical purposes we show an example with predefined images.
-
-The next p5 script allow us to load an image from our computer, then generates the histogram for the image and finally one can choose from various processes that can be applied to that image, when a process is applied the resulting image is automatically downloaded.
-
-{{< details title="web-app.js" open=false >}} {{< highlight js >}}
 let HW = 400;
 let HH = 400;
 let HP = 200;
@@ -227,7 +210,7 @@ function setup() {
   input.addEventListener("change", handleFiles, false);
   
   histogramTypeSelect = createSelect();
-  histogramTypeSelect.position(HP-50, HP-50);
+  histogramTypeSelect.position(HP, HP-50);
   histogramTypeSelect.option('RGB'); 
   histogramTypeSelect.option('Brightness');
   histogramTypeSelect.hide();
@@ -281,25 +264,3 @@ function draw() {
     }
   }
 }
-{{< /highlight >}} {{< /details >}}
-
-To get the script working properly, we need to add an html input element that is going to be used by the script.
-
-{{< details title="input-element.html" open=false >}} {{< highlight js >}}
-<div class=controls><input id=file-input type=file></div>
-{{< /highlight >}} {{< /details >}}
-
-To show how the script works, in the next sketch a random image is loaded and after the process is applied, the result is shown replacing the actual image.
-
-You can select three different modes:
- - RGB histogram: display the rgb histogram for the actual image.
- - Brightness histogram: display the brightness histogram for the actual image.
- - Image: display the actual image according to the process or original if you click that button.
-
-Finally you can refresh the image that is being used.
-
-{{< p5-iframe sketch="/showcase/sketches/exercises/masking/web_app.js" width="610" height="750">}}
-
-But if you want to use the original script, here is an sketch that uses it, you can download your modified images feel free to extend the script and provide it to the community.
-
-{{< p5-file-input-iframe sketch="/showcase/sketches/exercises/masking/original_web_app.js" width="610" height="750">}}
