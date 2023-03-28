@@ -1,5 +1,10 @@
 ## Mach Bands
 
+### [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram#:~:text=In%20mathematics%2C%20a%20Voronoi%20diagram,%2C%20sites%2C%20or%20generators).)
+In mathematics, a Voronoi diagram is a partition of a plane into regions close to each of a given set of objects.
+
+### Implementation
+
 In the following p5 sketch we mixed Perlin terrain generation, mach bands and voronoi diagrams.
 
 First we create a set of random points in a plane, then we compute the voronoi diagram for this set of points using the [gorhill](https://github.com/gorhill/Javascript-Voronoi) javascript library.
