@@ -25,6 +25,8 @@ Finally here's the complete P5.js implementation:
 {{< p5-iframe sketch="/showcase/sketches/exercises/coloring/1.js" width="450" height="450" >}}
 
 ## [Color modes](https://ww2.lacan.upc.edu/doc/intel/ipp/ipp_manual/IPPI/ippi_ch6/ch6_color_models.htm)
+>**Prompt:** Research other color models such as HSL, HSB, XYZ.
+>
 
 ### HSB, and HSL Color Models
 

@@ -1,5 +1,6 @@
 # Masking
-
+>**Prompt:** Implement a [kinegram](https://michaelbach.de/ot/mot-scanimation/index.html) and some [moiré patterns](https://en.wikipedia.org/wiki/Moir%C3%A9_pattern) which are close related visual phenomena to masking.
+>
 In the following image there are parallel lines in each row, but exists an illusion of a vertically displacement created by the
 irregular columns sort. The cafe wall illusion has been utilized by neuropsychologists to investigate how the brain processes visual information. Additionally, the illusion has found practical applications in graphic design and art.
 
@@ -7,8 +8,17 @@ irregular columns sort. The cafe wall illusion has been utilized by neuropsychol
 {{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern1.js" width="430" height="450" >}}
 {{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern2.js" width="430" height="450" >}}
 
+# Dithering
+>**Prompt:** Research & implement some [dither](https://en.wikipedia.org/wiki/Dither#Applications) visual apps.
+>
+
+{{< p5-iframe sketch="/showcase/sketches/exercises/dithering/1.js" width="760" height="780" >}}
 
 ## Web app
+>**Prompt:** Implement in software an image processing web app supporting different [image kernels](https://en.wikipedia.org/wiki/Kernel_%28image_processing%29) and supporting:
+- [Image histogram](https://en.wikipedia.org/wiki/Image_histogram) visualization.
+- Different [lightness](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness) (coloring brightness) tools.
+>
 
 On this exercise we provide a script to process images that can be embeded on any web application. But for practical purposes we show an example with predefined images.
 

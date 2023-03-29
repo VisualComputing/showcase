@@ -1,4 +1,6 @@
 ## Parallax effect
+>**Prompt:** Take advantage of monocular cues to implement a 2D sketch to trick the eye into perceiving a 3D scene.
+>
 
 Here we have the parallax effect, tricking our eye into perceiving depth between objects in a 2-D plane.
 
