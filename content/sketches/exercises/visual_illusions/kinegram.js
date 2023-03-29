@@ -18,7 +18,6 @@ function setup() {
 }
 
 function draw() {
-  //img.resize(600,800)
   background(img);
   if (xOffset) {
     xOffset += xSpeed;

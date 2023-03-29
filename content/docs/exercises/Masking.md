@@ -1,9 +1,26 @@
 # Masking
 
-In the following image there are parallel lines in each row, but exists an illusion of a vertically displacement created by the
-irregular columns sort. The cafe wall illusion has been utilized by neuropsychologists to investigate how the brain processes visual information. Additionally, the illusion has found practical applications in graphic design and art.
+Visual masking is the reduction or elimination of the visibility of one brief (≤ 50 ms) stimulus, called the “target”, by the presentation of a second brief stimulus, called the “mask”. Introduced near the end of the 19th and beginning of the 20th century (Exner, 1868; McDougal, 1904; Sherrington, 1897; Stigler, 1911) and extensively studied since then, masking, an interesting phenomenon in its own right, is a useful tool for exploring the dynamics of visual information processing (Breitmeyer & Öğmen, 2006). As a technique for studying the dynamic and microgenetic aspects of vision [Visual Masking](http://www.scholarpedia.org/article/Visual_masking).
+
+## Kinegram
+
+
+Visual artist Gianni A. Sarcone has produced animations that he calls kinegrams since 1997. He describes his animations as "optic kinetic media" that "artfully combine the visual effects of moiré patterns with the zoetrope animation technique". Sarcone also created rotating animations that use a transparent disc with radial lines that has to be spun around its center to animate the picture [Kinegram](https://en.wikipedia.org/wiki/Barrier-grid_animation_and_stereography#Kinegram)
+
+### Implementation
+In the following image there is a background image that is composed of a wolf main shape, but the figures that represent the wolf legs are incomplete and superimposed to allow a grid in movement to create the illusion of movement. Deepening in the code it was just required create multiple vertical lines and add an xOffset depending of the selected speed.
 
 {{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/kinegram.js" width="730" height="460" >}}
+
+## Moire Pattern
+
+Moire patterns are large-scale interference patterns that can be produced when a partially opaque ruled pattern with transparent gaps is overlaid on another similar pattern. For the moiré interference pattern to appear, the two patterns must not be completely identical, but rather displaced, rotated, or have slightly different pitch. [Moiré pattern](https://en.wikipedia.org/wiki/Moir%C3%A9_pattern)
+
+### Implementation
+In the first moire pattern were used mutiple circles and squares separated by an input parameter and multiplied by another parameter, the shapes are rotating endlessly and the dynamic intersection of the shapes create multiple figures along the created intersections sets.
+
+In the second implemented moire pattern we use traingles and rectangles in the same way as the first pattern
+
 {{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern1.js" width="430" height="450" >}}
 {{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern2.js" width="430" height="450" >}}
 
