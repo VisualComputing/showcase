@@ -3,18 +3,17 @@ title: Introduction
 type: docs
 ---
 
-# Visual Computing 2022-2
-
+# Visual Computing 2023-1
+This is a workbook for the Visual Computing class in the National University of Colombia.
 
 # Team
-
-
-
-
-
-Welcome to the [gohugo](https://gohugo.io/) template to create rich content [academic reports](https://www.wordy.com/writers-workshop/writing-an-academic-report/) having [p5.js](https://p5js.org/) sketches.
+* Andrés Ortega - 
+* David Mateus - dmateusb@unal.edu.co
+* Andryut Huertas - aahuertasca@unal.edu.co
 
 ## Hacking
+
+Welcome to the [gohugo](https://gohugo.io/) template to create rich content [academic reports](https://www.wordy.com/writers-workshop/writing-an-academic-report/) having [p5.js](https://p5js.org/) sketches.
 
 Install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
 
