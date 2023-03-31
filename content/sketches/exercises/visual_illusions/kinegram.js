@@ -8,6 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(700, 400);
+  text = createP("Speed");
   startButton = createButton('Start');
   startButton.mousePressed(startGrid);
   stopButton = createButton('Stop');

@@ -38,6 +38,7 @@ function draw() {
     translate(squareX + squareW/2, squareY + squareW/2); 
     rotate(radians(rotationAngle)); 
     stroke("blue");
+    rectMode(CENTER);
     rect(-squareW/2, -squareW/2, squareW, squareW); 
     
     stroke("red");
