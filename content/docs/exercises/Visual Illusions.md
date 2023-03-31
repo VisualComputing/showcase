@@ -1,4 +1,6 @@
 # Visual illusions
+>**Prompt:** Study, implement and discuss possible applications of some known visual phenomena and optical illusions.
+>
 
 The Hermann grid is used to create the optical illusion of perceiving a ghost between the grid cells, it's
 produced a neural process called "Lateral inhibition". In the image there are only white spaces and black blocks

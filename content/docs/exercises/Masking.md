@@ -1,5 +1,6 @@
 # Masking
-
+>**Prompt:** Implement a [kinegram](https://michaelbach.de/ot/mot-scanimation/index.html) and some [moiré patterns](https://en.wikipedia.org/wiki/Moir%C3%A9_pattern) which are close related visual phenomena to masking.
+>
 Visual masking is the reduction or elimination of the visibility of one brief (≤ 50 ms) stimulus, called the “target”, by the presentation of a second brief stimulus, called the “mask”. Introduced near the end of the 19th and beginning of the 20th century (Exner, 1868; McDougal, 1904; Sherrington, 1897; Stigler, 1911) and extensively studied since then, masking, an interesting phenomenon in its own right, is a useful tool for exploring the dynamics of visual information processing (Breitmeyer & Öğmen, 2006). As a technique for studying the dynamic and microgenetic aspects of vision [Visual Masking](http://www.scholarpedia.org/article/Visual_masking).
 
 ## Kinegram
@@ -197,8 +198,17 @@ function draw() {
 {{< /highlight >}} {{< /details >}}
 
 {{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern2.js" width="430" height="450" >}}
+# Dithering
+>**Prompt:** Research & implement some [dither](https://en.wikipedia.org/wiki/Dither#Applications) visual apps.
+>
+
+{{< p5-iframe sketch="/showcase/sketches/exercises/dithering/1.js" width="760" height="780" >}}
 
 ## Web app
+>**Prompt:** Implement in software an image processing web app supporting different [image kernels](https://en.wikipedia.org/wiki/Kernel_%28image_processing%29) and supporting:
+- [Image histogram](https://en.wikipedia.org/wiki/Image_histogram) visualization.
+- Different [lightness](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness) (coloring brightness) tools.
+>
 
 On this exercise we provide a script to process images that can be embeded on any web application. But for practical purposes we show an example with predefined images.
 

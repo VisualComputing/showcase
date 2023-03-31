@@ -1,5 +1,6 @@
 ## Mach Bands
-
+>**Prompt:** Develop a terrain visualization application. Check out the 3D terrain generation with Perlin noise coding train tutorial.
+>
 ### [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram#:~:text=In%20mathematics%2C%20a%20Voronoi%20diagram,%2C%20sites%2C%20or%20generators).)
 In mathematics, a Voronoi diagram is a partition of a plane into regions close to each of a given set of objects.
 
