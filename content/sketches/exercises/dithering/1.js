@@ -5,7 +5,7 @@ var d;
 
 
 function preload() {
-    img = loadImage('/showcase/gato.jpg');
+    img = loadImage('cat.png');
 }
 
 function setup() {

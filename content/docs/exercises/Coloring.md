@@ -7,6 +7,36 @@ In order to assess this problem, first we need to understand colorblindness and 
 ## What is colorblindness?
 Color blindness is classified according to the number of _color channels_ that are available to a person to conveying color information into: [monochromacy](https://en.wikipedia.org/wiki/Monochromacy), [dichromacy](https://en.wikipedia.org/wiki/Dichromacy) and anomalous trichromacy. Refer to the [Ishihara test](https://en.wikipedia.org/wiki/Ishihara_test) for a color vision dificiency test.
 
+For this particular P5.js implementation, I choose ***deuteranopia*** as my colorblindess type of interest. **Deuteranopia** is a kind of green color blindness that nullifies the person's ability to recognize the color green, thus their color spectrum goes only from blue hues to yellow ones, as shown bellow.
+
+![undefined](https://upload.wikimedia.org/wikipedia/commons/5/5a/Rainbow_Deuteranopia.svg)
+
+Now, diving into the P5.js implementation, I used a fairly simple mapping function as the backbone of the color mapping process. This mapping function recieves an image as input, to process the image in the three color channels first we need to load them into a array. This is achieved by the next function: 
+
+    
+    newImg.loadPixels();
+    
+Now that the pixels are loaded to an array it is possible to separate them by the color channels given the RGB order. After having the individual pixels in their respective channels we can finally map them into ***deuteranopia-friendly*** colors thanks to the next function:
+
+	// deuteranopia-friendly color transformation function
+	let  rNew = 0.625 * r + 0.375 * g + 0.001 * b;
+	let  gNew = 0.7 * r + 0.3 * g + 0 * b;
+	let  bNew = 0 * r + 0.3 * g + 0.7 * b;
+ 
+The specific values used in the color mapping function are derived from studies [1] on the spectral sensitivity of the deuteranopia visual system. By applying these values to the original RGB color, the resulting color is transformed to a deuteranopia-friendly color that is easier for individuals with deuteranopia to differentiate from other colors.
+
+It's important to note that the color mapping function I provided assumes a moderate degree of deuteranopia and may not be appropriate for all cases of deuteranopia. Additionally, color perception can vary from person to person, so the resulting transformed color may not be perfectly accurate in simulating protanopia for all individuals.
+
+After this transformation takes place the image is rebuilt with the new pixels and it´s displayed besides the original one.
+
+Finally here's the complete P5.js implementation:
+
+[1] Stockman, A., Sharpe, L. and Vries, R. (1999) _Color Vision: From Genes to Perception_. Cambridge University Press.
+
+
+## What is colorblindness?
+Color blindness is classified according to the number of _color channels_ that are available to a person to conveying color information into: [monochromacy](https://en.wikipedia.org/wiki/Monochromacy), [dichromacy](https://en.wikipedia.org/wiki/Dichromacy) and anomalous trichromacy. Refer to the [Ishihara test](https://en.wikipedia.org/wiki/Ishihara_test) for a color vision dificiency test.
+
 For this particular P5.js implementation, I choose ***protanopia*** as my colorblindess type of interest. **Protanopia** is a kind of red color blindness that nullifies the person's ability to recognize the color red, thus their color spectrum goes only from blue hues to yellow ones, as shown bellow.
 
 ![undefined](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Rainbow_Protanopia.svg/1920px-Rainbow_Protanopia.svg.png)
