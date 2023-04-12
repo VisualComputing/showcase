@@ -1,13 +1,203 @@
 # Masking
 >**Prompt:** Implement a [kinegram](https://michaelbach.de/ot/mot-scanimation/index.html) and some [moiré patterns](https://en.wikipedia.org/wiki/Moir%C3%A9_pattern) which are close related visual phenomena to masking.
 >
-In the following image there are parallel lines in each row, but exists an illusion of a vertically displacement created by the
-irregular columns sort. The cafe wall illusion has been utilized by neuropsychologists to investigate how the brain processes visual information. Additionally, the illusion has found practical applications in graphic design and art.
+Visual masking is the reduction or elimination of the visibility of one brief (≤ 50 ms) stimulus, called the “target”, by the presentation of a second brief stimulus, called the “mask”. Introduced near the end of the 19th and beginning of the 20th century (Exner, 1868; McDougal, 1904; Sherrington, 1897; Stigler, 1911) and extensively studied since then, masking, an interesting phenomenon in its own right, is a useful tool for exploring the dynamics of visual information processing (Breitmeyer & Öğmen, 2006). As a technique for studying the dynamic and microgenetic aspects of vision [Visual Masking](http://www.scholarpedia.org/article/Visual_masking).
 
-{{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/kinegram.js" width="730" height="460" >}}
+## Kinegram
+
+
+Visual artist Gianni A. Sarcone has produced animations that he calls kinegrams since 1997. He describes his animations as "optic kinetic media" that "artfully combine the visual effects of moiré patterns with the zoetrope animation technique". Sarcone also created rotating animations that use a transparent disc with radial lines that has to be spun around its center to animate the picture [Kinegram](https://en.wikipedia.org/wiki/Barrier-grid_animation_and_stereography#Kinegram)
+
+### Implementation
+In the following image there is a background image that is composed of a wolf main shape, but the figures that represent the wolf legs are incomplete and superimposed to allow a grid in movement to create the illusion of movement. Deepening in the code it was just required create multiple vertical lines and add an xOffset depending of the selected speed.
+
+{{< details title="Kinegram" open=false >}} {{< highlight js >}}
+let startButton, stopButton;
+let xOffset, xSpeed;
+let img;
+
+function preload() {
+  img = loadImage('/showcase/lobo.jpg');
+}
+
+function setup() {
+  createCanvas(700, 400);
+  text = createP("Speed");
+  startButton = createButton('Start');
+  startButton.mousePressed(startGrid);
+  stopButton = createButton('Stop');
+  stopButton.mousePressed(stopGrid);
+  input = createInput();
+  input.value(2.5);
+  startGrid();
+}
+
+function draw() {
+  background(img);
+  if (xOffset) {
+    xOffset += xSpeed;
+    if (xOffset > width) {
+      xOffset = -width;
+    }
+  }
+  drawLines();
+}
+
+function drawLines() {
+  stroke(0);
+  strokeWeight(5);
+  let lineSpacing = 10;
+  for (let x = -width*1000; x < width*1000; x += lineSpacing) {
+    line(x + xOffset, 0, x + xOffset, height);
+  }
+}
+
+function startGrid() {
+  let val = input.value();
+  xSpeed = parseFloat(val);
+  xOffset = -width;
+}
+
+function stopGrid() {
+  xOffset = null;
+}
+
+{{< /highlight >}} {{< /details >}}
+
+
+{{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/kinegram.js" width="730" height="500" >}}
+## Moire Pattern
+
+Moire patterns are large-scale interference patterns that can be produced when a partially opaque ruled pattern with transparent gaps is overlaid on another similar pattern. For the moiré interference pattern to appear, the two patterns must not be completely identical, but rather displaced, rotated, or have slightly different pitch. [Moiré pattern](https://en.wikipedia.org/wiki/Moir%C3%A9_pattern)
+
+### Implementation
+In the first moire pattern were used mutiple circles and squares separated by an input parameter and multiplied by another parameter, the shapes are rotating endlessly and the dynamic intersection of the shapes create multiple figures along the created intersections sets.
+
+In the second implemented moire pattern we use traingles and rectangles in the same way as the first pattern.
+Each pattern has two inputs, the first is the number of shapes to print and the second is the size of the shapes.
+
+{{< details title="Moire Pattern 1" open=false >}} {{< highlight js >}}
+let figuresCount = 100;
+let shapeSize = 4;
+
+function setup() {
+  createCanvas(400, 400);
+  shapesCount = createInput(figuresCount);
+  shapesCount.value(100);
+
+  shapeSizesInput = createInput(shapeSize);
+  shapeSizesInput.value(10);
+
+  shapesCount.input(() => {
+    figuresCount = parseInt(shapesCount.value());
+  });
+
+  shapeSizesInput.input(() => {
+    shapeSize = parseInt(shapeSizesInput.value());
+  });
+
+}
+
+let rotationAngle = 0;
+
+function draw() {
+  background(220);
+  noFill();
+  strokeWeight(2);
+  
+  let centerX = width / 2;
+  let centerY = height / 2;
+  
+  for (let i = 0; i < figuresCount; i++) {
+    let squareX = centerX - (shapeSize * (figuresCount - i)) / 2;
+    let squareY = centerY - (shapeSize * (figuresCount - i)) / 2;
+    let squareW = shapeSize * (figuresCount - i);
+
+    push(); 
+    translate(squareX + squareW/2, squareY + squareW/2); 
+    rotate(radians(rotationAngle)); 
+    stroke("blue");
+    rectMode(CENTER);
+    rect(-squareW/2, -squareW/2, squareW, squareW); 
+    
+    stroke("red");
+    let circleR = (shapeSize * (figuresCount - i)) ;
+    ellipse(centerX, centerY, circleR, circleR);
+  }
+  
+  rotationAngle += 1; 
+}
+
+{{< /highlight >}} {{< /details >}}
+
 {{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern1.js" width="430" height="450" >}}
-{{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern2.js" width="430" height="450" >}}
 
+{{< details title="Moire Pattern 2" open=false >}} {{< highlight js >}}
+let numShapes = 100;
+let shapeSize = 10;
+let angle = 0;
+
+function setup() {
+  createCanvas(400, 400);
+  numShapesInput = createInput(numShapes);
+  numShapesInput.value(100);
+
+  shapeSizesInput = createInput(shapeSize);
+  shapeSizesInput.value(10);
+
+  numShapesInput.input(() => {
+    numShapes = parseInt(numShapesInput.value());
+  });
+
+  shapeSizesInput.input(() => {
+    shapeSize = parseInt(shapeSizesInput.value());
+  });
+}
+
+function draw() {
+  background(220);
+  noFill();
+
+  // Center the shapes in the canvas
+  let centerX = width / 2;
+  let centerY = height / 2;
+
+  // Draw a loop of triangles
+  stroke("blue");
+  for (let i = 0; i < numShapes; i++) {
+    let triangleX = centerX;
+    let triangleY = centerY;
+    let triangleR = shapeSize * (numShapes - i);
+    let triangleA = angle + i * (360 / numShapes);
+    push();
+    translate(triangleX, triangleY);
+    rotate(radians(triangleA));
+    triangle(0, 0, triangleR, triangleR * sqrt(3) / 2, -triangleR, triangleR * sqrt(3) / 2);
+    pop();
+  }
+
+  // Draw a loop of squares
+  stroke("red");
+  for (let i = 0; i < numShapes; i++) {
+    let squareX = centerX;
+    let squareY = centerY;
+    let squareW = shapeSize * (numShapes - i);
+    let squareA = angle - i * (360 / numShapes);
+    push();
+    translate(squareX, squareY);
+    rotate(radians(squareA));
+    rectMode(CENTER);
+    rect(0, 0, squareW, squareW);
+    pop();
+  }
+
+  angle += 1;
+}
+
+
+{{< /highlight >}} {{< /details >}}
+
+{{< p5-iframe sketch="/showcase/sketches/exercises/visual_illusions/moire_pattern2.js" width="430" height="450" >}}
 # Dithering
 >**Prompt:** Research & implement some [dither](https://en.wikipedia.org/wiki/Dither#Applications) visual apps.
 >

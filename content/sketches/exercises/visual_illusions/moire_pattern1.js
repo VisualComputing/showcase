@@ -1,16 +1,16 @@
-let numFigures = 100;
-let shapeSize = 10;
+let figuresCount = 100;
+let shapeSize = 4;
 
 function setup() {
   createCanvas(400, 400);
-  numShapesInput = createInput(numFigures);
-  numShapesInput.value(100);
+  shapesCount = createInput(figuresCount);
+  shapesCount.value(100);
 
   shapeSizesInput = createInput(shapeSize);
   shapeSizesInput.value(10);
 
-  numShapesInput.input(() => {
-    numFigures = parseInt(numShapesInput.value());
+  shapesCount.input(() => {
+    figuresCount = parseInt(shapesCount.value());
   });
 
   shapeSizesInput.input(() => {
@@ -19,34 +19,32 @@ function setup() {
 
 }
 
-let rotationAngle = 0; // Add a rotation angle variable
+let rotationAngle = 0;
 
 function draw() {
   background(220);
   noFill();
   strokeWeight(2);
   
-  // Center the square loop in the canvas
   let centerX = width / 2;
   let centerY = height / 2;
   
-  // Draw a loop of squares
-  for (let i = 0; i < numFigures; i++) {
-    let squareX = centerX - (shapeSize * (numFigures - i)) / 2;
-    let squareY = centerY - (shapeSize * (numFigures - i)) / 2;
-    let squareW = shapeSize * (numFigures - i);
+  for (let i = 0; i < figuresCount; i++) {
+    let squareX = centerX - (shapeSize * (figuresCount - i)) / 2;
+    let squareY = centerY - (shapeSize * (figuresCount - i)) / 2;
+    let squareW = shapeSize * (figuresCount - i);
 
-    push(); // Save the current drawing style and transformation state
-    translate(squareX + squareW/2, squareY + squareW/2); // Translate to the center of the square
-    rotate(radians(rotationAngle)); // Rotate the square
+    push(); 
+    translate(squareX + squareW/2, squareY + squareW/2); 
+    rotate(radians(rotationAngle)); 
     stroke("blue");
-    rect(-squareW/2, -squareW/2, squareW, squareW); // Draw the square
-    pop(); // Restore the previous drawing style and transformation state
+    rectMode(CENTER);
+    rect(-squareW/2, -squareW/2, squareW, squareW); 
     
     stroke("red");
-    let circleR = (shapeSize * (numFigures - i)) ;
+    let circleR = (shapeSize * (figuresCount - i)) ;
     ellipse(centerX, centerY, circleR, circleR);
   }
   
-  rotationAngle += 1; // Increment the rotation angle
+  rotationAngle += 1; 
 }

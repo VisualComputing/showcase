@@ -8,6 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(700, 400);
+  text = createP("Speed");
   startButton = createButton('Start');
   startButton.mousePressed(startGrid);
   stopButton = createButton('Stop');
@@ -18,7 +19,6 @@ function setup() {
 }
 
 function draw() {
-  //img.resize(600,800)
   background(img);
   if (xOffset) {
     xOffset += xSpeed;
