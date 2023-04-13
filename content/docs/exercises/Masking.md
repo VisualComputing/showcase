@@ -44,7 +44,7 @@ This algorithm focuses on "streching" or dispersing the error to the neighboring
 
 Here the error "spreads" in different directions with different rates, thats why the pixel indexing was so important. 
 
-After having the quantized error calculated and embeded into the algorithm it´s time to put back all the pixels and reveal the waited result!
+After having the quantized error calculated and embeded into the algorithm it´s time to put back all the pixels and reveal the waited result:
 
 {{< p5-iframe sketch="/showcase/sketches/exercises/dithering/1.js" width="760" height="780" >}}
 
