@@ -1,3 +1,43 @@
+# Floyd-Steinberg dithering
+>**Prompt:** Implement a color mapping application that helps people who are color blind see the colors around them.
+>
+Dithering is, a it´s core, a form of noise that is applied to a medium (either sound or an image) and it´s used to prevent certain color problems when used in image processing or as a means to compress audio.
+![Image od David using dithering](https://upload.wikimedia.org/wikipedia/commons/7/71/Michelangelo%27s_David_-_63_grijswaarden.png)
+![Image od David using dithering](https://upload.wikimedia.org/wikipedia/commons/c/c1/Michelangelo%27s_David_-_Floyd-Steinberg.png)
+Dithering in image processing can be achieved by many different ways, but in this case we´re focusing on the ***Floyd-Steinberg algorithm for image dithering***. To understand this algorithm fyllu it is necessary to break it in a couple of portions:
+
+## Quantizing
+Quantizing in the image processing scope, is a process in wich the image is divided into individual pixels and each and every one of them is filtered through their respective red, green and blue channels. But first it´s necessary to trace every pixel´s position in the image, a helpfull way to think about it is like a grid of pixels, where every pixel has a (x,y) location to it:
+| 0 | 1 | 2 | 3 |
+| - | - | - | - | 
+| 1 | x | x | x |
+| 2 | x | x | x |
+| 3 | x | x | x |
+
+Now, after every pixel has it´s coordinates we can filter every individual pixel through every color channel limiting the available number of colors it can take: For example, if we take an RGB color as a number between 0 and 255, if we limit the colors to only two 0 or 255 (black and white),  if a color value on any channel is les than 127, the pixel will round down to 0 and it´ll take the color black. On the other hand, if the value is greater than 127, the pixel will round up to 255 and take the color white. This very thing happens if the color spectrum goes from 2 possibilities to 5, or 125, etc.  
+
+There´s something to keep in mind, every time dithering is applied to an image there´s an error that is being generated. This error can be used and spread through the pixel´s neighbours to have a more detailed image withoud much fidelity loss.
+
+## Quantizing error
+To quantize the error and incorporate it into the the image processing, first we just need to do a simple substraction. The operation consists of substracting the original value of the color channel from the quantized value , the result is the error_
+![Image od David using dithering](https://drive.google.com/uc?id=1eMAOO7M0OAzqzBeb3wfbp7UMACtWlC-T)
+Now, finnaly it´s time for the **Floyd-Steinberg algorithm**.
+## Floyd-Steinberg algorithm
+This algorithm focuses on "streching" or dispersing the error to the neighboring pixels, this is achieved by the use of this small pseudo-code and better explaine by this graph:
+
+		pixels[_x_ + 1][_y_    ] := pixels[_x_ + 1][_y_    ] + quant_error × 7 / 16
+		pixels[_x_ - 1][_y_ + 1] := pixels[_x_ - 1][_y_ + 1] + quant_error × 3 / 16
+        pixels[_x_    ][_y_ + 1] := pixels[_x_    ][_y_ + 1] + quant_error × 5 / 16
+        pixels[_x_ + 1][_y_ + 1] := pixels[_x_ + 1][_y_ + 1] + quant_error × 1 / 16
+
+![Image od David using dithering](https://drive.google.com/uc?id=1036PgQPB7gMR0iT2Khd-yPTgMCuoCQ2R)
+
+Here the error "spreads" in different directions with different rates, thats why the pixel indexing was so important. 
+
+After having the quantized error calculated and embeded into the algorithm it´s time to put back all the pixels and reveal the waited result!
+
+{{< p5-iframe sketch="/showcase/sketches/exercises/masking/dithering.js" width="500" height="540" >}}
+
 # Masking
 >**Prompt:** Implement a [kinegram](https://michaelbach.de/ot/mot-scanimation/index.html) and some [moiré patterns](https://en.wikipedia.org/wiki/Moir%C3%A9_pattern) which are close related visual phenomena to masking.
 >

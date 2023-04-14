@@ -1,44 +1,33 @@
-let r, g, b;
+let img;
+
+function preload() {
+  img = loadImage('0e5c038d-098c-4a45-87fd-b89630a313e9.jpg'); // replace with your own image file path
+}
 
 function setup() {
-  createCanvas(400, 400);
-  background(220);
-  
-  // Crea campos de texto para los valores r, g, b.
-  rInput = createInput(255);
-  rInput.position(20, 20);
-  
-  gInput = createInput(0);
-  gInput.position(20, 50);
-  
-  bInput = createInput(0);
-  bInput.position(20, 80);
-  
-  // Botón para la transofrmación
-  transformButton = createButton('Transformar colores para protanopia');
-  transformButton.position(20, 120);
-  transformButton.mousePressed(transformColor);
+  createCanvas(1200, 600); // set canvas size
+  image(img, 0, 0, width/2, height); // display original image
+  let newImg = deuteranopia(img); // apply deuteranopia-friendly color transformation
+  image(newImg, width/2, 0, width/2, height); // display transformed image
 }
 
-function transformColor() {
-  // Toma los valores r, g, b de los campos
-  r = rInput.value();
-  g = gInput.value();
-  b = bInput.value();
-  
-  // Aplica la transformación a los valores ingresados
-  let newR = 0.56667 * r + 0.43333 * g + 0 * b;
-  let newG = 0.55833 * r + 0.44167 * g + 0 * b;
-  let newB = 0 * r + 0.24167 * g + 0.75833 * b;
-  
-  // Muestra los valores nuevos en la parte inferior del canvas
-  fill(r, g, b);
-  rect(100, 200, 100, 100);
-  
-  fill(newR, newG, newB);
-  rect(220, 200, 100, 100);
-}
-
-function draw() {
-
+function deuteranopia(img) {
+  let newImg = createImage(img.width, img.height);
+  img.loadPixels();
+  newImg.loadPixels();
+  for (let i = 0; i < img.pixels.length; i += 4) {
+    let r = img.pixels[i];
+    let g = img.pixels[i + 1];
+    let b = img.pixels[i + 2];
+    // deuteranopia-friendly color transformation function
+    let rNew = 0.625 * r + 0.375 * g + 0.001 * b;
+    let gNew = 0.7 * r + 0.3 * g + 0 * b;
+    let bNew = 0 * r + 0.3 * g + 0.7 * b;
+    newImg.pixels[i] = rNew;
+    newImg.pixels[i + 1] = gNew;
+    newImg.pixels[i + 2] = bNew;
+    newImg.pixels[i + 3] = img.pixels[i + 3];
+  }
+  newImg.updatePixels();
+  return newImg;
 }
