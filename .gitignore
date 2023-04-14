@@ -4,3 +4,4 @@
 # Logs
 *.log
 .hugo_build.lock
+config.toml
