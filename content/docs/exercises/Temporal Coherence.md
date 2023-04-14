@@ -27,3 +27,4 @@ There are also some other usefull functions in the library that I actually used 
  - **node.setAnimationRecurrence(true):** This loops the aniamtion once it lands in the final keyframe.
  - **node.addKeyFrame(Node.AXES | Node.SHAPE, i % 2 == 1 ? 1000 : 4000):**  This is the function that defines the keyframes, in the first part it´s declared that the keyframe will have the axes enabled and that it´ll take the shape declared before. In the second part it´s declared how far in between the keyframes are generated.
 
+{{< p5-iframe sketch="/showcase/sketches/exercises/dithering/1.js" width="760" height="780" >}}
