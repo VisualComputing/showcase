@@ -10,6 +10,7 @@ This is a workbook for the Visual Computing class in the National University of 
 * Andrés Ortega - 
 * David Mateus - dmateusb@unal.edu.co
 * Andryut Huertas - aahuertasca@unal.edu.co
+* Nicolas La Rotta - nlam@unal.edu.co
 
 ## Hacking
 
