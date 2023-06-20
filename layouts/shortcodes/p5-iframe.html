@@ -15,6 +15,11 @@
           <head>
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/{{ default $defver (.Get `ver`) }}/p5.min.js></script>
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/{{ default $defver (.Get `ver`) }}/addons/p5.sound.min.js></script>
+            <script src=https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/{{ default $defver (.Get `ver`) }}/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/{{ default $defver (.Get `ver`) }}/addons/p5.sound.min.js></script>
+            <script src=https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js></script>
+            <script src=https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js></script>
             {{ if isset .Params "lib1" }} <script src={{ $lib1 }}></script> {{ end }}
             {{ if isset .Params "lib2" }} <script src={{ $lib2 }}></script> {{ end }}
             {{ if isset .Params "lib3" }} <script src={{ $lib3 }}></script> {{ end }}

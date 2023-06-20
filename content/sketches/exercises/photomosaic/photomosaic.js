@@ -20,9 +20,9 @@ function preload() {
   image_src = loadImage("/showcase/resources/_gen/images/needler.jpg");
   video_src = createVideo(["/showcase/resources/_gen/images/video.mp4"]);
   video_src.hide(); // by default video shows up in separate dom
-  mosaic = readShader("/showcase/content/sketches/shaders/photomosaic.frag");
+  mosaic = readShader("/showcase/sketches/shaders/photomosaic.frag");
   p = [];
-  for (let i = 1; i <= 40; i++) {
+  for (let i = 1; i <= 23; i++) {
     if (i.toString().length == 1) {
       p.push(loadImage(`/showcase/resources/_gen/images/blocks/00000${i}.jpg`));
     } else {

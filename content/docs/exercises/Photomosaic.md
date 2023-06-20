@@ -12,5 +12,5 @@ In the `preload` function, we define the fragment to be used, called `photomosai
 
 The average colors of the original image are compared with the image returned by the quadrille, using a tolerance that increases until the closest color to the original is found. This found color is then used to fill in the resulting image that is displayed.
 
-{{< p5-iframe sketch="/showcase/content/sketches/exercises/photomosaic/photomosaic.js" lib1="/showcase/content/sketches/libs/p5.shaderbox.js" lib2="/showcase/content/sketches/libs/" width="675" height="675" >}}
+{{< p5-iframe sketch="/showcase/sketches/exercises/photomosaic/photomosaic.js" lib1="/showcase/sketches/libs/p5.shaderbox.js" lib2="/showcase/sketches/libs/p5.quadrille.js" width="675" height="675" >}}
 
